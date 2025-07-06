@@ -14,6 +14,8 @@
         body {
             font-family: 'Inter', sans-serif; /* Default font for body text */
             overflow-x: hidden; /* Prevent horizontal scrolling */
+            font-size: 1.125rem; /* Base font size for body (text-lg equivalent) */
+            background-color: #F3F4F6; /* bg-gray-100 for subtle contrast */
         }
         h1, h2, h3 {
             font-family: 'Playfair Display', serif; /* Elegant font for general headings */
@@ -87,9 +89,84 @@
         .tab-button {
             @apply px-8 py-4 text-lg; /* Slightly larger buttons */
         }
+        /* Adjusted paragraph text size */
+        p {
+            @apply text-lg; /* Ensure general paragraphs are larger */
+        }
+        .text-gray-600, .text-gray-700 {
+            @apply text-lg; /* Apply larger size to specific gray texts as well */
+        }
+
+        /* Carousel specific styles */
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden; /* Keep this to hide parts of cards that are not in view */
+        }
+        .carousel-track {
+            display: flex;
+            overflow-x: scroll; /* Allow native horizontal scrolling */
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch; /* For smoother scrolling on iOS */
+            gap: 1rem; /* Space between cards */
+            padding-bottom: 1rem; /* To prevent scrollbar from overlapping content */
+        }
+        /* Hide scrollbar for a cleaner look */
+        .carousel-track::-webkit-scrollbar {
+            display: none;
+        }
+        .carousel-track {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+
+        .carousel-track > .card {
+            flex: none; /* Disable flex-grow/shrink */
+            width: 75%; /* Default for mobile */
+            scroll-snap-align: start; /* Snap to the start of each card */
+            height: 24rem; /* Fixed height for carousel cards (384px) */
+        }
+        .carousel-track > .card img {
+            height: 100%; /* Image fills the card height */
+            object-fit: cover; /* Ensure image covers the area, cropping if necessary */
+        }
+
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(221, 142, 166, 0.8); /* bg-main-pink with opacity */
+            color: white;
+            padding: 1rem;
+            border-radius: 9999px; /* Full rounded */
+            cursor: pointer;
+            z-index: 10;
+            transition: background-color 0.3s ease;
+        }
+        .carousel-button:hover {
+            background-color: rgba(194, 122, 146, 0.9); /* bg-darker-pink with opacity */
+        }
+        .carousel-button-left {
+            left: 1rem;
+        }
+        .carousel-button-right {
+            right: 1rem;
+        }
+
+        /* Adjust carousel card width for different screen sizes */
+        @media (min-width: 640px) { /* sm */
+            .carousel-track > .card {
+                width: calc(50% - 0.5rem); /* 2 cards per row with gap */
+            }
+        }
+        @media (min-width: 1024px) { /* lg */
+            .carousel-track > .card {
+                width: calc(33.3333% - 0.6666rem); /* 3 cards per row with gap */
+            }
+        }
     </style>
 </head>
-<body class="bg-white text-gray-800">
+<body class="bg-gray-100 text-gray-800">
 
     <!-- Header / Navbar -->
     <header class="bg-main-pink text-white shadow-lg fixed w-full z-50">
@@ -133,17 +210,17 @@
             </div>
         </section>
 
-        <!-- Main Gallery Overview Section -->
+        <!-- Main Gallery Overview Section (Carousel) -->
         <section id="plantillas" class="py-20 bg-light-pink-bg">
-            <div class="container mx-auto px-2 sm:px-6"> <!-- Adjusted padding for small screens -->
+            <div class="container mx-auto px-2 sm:px-6">
                 <h2 class="main-section-title-quicksand text-main-pink animate-on-scroll">Nuestras Plantillas</h2>
                 <p class="text-xl text-center mb-12 animate-on-scroll animate-on-scroll-delay-100">
                     Explora nuestra amplia colección de invitaciones digitales por categoría.
-                    Haz clic en una categoría para ver más ejemplos.
+                    Usa las flechas para navegar por los ejemplos.
                 </p>
 
                 <!-- Category Navigation Buttons -->
-                <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-12 animate-on-scroll animate-on-scroll-delay-200"> <!-- Adjusted gap for small screens -->
+                <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-12 animate-on-scroll animate-on-scroll-delay-200">
                     <a href="#bodas-gallery" class="tab-button bg-main-pink text-white px-8 py-4 rounded-full font-semibold hover:bg-darker-pink transition duration-300">Bodas</a>
                     <a href="#xvanos-gallery" class="tab-button bg-main-pink text-white px-8 py-4 rounded-full font-semibold hover:bg-darker-pink transition duration-300">XV Años</a>
                     <a href="#babyshower-gallery" class="tab-button bg-main-pink text-white px-8 py-4 rounded-full font-semibold hover:bg-darker-pink transition duration-300">Baby Shower</a>
@@ -156,33 +233,75 @@
                     <a href="#revelacion-genero-gallery" class="tab-button bg-main-pink text-white px-8 py-4 rounded-full font-semibold hover:bg-darker-pink transition duration-300">Revelación de Género</a>
                 </div>
 
-                <!-- Grid for All Invitations Overview - Collage of images -->
-                <div id="all-invitations-overview-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-                    <!-- Collage Images - Replace with your actual invitation images -->
-                    <div class="card animate-on-scroll">
-                        <img src="https://placehold.co/400x600/FFD1DC/DD8EA6?text=Invitacion+Boda+1" alt="Invitación de Boda" class="w-full h-auto object-cover rounded-xl">
+                <!-- Carousel for All Invitations Overview -->
+                <div class="carousel-container animate-on-scroll animate-on-scroll-delay-300">
+                    <div id="carousel-track" class="carousel-track">
+                        <!-- Carousel Images - Replace with your actual invitation images -->
+                        <div class="card">
+                            <img src="https://placehold.co/400x600/FFD1DC/DD8EA6?text=Invitacion+Boda+1" alt="Invitación de Boda" class="w-full object-cover rounded-xl">
+                            <div class="p-4 text-center">
+                                <h3 class="text-xl font-semibold text-main-pink">Boda Clásica</h3>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://placehold.co/400x600/DD8EA6/FFFFFF?text=Invitacion+XV+Anos+1" alt="Invitación de XV Años" class="w-full object-cover rounded-xl">
+                            <div class="p-4 text-center">
+                                <h3 class="text-xl font-semibold text-main-pink">XV Años Soñados</h3>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://placehold.co/400x600/FDF2F5/DD8EA6?text=Invitacion+Baby+Shower+1" alt="Invitación de Baby Shower" class="w-full object-cover rounded-xl">
+                            <div class="p-4 text-center">
+                                <h3 class="text-xl font-semibold text-main-pink">Baby Shower Alegre</h3>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://placehold.co/400x600/C27A92/FFFFFF?text=Invitacion+Cumpleanos+1" alt="Invitación de Cumpleaños" class="w-full object-cover rounded-xl">
+                            <div class="p-4 text-center">
+                                <h3 class="text-xl font-semibold text-main-pink">Cumpleaños Divertido</h3>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://placehold.co/400x600/FFB3C6/DD8EA6?text=Invitacion+Bautizo+1" alt="Invitación de Bautizo" class="w-full object-cover rounded-xl">
+                            <div class="p-4 text-center">
+                                <h3 class="text-xl font-semibold text-main-pink">Bautizo Celestial</h3>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://placehold.co/400x600/DD8EA6/FFFFFF?text=Invitacion+Graduacion+1" alt="Invitación de Graduación" class="w-full object-cover rounded-xl">
+                            <div class="p-4 text-center">
+                                <h3 class="text-xl font-semibold text-main-pink">Graduación Exitosa</h3>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://placehold.co/400x600/FDF2F5/DD8EA6?text=Invitacion+Empresarial+1" alt="Invitación Empresarial" class="w-full object-cover rounded-xl">
+                            <div class="p-4 text-center">
+                                <h3 class="text-xl font-semibold text-main-pink">Evento Corporativo</h3>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://placehold.co/400x600/C27A92/FFFFFF?text=Invitacion+Revelacion+1" alt="Invitación de Revelación de Género" class="w-full object-cover rounded-xl">
+                            <div class="p-4 text-center">
+                                <h3 class="text-xl font-semibold text-main-pink">Revelación Mágica</h3>
+                            </div>
+                        </div>
+                        <!-- New image for Main Gallery Overview: Danna Jasley -->
+                        <div class="card">
+                            <img src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Danna%20jasley.jpg" alt="Invitación Danna Jasley" class="w-full object-cover rounded-xl">
+                            <div class="p-4 text-center">
+                                <h3 class="text-xl font-semibold text-main-pink">Cumpleaños Danna</h3>
+                            </div>
+                        </div>
+                        <!-- New image for Main Gallery Overview: Nuestra (5) -->
+                        <div class="card">
+                            <img src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Nuestra%20(5).jpg" alt="Invitación Nuestra" class="w-full object-cover rounded-xl">
+                            <div class="p-4 text-center">
+                                <h3 class="text-xl font-semibold text-main-pink">Diseño Exclusivo</h3>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card animate-on-scroll animate-on-scroll-delay-100">
-                        <img src="https://placehold.co/400x600/DD8EA6/FFFFFF?text=Invitacion+XV+Anos+1" alt="Invitación de XV Años" class="w-full h-auto object-cover rounded-xl">
-                    </div>
-                    <div class="card animate-on-scroll animate-on-scroll-delay-200">
-                        <img src="https://placehold.co/400x600/FDF2F5/DD8EA6?text=Invitacion+Baby+Shower+1" alt="Invitación de Baby Shower" class="w-full h-auto object-cover rounded-xl">
-                    </div>
-                    <div class="card animate-on-scroll animate-on-scroll-delay-300">
-                        <img src="https://placehold.co/400x600/C27A92/FFFFFF?text=Invitacion+Cumpleanos+1" alt="Invitación de Cumpleaños" class="w-full h-auto object-cover rounded-xl">
-                    </div>
-                    <div class="card animate-on-scroll">
-                        <img src="https://placehold.co/400x600/FFB3C6/DD8EA6?text=Invitacion+Bautizo+1" alt="Invitación de Bautizo" class="w-full h-auto object-cover rounded-xl">
-                    </div>
-                    <div class="card animate-on-scroll animate-on-scroll-delay-100">
-                        <img src="https://placehold.co/400x600/DD8EA6/FFFFFF?text=Invitacion+Graduacion+1" alt="Invitación de Graduación" class="w-full h-auto object-cover rounded-xl">
-                    </div>
-                    <div class="card animate-on-scroll animate-on-scroll-delay-200">
-                        <img src="https://placehold.co/400x600/FDF2F5/DD8EA6?text=Invitacion+Empresarial+1" alt="Invitación Empresarial" class="w-full h-auto object-cover rounded-xl">
-                    </div>
-                    <div class="card animate-on-scroll animate-on-scroll-delay-300">
-                        <img src="https://placehold.co/400x600/C27A92/FFFFFF?text=Invitacion+Revelacion+1" alt="Invitación de Revelación de Género" class="w-full h-auto object-cover rounded-xl">
-                    </div>
+                    <button id="carousel-prev" class="carousel-button carousel-button-left"><i class="fas fa-chevron-left text-2xl"></i></button>
+                    <button id="carousel-next" class="carousel-button carousel-button-right"><i class="fas fa-chevron-right text-2xl"></i></button>
                 </div>
             </div>
         </section>
@@ -626,6 +745,19 @@
                             <p class="text-gray-600">Video invitación con espacio para más texto.</p>
                         </div>
                     </div>
+                    <!-- New video for Cumpleaños: El texto del párrafo (3).mp4 -->
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-900" data-category="cumpleanos">
+                        <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/El%20texto%20del%20p%C3%A1rrafo%20(3).mp4"
+                                   poster="https://placehold.co/600x400/FFD700/DD8EA6?text=Cumpleanos+Texto+3+Video"
+                                   controls autoplay="false" loop="false" muted="true"
+                                   class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Cumpleaños con Texto Extra (Video)</h3>
+                            <p class="text-gray-600">Otra opción de video para cumpleaños con más texto.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -887,6 +1019,44 @@
 
             // Open WhatsApp in a new tab
             window.open(whatsappUrl, '_blank');
+        });
+
+        // Carousel Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const carouselTrack = document.getElementById('carousel-track');
+            const prevButton = document.getElementById('carousel-prev');
+            const nextButton = document.getElementById('carousel-next');
+
+            // Function to calculate how much to scroll based on the width of a single card + its gap
+            const getScrollStep = () => {
+                const firstCard = carouselTrack.querySelector('.card');
+                if (firstCard) {
+                    const computedStyle = window.getComputedStyle(carouselTrack);
+                    const gap = parseFloat(computedStyle.getPropertyValue('gap'));
+                    return firstCard.offsetWidth + gap;
+                }
+                return carouselTrack.offsetWidth;
+            };
+
+            nextButton.addEventListener('click', () => {
+                const step = getScrollStep();
+                // Check if at the end to loop
+                if (carouselTrack.scrollLeft + carouselTrack.offsetWidth >= carouselTrack.scrollWidth - 1) { // -1 for tolerance
+                    carouselTrack.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    carouselTrack.scrollBy({ left: step, behavior: 'smooth' });
+                }
+            });
+
+            prevButton.addEventListener('click', () => {
+                const step = getScrollStep();
+                // Check if at the beginning to loop
+                if (carouselTrack.scrollLeft <= 1) { // +1 for tolerance
+                    carouselTrack.scrollTo({ left: carouselTrack.scrollWidth, behavior: 'smooth' });
+                } else {
+                    carouselTrack.scrollBy({ left: -step, behavior: 'smooth' });
+                }
+            });
         });
     </script>
 </body>
