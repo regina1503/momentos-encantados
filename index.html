@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momentos Encantados - Invitaciones Digitales Personalizadas</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+        /* Custom Colors for the new theme */
+        .text-light-yellow {
+            color: #FDFD96; /* Light pastel yellow for accents */
+        }
+        .bg-light-pink-bg {
+            background-color: #FDF2F5; /* Very light pink for section backgrounds */
+        }
+        .bg-dark-pastel-pink {
+            background-color: #D8BFD8; /* Darker pastel pink for headers and main elements */
+        }
+        .bg-medium-pink {
+            background-color: #FFC0CB; /* Medium pink for primary buttons */
+        }
+        .bg-hover-pink {
+            background-color: #FF99AA; /* Darker pink for button hover state */
+        }
+        .bg-darker-pastel-pink {
+            background-color: #C5A5C5; /* Even darker pastel pink for testimonial cards */
+        }
+        .ring-medium-pink {
+            --tw-ring-color: #FFC0CB; /* Custom ring color for form focus */
+        }
+
+        /* General Component Styles */
+        .btn-primary {
+            @apply bg-medium-pink text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-hover-pink transition duration-300 ease-in-out;
+        }
+        .card {
+            @apply bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105;
+        }
+        .section-title {
+            @apply text-4xl font-bold text-center mb-12;
+        }
+        /* Custom styles for smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Message box styles */
+        #message-box {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        #message-box.error {
+            background-color: #f44336;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- Message Box -->
+    <div id="message-box"></div>
+
+    <!-- Header / Navbar -->
+    <header class="bg-dark-pastel-pink text-white shadow-lg fixed w-full z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-3xl font-bold text-light-yellow">Momentos Encantados</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#inicio" class="hover:text-light-yellow transition duration-300">Inicio</a>
+                <a href="#plantillas" class="hover:text-light-yellow transition duration-300">Plantillas</a>
+                <a href="#servicios" class="hover:text-light-yellow transition duration-300">Servicios</a>
+                <a href="#testimonios" class="hover:text-light-yellow transition duration-300">Testimonios</a>
+                <a href="#contacto" class="hover:text-light-yellow transition duration-300">Contacto</a>
+                <a href="#author-panel" class="hover:text-light-yellow transition duration-300">Panel de Autor</a>
+            </div>
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </nav>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dark-pastel-pink py-4">
+            <a href="#inicio" class="block px-6 py-2 hover:bg-darker-pastel-pink transition duration-300">Inicio</a>
+            <a href="#plantillas" class="block px-6 py-2 hover:bg-darker-pastel-pink transition duration-300">Plantillas</a>
+            <a href="#servicios" class="block px-6 py-2 hover:bg-darker-pastel-pink transition duration-300">Servicios</a>
+            <a href="#testimonios" class="block px-6 py-2 hover:bg-darker-pastel-pink transition duration-300">Testimonios</a>
+            <a href="#contacto" class="block px-6 py-2 hover:bg-darker-pastel-pink transition duration-300">Contacto</a>
+            <a href="#author-panel" class="block px-6 py-2 hover:bg-darker-pastel-pink transition duration-300">Panel de Autor</a>
+        </div>
+    </header>
+
+    <main class="pt-20"> <!-- Padding top to account for fixed header -->
+
+        <!-- Hero Section -->
+        <section id="inicio" class="relative h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://placehold.co/1920x1080/D8BFD8/FFFFFF?text=Momentos+Encantados+Background');">
+            <div class="absolute inset-0 bg-black opacity-60"></div>
+            <div class="relative z-10 text-center text-white px-6">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight drop-shadow-lg">
+                    Crea Recuerdos Inolvidables, Una Invitación a la Vez.
+                </h1>
+                <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto drop-shadow-md">
+                    Diseños únicos y personalizados para cada celebración especial en tu vida.
+                </p>
+                <a href="#plantillas" class="btn-primary">Explora Nuestras Plantillas</a>
+            </div>
+        </section>
+
+        <!-- Author Panel Section -->
+        <section id="author-panel" class="py-20 bg-light-pink-bg">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-title text-dark-pastel-pink">Panel de Autor</h2>
+                <p class="text-xl mb-8 max-w-2xl mx-auto text-gray-700">
+                    Aquí puedes añadir nuevas invitaciones a la galería. Ten en cuenta que estas adiciones son temporales.
+                </p>
+                <div class="w-full md:w-2/3 lg:w-1/2 mx-auto bg-white p-8 rounded-xl shadow-lg text-left">
+                    <h3 class="text-2xl font-semibold mb-6 text-dark-pastel-pink">Añadir Nueva Invitación</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <label for="invitation-url" class="block text-gray-700 text-sm font-bold mb-2">URL de Imagen/Video:</label>
+                            <input type="url" id="invitation-url" placeholder="Ej: https://ejemplo.com/mi-invitacion.jpg o .mp4" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 ring-medium-pink" required>
+                        </div>
+                        <div>
+                            <label for="invitation-title" class="block text-gray-700 text-sm font-bold mb-2">Título de la Invitación:</label>
+                            <input type="text" id="invitation-title" placeholder="Ej: Invitación Boda Soñada" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 ring-medium-pink" required>
+                        </div>
+                        <div>
+                            <label for="invitation-description" class="block text-gray-700 text-sm font-bold mb-2">Descripción:</label>
+                            <textarea id="invitation-description" placeholder="Breve descripción de la invitación." rows="3" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 ring-medium-pink" required></textarea>
+                        </div>
+                        <div>
+                            <label for="invitation-category" class="block text-gray-700 text-sm font-bold mb-2">Categoría:</label>
+                            <select id="invitation-category" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 ring-medium-pink">
+                                <option value="bodas">Bodas</option>
+                                <option value="xvanos">XV Años</option>
+                                <option value="babyshower">Baby Shower</option>
+                                <option value="bautizos">Bautizos</option>
+                                <option value="cumpleanos">Cumpleaños</option>
+                                <option value="despedidas">Despedidas</option>
+                                <option value="graduaciones">Graduaciones</option>
+                                <option value="empresariales">Empresariales</option>
+                            </select>
+                        </div>
+                        <button id="add-invitation-button" class="btn-primary w-full">Añadir Invitación</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery of Templates Section -->
+        <section id="plantillas" class="py-20 bg-light-pink-bg">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-dark-pastel-pink">Nuestras Plantillas</h2>
+
+                <!-- Category Tabs -->
+                <div class="flex flex-wrap justify-center gap-4 mb-12">
+                    <button class="tab-button bg-dark-pastel-pink text-white px-6 py-3 rounded-full font-semibold hover:bg-darker-pastel-pink transition duration-300 active-tab" data-category="all">Todas</button>
+                    <button class="tab-button bg-dark-pastel-pink text-white px-6 py-3 rounded-full font-semibold hover:bg-darker-pastel-pink transition duration-300" data-category="bodas">Bodas</button>
+                    <button class="tab-button bg-dark-pastel-pink text-white px-6 py-3 rounded-full font-semibold hover:bg-darker-pastel-pink transition duration-300" data-category="xvanos">XV Años</button>
+                    <button class="tab-button bg-dark-pastel-pink text-white px-6 py-3 rounded-full font-semibold hover:bg-darker-pastel-pink transition duration-300" data-category="babyshower">Baby Shower</button>
+                    <button class="tab-button bg-dark-pastel-pink text-white px-6 py-3 rounded-full font-semibold hover:bg-darker-pastel-pink transition duration-300" data-category="bautizos">Bautizos</button>
+                    <button class="tab-button bg-dark-pastel-pink text-white px-6 py-3 rounded-full font-semibold hover:bg-darker-pastel-pink transition duration-300" data-category="cumpleanos">Cumpleaños</button>
+                    <button class="tab-button bg-dark-pastel-pink text-white px-6 py-3 rounded-full font-semibold hover:bg-darker-pastel-pink transition duration-300" data-category="despedidas">Despedidas</button>
+                    <button class="tab-button bg-dark-pastel-pink text-white px-6 py-3 rounded-full font-semibold hover:bg-darker-pastel-pink transition duration-300" data-category="graduaciones">Graduaciones</button>
+                    <button class="tab-button bg-dark-pastel-pink text-white px-6 py-3 rounded-full font-semibold hover:bg-darker-pastel-pink transition duration-300" data-category="empresariales">Empresariales</button>
+                </div>
+
+                <!-- Invitations Grid -->
+                <div id="invitation-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Wedding Invitations -->
+                    <div class="card invitation-item" data-category="bodas">
+                        <img src="https://placehold.co/600x400/FDFD96/D8BFD8?text=Boda+Clásica" alt="Invitación Boda Clásica" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-dark-pastel-pink">Boda Clásica</h3>
+                            <p class="text-gray-600">Elegancia atemporal para tu día especial.</p>
+                        </div>
+                    </div>
+                    <div class="card invitation-item" data-category="bodas">
+                        <img src="https://placehold.co/600x400/FDF2F5/D8BFD8?text=Boda+Boho" alt="Invitación Boda Boho" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-dark-pastel-pink">Boda Boho Chic</h3>
+                            <p class="text-gray-600">Estilo libre y romántico.</p>
+                        </div>
+                    </div>
+                    <!-- XV Años Invitations -->
+                    <div class="card invitation-item" data-category="xvanos">
+                        <img src="https://placehold.co/600x400/D8BFD8/FFFFFF?text=XV+Años+Princesa" alt="Invitación XV Años Princesa" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-dark-pastel-pink">XV Años Princesa</h3>
+                            <p class="text-gray-600">Un cuento de hadas para tu gran día.</p>
+                        </div>
+                    </div>
+                    <div class="card invitation-item" data-category="xvanos">
+                        <img src="https://placehold.co/600x400/FDFD96/D8BFD8?text=XV+Años+Moderna" alt="Invitación XV Años Moderna" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-dark-pastel-pink">XV Años Moderna</h3>
+                            <p class="text-gray-600">Diseño vanguardista y juvenil.</p>
+                        </div>
+                    </div>
+                    <!-- Baby Shower Invitations -->
+                    <div class="card invitation-item" data-category="babyshower">
+                        <img src="https://placehold.co/600x400/FFD1DC/D8BFD8?text=Baby+Shower+Osito" alt="Invitación Baby Shower Osito" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-dark-pastel-pink">Baby Shower Osito</h3>
+                            <p class="text-gray-600">Tierna invitación para la llegada del bebé.</p>
+                        </div>
+                    </div>
+                    <!-- Baptisms Invitations -->
+                    <div class="card invitation-item" data-category="bautizos">
+                        <img src="https://placehold.co/600x400/F0F8FF/D8BFD8?text=Bautizo+Ángel" alt="Invitación Bautizo Ángel" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-dark-pastel-pink">Bautizo Celestial</h3>
+                            <p class="text-gray-600">Un diseño puro y bendecido.</p>
+                        </div>
+                    </div>
+                    <!-- Birthday Invitations -->
+                    <div class="card invitation-item" data-category="cumpleanos">
+                        <img src="https://placehold.co/600x400/FF69B4/FFFFFF?text=Cumpleaños+Fiesta" alt="Invitación Cumpleaños Fiesta" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-dark-pastel-pink">Cumpleaños Divertido</h3>
+                            <p class="text-gray-600">Celebra con alegría y color.</p>
+                        </div>
+                    </div>
+                    <!-- Farewell Invitations -->
+                    <div class="card invitation-item" data-category="despedidas">
+                        <img src="https://placehold.co/600x400/C7A2E0/FFFFFF?text=Despedida+Soltero" alt="Invitación Despedida de Soltero/a" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-dark-pastel-pink">Despedida de Soltero/a</h3>
+                            <p class="text-gray-600">Para una última gran aventura.</p>
+                        </div>
+                    </div>
+                    <!-- Graduation Invitations -->
+                    <div class="card invitation-item" data-category="graduaciones">
+                        <img src="https://placehold.co/600x400/A7D9D9/D8BFD8?text=Graduación+Éxito" alt="Invitación Graduación Éxito" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-dark-pastel-pink">Graduación Éxito</h3>
+                            <p class="text-gray-600">Celebra tus logros con estilo.</p>
+                        </div>
+                    </div>
+                    <!-- Corporate Events Invitations -->
+                    <div class="card invitation-item" data-category="empresariales">
+                        <img src="https://placehold.co/600x400/948C9C/FFFFFF?text=Evento+Empresarial" alt="Invitación Evento Empresarial" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-dark-pastel-pink">Evento Corporativo</h3>
+                            <p class="text-gray-600">Profesionalismo y elegancia para tu empresa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="servicios" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-dark-pastel-pink">Nuestros Servicios Adicionales</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <div class="flex items-start p-6 bg-light-pink-bg rounded-xl shadow-md">
+                        <i class="fas fa-music text-4xl text-light-yellow mr-6"></i>
+                        <div>
+                            <h3 class="text-2xl font-semibold mb-2 text-dark-pastel-pink">Música Ambiental</h3>
+                            <p class="text-gray-700">Añade la banda sonora perfecta a tu invitación con música de fondo.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start p-6 bg-light-pink-bg rounded-xl shadow-md">
+                        <i class="fas fa-clipboard-check text-4xl text-light-yellow mr-6"></i>
+                        <div>
+                            <h3 class="text-2xl font-semibold mb-2 text-dark-pastel-pink">Formulario de Confirmación (RSVP)</h3>
+                            <p class="text-gray-700">Gestiona fácilmente las confirmaciones de asistencia de tus invitados.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start p-6 bg-light-pink-bg rounded-xl shadow-md">
+                        <i class="fas fa-map-marked-alt text-4xl text-light-yellow mr-6"></i>
+                        <div>
+                            <h3 class="text-2xl font-semibold mb-2 text-dark-pastel-pink">Ubicación con Mapa</h3>
+                            <p class="text-gray-700">Integra un mapa interactivo para que tus invitados lleguen sin problemas.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start p-6 bg-light-pink-bg rounded-xl shadow-md">
+                        <i class="fas fa-hourglass-half text-4xl text-light-yellow mr-6"></i>
+                        <div>
+                            <h3 class="text-2xl font-semibold mb-2 text-dark-pastel-pink">Cuenta Regresiva</h3>
+                            <p class="text-gray-700">Genera emoción con un contador de tiempo hasta el evento.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start p-6 bg-light-pink-bg rounded-xl shadow-md">
+                        <i class="fas fa-gift text-4xl text-light-yellow mr-6"></i>
+                        <div>
+                            <h3 class="text-2xl font-semibold mb-2 text-dark-pastel-pink">Lista de Regalos</h3>
+                            <p class="text-gray-700">Facilita a tus invitados la elección de regalos con una lista integrada.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start p-6 bg-light-pink-bg rounded-xl shadow-md">
+                        <i class="fas fa-image text-4xl text-light-yellow mr-6"></i>
+                        <div>
+                            <h3 class="text-2xl font-semibold mb-2 text-dark-pastel-pink">Galería de Fotos</h3>
+                            <p class="text-gray-700">Comparte tus momentos especiales con una galería de imágenes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonios" class="py-20 bg-dark-pastel-pink text-white">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-light-yellow">Lo que Dicen Nuestros Clientes</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-darker-pastel-pink p-8 rounded-xl shadow-lg">
+                        <p class="italic mb-4">"Las invitaciones de Momentos Encantados fueron simplemente perfectas para nuestra boda. Elegantes, fáciles de usar y a nuestros invitados les encantaron. ¡Totalmente recomendados!"</p>
+                        <p class="font-semibold text-light-yellow">- Ana & Luis G.</p>
+                    </div>
+                    <div class="bg-darker-pastel-pink p-8 rounded-xl shadow-lg">
+                        <p class="italic mb-4">"Crearon la invitación de XV años de mi hija tal como la soñamos. El servicio al cliente fue excelente y el resultado superó nuestras expectativas. ¡Gracias!"</p>
+                        <p class="font-semibold text-light-yellow">- María S.</p>
+                    </div>
+                    <div class="bg-darker-pastel-pink p-8 rounded-xl shadow-lg">
+                        <p class="italic mb-4">"Necesitábamos invitaciones rápidas y profesionales para nuestro evento corporativo y Momentos Encantados entregó un diseño impecable en tiempo récord. Muy eficientes."</p>
+                        <p class="font-semibold text-light-yellow">- Carlos R. (CEO Tech Solutions)</p>
+                    </div>
+                    <div class="bg-darker-pastel-pink p-8 rounded-xl shadow-lg">
+                        <p class="italic mb-4">"Desde el baby shower hasta el primer cumpleaños, siempre confío en Momentos Encantados. Sus diseños son siempre adorables y la personalización es fantástica."</p>
+                        <p class="font-semibold text-light-yellow">- Sofía P.</p>
+                    </div>
+                    <div class="bg-darker-pastel-pink p-8 rounded-xl shadow-lg">
+                        <p class="italic mb-4">"La cuenta regresiva y el mapa integrado en nuestra invitación de graduación fueron un éxito. ¡Todos supieron exactamente dónde y cuándo celebrar!"</p>
+                        <p class="font-semibold text-light-yellow">- Equipo de Graduación 2025</p>
+                    </div>
+                    <div class="bg-darker-pastel-pink p-8 rounded-xl shadow-lg">
+                        <p class="italic mb-4">"La atención al detalle y la creatividad en cada diseño son inigualables. Mi despedida de soltera tuvo la invitación más divertida gracias a ellos."</p>
+                        <p class="font-semibold text-light-yellow">- Valeria M.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contacto" class="py-20 bg-light-pink-bg">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-title text-dark-pastel-pink">Contáctanos</h2>
+                <p class="text-xl mb-8 max-w-2xl mx-auto text-gray-700">
+                    ¿Listo para crear la invitación perfecta? Contáctanos para cotizar tu proyecto o resolver cualquier duda.
+                </p>
+
+                <div class="flex flex-col md:flex-row justify-center items-center gap-8">
+                    <!-- WhatsApp Button -->
+                    <a href="https://wa.me/5215512345678" target="_blank" class="btn-primary flex items-center justify-center px-10 py-4 text-xl">
+                        <i class="fab fa-whatsapp text-2xl mr-3"></i> Cotizar vía WhatsApp
+                    </a>
+
+                    <!-- Or Contact Form -->
+                    <div class="w-full md:w-1/2 lg:w-1/3 bg-white p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-semibold mb-6 text-dark-pastel-pink">Envíanos un Mensaje</h3>
+                        <form class="space-y-4">
+                            <div>
+                                <input type="text" placeholder="Tu Nombre" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 ring-medium-pink" required>
+                            </div>
+                            <div>
+                                <input type="email" placeholder="Tu Correo Electrónico" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 ring-medium-pink" required>
+                            </div>
+                            <div>
+                                <textarea placeholder="Tu Mensaje" rows="5" class="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 ring-medium-pink" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary w-full">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-10">
+        <div class="container mx-auto px-6 text-center">
+            <p class="mb-4">&copy; 2025 Momentos Encantados. Todos los derechos reservados.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="text-gray-400 hover:text-light-yellow transition duration-300"><i class="fab fa-facebook-f text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-light-yellow transition duration-300"><i class="fab fa-instagram text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-light-yellow transition duration-300"><i class="fab fa-pinterest-p text-xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Function to display messages (instead of alert)
+        function showMessage(message, isError = false) {
+            const messageBox = document.getElementById('message-box');
+            messageBox.textContent = message;
+            messageBox.classList.remove('error');
+            if (isError) {
+                messageBox.classList.add('error');
+            }
+            messageBox.style.display = 'block';
+            messageBox.style.opacity = '1';
+
+            setTimeout(() => {
+                messageBox.style.opacity = '0';
+                setTimeout(() => {
+                    messageBox.style.display = 'none';
+                }, 500); // Wait for fade out
+            }, 3000); // Display for 3 seconds
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close mobile menu if open
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Gallery filter logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const invitationGrid = document.getElementById('invitation-grid');
+
+            // Store initial invitation items (cloned to avoid re-fetching from DOM on each filter)
+            const initialInvitationItems = Array.from(document.querySelectorAll('.invitation-item'));
+
+            function filterInvitations(category) {
+                // Clear the current grid
+                invitationGrid.innerHTML = '';
+
+                initialInvitationItems.forEach(item => {
+                    if (category === 'all' || item.dataset.category === category) {
+                        invitationGrid.appendChild(item.cloneNode(true)); // Append a clone
+                    }
+                });
+
+                // Also add dynamically added items if they match the category
+                const dynamicItems = Array.from(document.querySelectorAll('.invitation-item.dynamic-added'));
+                dynamicItems.forEach(item => {
+                    if (category === 'all' || item.dataset.category === category) {
+                        invitationGrid.appendChild(item.cloneNode(true)); // Append a clone
+                    }
+                });
+            }
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    tabButtons.forEach(btn => btn.classList.remove('active-tab', 'bg-medium-pink', 'hover:bg-hover-pink', 'text-white'));
+                    tabButtons.forEach(btn => btn.classList.add('bg-dark-pastel-pink', 'hover:bg-darker-pastel-pink', 'text-white'));
+
+                    // Add active class to clicked button
+                    button.classList.add('active-tab', 'bg-medium-pink', 'hover:bg-hover-pink', 'text-white');
+                    button.classList.remove('bg-dark-pastel-pink', 'hover:bg-darker-pastel-pink');
+
+                    const category = button.dataset.category;
+                    filterInvitations(category);
+                });
+            });
+
+            // Trigger click on "Todas" button initially to show all
+            document.querySelector('.tab-button[data-category="all"]').click();
+
+            // Author Panel Logic
+            const addInvitationButton = document.getElementById('add-invitation-button');
+            const invitationUrlInput = document.getElementById('invitation-url');
+            const invitationTitleInput = document.getElementById('invitation-title');
+            const invitationDescriptionInput = document.getElementById('invitation-description');
+            const invitationCategorySelect = document.getElementById('invitation-category');
+
+            addInvitationButton.addEventListener('click', () => {
+                const url = invitationUrlInput.value.trim();
+                const title = invitationTitleInput.value.trim();
+                const description = invitationDescriptionInput.value.trim();
+                const category = invitationCategorySelect.value;
+
+                if (!url || !title || !description) {
+                    showMessage('Por favor, completa todos los campos.', true);
+                    return;
+                }
+
+                // Determine if it's an image or video
+                const isVideo = url.match(/\.(mp4|webm|ogg)$/i);
+
+                // Create new invitation card element
+                const newCard = document.createElement('div');
+                newCard.classList.add('card', 'invitation-item', 'dynamic-added'); // Add dynamic-added class for identification
+                newCard.dataset.category = category;
+
+                let mediaElement;
+                if (isVideo) {
+                    mediaElement = document.createElement('video');
+                    mediaElement.src = url;
+                    mediaElement.controls = true;
+                    mediaElement.autoplay = false; // Don't autoplay
+                    mediaElement.loop = false;
+                    mediaElement.muted = true; // Mute by default
+                    mediaElement.classList.add('w-full', 'h-48', 'object-cover');
+                } else {
+                    mediaElement = document.createElement('img');
+                    mediaElement.src = url;
+                    mediaElement.alt = title;
+                    mediaElement.classList.add('w-full', 'h-48', 'object-cover');
+                    // Add error handling for images
+                    mediaElement.onerror = function() {
+                        this.onerror=null; // Prevent infinite loop if fallback also fails
+                        this.src='https://placehold.co/600x400/CCCCCC/333333?text=Error+Imagen'; // Fallback image
+                        showMessage('No se pudo cargar la imagen. Usando imagen de respaldo.', true);
+                    };
+                }
+
+                newCard.innerHTML = `
+                    ${mediaElement.outerHTML}
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-dark-pastel-pink">${title}</h3>
+                        <p class="text-gray-600">${description}</p>
+                    </div>
+                `;
+
+                // Append the new card to the grid
+                invitationGrid.appendChild(newCard);
+
+                // Add the new item to our internal list for filtering
+                initialInvitationItems.push(newCard); // Add the actual element, not a clone, for live updates
+
+                // Re-apply filter to ensure new item is visible if category matches
+                const currentActiveCategory = document.querySelector('.tab-button.active-tab').dataset.category;
+                filterInvitations(currentActiveCategory);
+
+                // Clear form fields
+                invitationUrlInput.value = '';
+                invitationTitleInput.value = '';
+                invitationDescriptionInput.value = '';
+                invitationCategorySelect.value = 'bodas'; // Reset to default
+
+                showMessage('¡Invitación añadida con éxito!');
+            });
+        });
+    </script>
+</body>
+</html>
