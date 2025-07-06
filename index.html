@@ -6,8 +6,8 @@
     <title>Momentos Encantados - Invitaciones Digitales Personalizadas</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Playfair Display for elegance, Inter for general text -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts: Playfair Display for elegance, Inter for general text, Quicksand for specific elements -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome CDN for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -16,12 +16,12 @@
             overflow-x: hidden; /* Prevent horizontal scrolling */
         }
         h1, h2, h3 {
-            font-family: 'Playfair Display', serif; /* Elegant font for headings */
+            font-family: 'Playfair Display', serif; /* Elegant font for general headings */
         }
 
         /* Custom Colors for the new theme */
-        .text-accent-yellow {
-            color: #FFD700; /* Brighter, more visible yellow for accents (Gold) */
+        .text-white-accent {
+            color: #FFFFFF; /* White for accents */
         }
         .bg-light-pink-bg {
             background-color: #FDF2F5; /* Very light pink for section backgrounds */
@@ -51,11 +51,12 @@
         }
         .section-title {
             @apply text-4xl font-bold text-center mb-12;
+            font-family: 'Playfair Display', serif; /* Ensure general section titles use Playfair */
         }
-        /* Custom style for the Contact section title */
-        .contact-title {
-            @apply text-5xl md:text-6xl font-bold text-center mb-12; /* Larger and more prominent */
-            font-family: 'Playfair Display', serif; /* Ensure it uses the elegant font */
+        /* Custom style for specific section titles (Plantillas, Contacto, and new category sections) */
+        .large-title-quicksand {
+            @apply text-6xl md:text-7xl font-bold text-center mb-12; /* Larger and more prominent */
+            font-family: 'Quicksand', sans-serif; /* Specific font for these titles */
         }
         /* Custom styles for smooth scrolling */
         html {
@@ -77,6 +78,11 @@
         .animate-on-scroll-delay-300 { transition-delay: 0.3s; }
         .animate-on-scroll-delay-400 { transition-delay: 0.4s; }
         .animate-on-scroll-delay-500 { transition-delay: 0.5s; }
+
+        /* Category buttons styling */
+        .tab-button {
+            @apply px-8 py-4 text-lg; /* Slightly larger buttons */
+        }
     </style>
 </head>
 <body class="bg-white text-gray-800">
@@ -84,13 +90,13 @@
     <!-- Header / Navbar -->
     <header class="bg-main-pink text-white shadow-lg fixed w-full z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-3xl font-bold text-accent-yellow">Momentos Encantados</a>
+            <a href="#" class="text-3xl font-bold text-white-accent" style="font-family: 'Quicksand', sans-serif;">Momentos Encantados</a>
             <div class="hidden md:flex space-x-8">
-                <a href="#inicio" class="hover:text-accent-yellow transition duration-300">Inicio</a>
-                <a href="#plantillas" class="hover:text-accent-yellow transition duration-300">Plantillas</a>
-                <a href="#servicios" class="hover:text-accent-yellow transition duration-300">Servicios</a>
-                <a href="#testimonios" class="hover:text-accent-yellow transition duration-300">Testimonios</a>
-                <a href="#contacto" class="hover:text-accent-yellow transition duration-300">Contacto</a>
+                <a href="#inicio" class="hover:text-white-accent transition duration-300">Inicio</a>
+                <a href="#plantillas" class="hover:text-white-accent transition duration-300">Plantillas</a>
+                <a href="#servicios" class="hover:text-white-accent transition duration-300">Servicios</a>
+                <a href="#testimonios" class="hover:text-white-accent transition duration-300">Testimonios</a>
+                <a href="#contacto" class="hover:text-white-accent transition duration-300">Contacto</a>
             </div>
             <!-- Mobile menu button -->
             <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
@@ -123,46 +129,103 @@
             </div>
         </section>
 
-        <!-- Gallery of Templates Section -->
+        <!-- Main Gallery Overview Section -->
         <section id="plantillas" class="py-20 bg-light-pink-bg">
             <div class="container mx-auto px-6">
-                <h2 class="section-title text-main-pink animate-on-scroll">Nuestras Plantillas</h2>
+                <h2 class="large-title-quicksand text-main-pink animate-on-scroll">Nuestras Plantillas</h2>
+                <p class="text-xl text-center mb-12 animate-on-scroll animate-on-scroll-delay-100">
+                    Explora nuestra amplia colección de invitaciones digitales por categoría.
+                    Haz clic en una categoría para ver más ejemplos.
+                </p>
 
-                <!-- Category Tabs -->
-                <div class="flex flex-wrap justify-center gap-4 mb-12 animate-on-scroll animate-on-scroll-delay-200">
-                    <button class="tab-button bg-main-pink text-white px-6 py-3 rounded-full font-semibold hover:bg-darker-pink transition duration-300 active-tab" data-category="all">Todas</button>
-                    <button class="tab-button bg-main-pink text-white px-6 py-3 rounded-full font-semibold hover:bg-darker-pink transition duration-300" data-category="bodas">Bodas</button>
-                    <button class="tab-button bg-main-pink text-white px-6 py-3 rounded-full font-semibold hover:bg-darker-pink transition duration-300" data-category="xvanos">XV Años</button>
-                    <button class="tab-button bg-main-pink text-white px-6 py-3 rounded-full font-semibold hover:bg-darker-pink transition duration-300" data-category="babyshower">Baby Shower</button>
-                    <button class="tab-button bg-main-pink text-white px-6 py-3 rounded-full font-semibold hover:bg-darker-pink transition duration-300" data-category="bautizos">Bautizos</button>
-                    <button class="tab-button bg-main-pink text-white px-6 py-3 rounded-full font-semibold hover:bg-darker-pink transition duration-300" data-category="cumpleanos">Cumpleaños</button>
-                    <button class="tab-button bg-main-pink text-white px-6 py-3 rounded-full font-semibold hover:bg-darker-pink transition duration-300" data-category="despedidas">Despedidas</button>
-                    <button class="tab-button bg-main-pink text-white px-6 py-3 rounded-full font-semibold hover:bg-darker-pink transition duration-300" data-category="graduaciones">Graduaciones</button>
-                    <button class="tab-button bg-main-pink text-white px-6 py-3 rounded-full font-semibold hover:bg-darker-pink transition duration-300" data-category="empresariales">Empresariales</button>
+                <!-- Category Navigation Buttons -->
+                <div class="flex flex-wrap justify-around gap-4 mb-12 animate-on-scroll animate-on-scroll-delay-200">
+                    <a href="#bodas-gallery" class="tab-button bg-main-pink text-white px-8 py-4 rounded-full font-semibold hover:bg-darker-pink transition duration-300">Bodas</a>
+                    <a href="#xvanos-gallery" class="tab-button bg-main-pink text-white px-8 py-4 rounded-full font-semibold hover:bg-darker-pink transition duration-300">XV Años</a>
+                    <a href="#babyshower-gallery" class="tab-button bg-main-pink text-white px-8 py-4 rounded-full font-semibold hover:bg-darker-pink transition duration-300">Baby Shower</a>
+                    <a href="#bautizos-gallery" class="tab-button bg-main-pink text-white px-8 py-4 rounded-full font-semibold hover:bg-darker-pink transition duration-300">Bautizos</a>
+                    <a href="#cumpleanos-gallery" class="tab-button bg-main-pink text-white px-8 py-4 rounded-full font-semibold hover:bg-darker-pink transition duration-300">Cumpleaños</a>
+                    <a href="#despedidas-gallery" class="tab-button bg-main-pink text-white px-8 py-4 rounded-full font-semibold hover:bg-darker-pink transition duration-300">Despedidas</a>
+                    <a href="#graduaciones-gallery" class="tab-button bg-main-pink text-white px-8 py-4 rounded-full font-semibold hover:bg-darker-pink transition duration-300">Graduaciones</a>
+                    <a href="#empresariales-gallery" class="tab-button bg-main-pink text-white px-8 py-4 rounded-full font-semibold hover:bg-darker-pink transition duration-300">Empresariales</a>
                 </div>
 
-                <!-- Invitations Grid -->
-                <div id="invitation-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Grid for All Invitations Overview -->
+                <div id="all-invitations-overview-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!--
-                        PARA AÑADIR TUS PROPIAS INVITACIONES (IMAGEN O VIDEO):
-                        1. Copia y pega uno de los bloques 'div' de 'card' a continuación.
-                        2. Si es una IMAGEN:
-                           - Reemplaza 'src' de la etiqueta 'img' con la URL de tu imagen.
-                           - Reemplaza 'alt' con una descripción corta de tu imagen.
-                           - Asegúrate de que 'data-category' coincida con una de las categorías existentes
-                             (ej: "bodas", "xvanos", "babyshower", "bautizos", "cumpleanos", "despedidas", "graduaciones", "empresariales").
-                           - Actualiza el título (h3) y la descripción (p).
-                        3. Si es un VIDEO:
-                           - Reemplaza la etiqueta 'img' con una etiqueta 'video'.
-                           - Establece 'src' de la etiqueta 'video' con la URL de tu video (ej: .mp4, .webm, .ogg).
-                           - Añade 'controls', 'autoplay="false"', 'loop="false"', 'muted="true"' si lo deseas.
-                           - Asegúrate de que 'data-category' coincida con una de las categorías existentes.
-                           - Actualiza el título (h3) y la descripción (p).
+                        Ejemplos de invitaciones de diferentes categorías para la vista principal.
+                        Puedes reemplazar estas imágenes y textos con tus propias invitaciones.
                     -->
+                    <div class="card animate-on-scroll" data-category="bodas">
+                        <img src="https://placehold.co/600x400/FFFFFF/DD8EA6?text=Boda+Elegante" alt="Invitación Boda Elegante" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Boda Sueño Floral</h3>
+                            <p class="text-gray-600">Diseño clásico con toques modernos.</p>
+                        </div>
+                    </div>
+                    <div class="card animate-on-scroll animate-on-scroll-delay-100" data-category="xvanos">
+                        <img src="https://placehold.co/600x400/DD8EA6/FFFFFF?text=XV+Años+Mágico" alt="Invitación XV Años Mágico" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">XV Años Encantados</h3>
+                            <p class="text-gray-600">Para una celebración inolvidable.</p>
+                        </div>
+                    </div>
+                    <div class="card animate-on-scroll animate-on-scroll-delay-200" data-category="babyshower">
+                        <img src="https://placehold.co/600x400/FFD1DC/DD8EA6?text=Baby+Shower+Dulce" alt="Invitación Baby Shower Dulce" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Baby Shower Cigueña</h3>
+                            <p class="text-gray-600">La más tierna bienvenida para el bebé.</p>
+                        </div>
+                    </div>
+                    <div class="card animate-on-scroll" data-category="bautizos">
+                        <img src="https://placehold.co/600x400/F0F8FF/DD8EA6?text=Bautizo+Paz" alt="Invitación Bautizo Paz" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Bautizo Divino</h3>
+                            <p class="text-gray-600">Un diseño puro para un momento sagrado.</p>
+                        </div>
+                    </div>
+                    <div class="card animate-on-scroll animate-on-scroll-delay-100" data-category="cumpleanos">
+                        <img src="https://placehold.co/600x400/FF69B4/FFFFFF?text=Cumpleaños+Feliz" alt="Invitación Cumpleaños Feliz" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Cumpleaños Festivo</h3>
+                            <p class="text-gray-600">Celebra la vida con alegría y color.</p>
+                        </div>
+                    </div>
+                    <div class="card animate-on-scroll animate-on-scroll-delay-200" data-category="despedidas">
+                        <img src="https://placehold.co/600x400/C7A2E0/FFFFFF?text=Despedida+Única" alt="Invitación Despedida Única" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Despedida de Amigos</h3>
+                            <p class="text-gray-600">Un adiós con mucho estilo y diversión.</p>
+                        </div>
+                    </div>
+                    <div class="card animate-on-scroll" data-category="graduaciones">
+                        <img src="https://placehold.co/600x400/A7D9D9/DD8EA6?text=Graduación+Logro" alt="Invitación Graduación Logro" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Graduación Triunfo</h3>
+                            <p class="text-gray-600">Diseño elegante para celebrar el éxito.</p>
+                        </div>
+                    </div>
+                    <div class="card animate-on-scroll animate-on-scroll-delay-100" data-category="empresariales">
+                        <img src="https://placehold.co/600x400/948C9C/FFFFFF?text=Evento+Profesional" alt="Invitación Evento Profesional" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Evento Corporativo</h3>
+                            <p class="text-gray-600">Profesionalismo y elegancia para tu empresa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                    <!-- Wedding Invitations -->
+        <!-- Dedicated Category Sections -->
+
+        <!-- Bodas Gallery -->
+        <section id="bodas-gallery" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="large-title-quicksand text-main-pink animate-on-scroll">Invitaciones para Bodas</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Wedding Invitations Examples (more examples) -->
                     <div class="card invitation-item animate-on-scroll" data-category="bodas">
-                        <img src="https://placehold.co/600x400/FFD700/DD8EA6?text=Boda+Clásica" alt="Invitación Boda Clásica" class="w-full h-48 object-cover">
+                        <img src="https://placehold.co/600x400/FFFFFF/DD8EA6?text=Boda+Clásica" alt="Invitación Boda Clásica" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-semibold mb-2 text-main-pink">Boda Clásica</h3>
                             <p class="text-gray-600">Elegancia atemporal para tu día especial.</p>
@@ -175,38 +238,162 @@
                             <p class="text-gray-600">Estilo libre y romántico.</p>
                         </div>
                     </div>
-                    <!-- XV Años Invitations -->
-                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-200" data-category="xvanos">
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-200" data-category="bodas">
+                        <img src="https://placehold.co/600x400/DD8EA6/FFFFFF?text=Boda+Minimalista" alt="Invitación Boda Minimalista" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Boda Minimalista</h3>
+                            <p class="text-gray-600">Diseño limpio y sofisticado.</p>
+                        </div>
+                    </div>
+                    <div class="card invitation-item animate-on-scroll" data-category="bodas">
+                        <img src="https://placehold.co/600x400/C27A92/FFFFFF?text=Boda+Rústica" alt="Invitación Boda Rústica" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Boda Rústica</h3>
+                            <p class="text-gray-600">Encanto natural y detalles campestres.</p>
+                        </div>
+                    </div>
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-100" data-category="bodas">
+                        <img src="https://placehold.co/600x400/FFB3C6/FFFFFF?text=Boda+Glamour" alt="Invitación Boda Glamour" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Boda Glamour</h3>
+                            <p class="text-gray-600">Brillo y sofisticación para tu gran día.</p>
+                        </div>
+                    </div>
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-200" data-category="bodas">
+                        <img src="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Boda+Vintage" alt="Invitación Boda Vintage" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Boda Vintage</h3>
+                            <p class="text-gray-600">Un toque de nostalgia y romance.</p>
+                        </div>
+                    </div>
+                    <!-- Add more wedding examples here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- XV Años Gallery -->
+        <section id="xvanos-gallery" class="py-20 bg-light-pink-bg">
+            <div class="container mx-auto px-6">
+                <h2 class="large-title-quicksand text-main-pink animate-on-scroll">Invitaciones para XV Años</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- XV Años Invitations Examples (more examples) -->
+                    <div class="card invitation-item animate-on-scroll" data-category="xvanos">
                         <img src="https://placehold.co/600x400/DD8EA6/FFFFFF?text=XV+Años+Princesa" alt="Invitación XV Años Princesa" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-semibold mb-2 text-main-pink">XV Años Princesa</h3>
                             <p class="text-gray-600">Un cuento de hadas para tu gran día.</p>
                         </div>
                     </div>
-                    <div class="card invitation-item animate-on-scroll" data-category="xvanos">
-                        <img src="https://placehold.co/600x400/FFD700/DD8EA6?text=XV+Años+Moderna" alt="Invitación XV Años Moderna" class="w-full h-48 object-cover">
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-100" data-category="xvanos">
+                        <img src="https://placehold.co/600x400/FFFFFF/DD8EA6?text=XV+Años+Moderna" alt="Invitación XV Años Moderna" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-semibold mb-2 text-main-pink">XV Años Moderna</h3>
                             <p class="text-gray-600">Diseño vanguardista y juvenil.</p>
                         </div>
                     </div>
-                    <!-- Baby Shower Invitations -->
-                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-100" data-category="babyshower">
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-200" data-category="xvanos">
+                        <img src="https://placehold.co/600x400/FFB3C6/FFFFFF?text=XV+Años+Floral" alt="Invitación XV Años Floral" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">XV Años Floral</h3>
+                            <p class="text-gray-600">Delicados diseños con motivos florales.</p>
+                        </div>
+                    </div>
+                    <div class="card invitation-item animate-on-scroll" data-category="xvanos">
+                        <img src="https://placehold.co/600x400/C27A92/FFFFFF?text=XV+Años+Temática" alt="Invitación XV Años Temática" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">XV Años Temática</h3>
+                            <p class="text-gray-600">Diseños personalizados según tu tema favorito.</p>
+                        </div>
+                    </div>
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-100" data-category="xvanos">
+                        <img src="https://placehold.co/600x400/FDF2F5/DD8EA6?text=XV+Años+Elegante" alt="Invitación XV Años Elegante" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">XV Años Elegante</h3>
+                            <p class="text-gray-600">Sofisticación y glamour para tu celebración.</p>
+                        </div>
+                    </div>
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-200" data-category="xvanos">
+                        <img src="https://placehold.co/600x400/DD8EA6/FFFFFF?text=XV+Años+Colorida" alt="Invitación XV Años Colorida" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">XV Años Colorida</h3>
+                            <p class="text-gray-600">Explosión de color y alegría.</p>
+                        </div>
+                    </div>
+                    <!-- Add more XV Años examples here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Baby Shower Gallery -->
+        <section id="babyshower-gallery" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="large-title-quicksand text-main-pink animate-on-scroll">Invitaciones para Baby Shower</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Baby Shower Invitations Examples (more examples) -->
+                    <div class="card invitation-item animate-on-scroll" data-category="babyshower">
                         <img src="https://placehold.co/600x400/FFD1DC/DD8EA6?text=Baby+Shower+Osito" alt="Invitación Baby Shower Osito" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-semibold mb-2 text-main-pink">Baby Shower Osito</h3>
                             <p class="text-gray-600">Tierna invitación para la llegada del bebé.</p>
                         </div>
                     </div>
-                    <!-- Baptisms Invitations -->
-                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-200" data-category="bautizos">
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-100" data-category="babyshower">
+                        <img src="https://placehold.co/600x400/ADD8E6/FFFFFF?text=Baby+Shower+Estrellas" alt="Invitación Baby Shower Estrellas" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Baby Shower Estrellas</h3>
+                            <p class="text-gray-600">Un diseño mágico para tu pequeño.</p>
+                        </div>
+                    </div>
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-200" data-category="babyshower">
+                        <img src="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Baby+Shower+Animales" alt="Invitación Baby Shower Animales" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Baby Shower Animales</h3>
+                            <p class="text-gray-600">Divertidos diseños con animales de la jungla.</p>
+                        </div>
+                    </div>
+                    <!-- Add more Baby Shower examples here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Bautizos Gallery -->
+        <section id="bautizos-gallery" class="py-20 bg-light-pink-bg">
+            <div class="container mx-auto px-6">
+                <h2 class="large-title-quicksand text-main-pink animate-on-scroll">Invitaciones para Bautizos</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Bautizos Invitations Examples (more examples) -->
+                    <div class="card invitation-item animate-on-scroll" data-category="bautizos">
                         <img src="https://placehold.co/600x400/F0F8FF/DD8EA6?text=Bautizo+Ángel" alt="Invitación Bautizo Ángel" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-semibold mb-2 text-main-pink">Bautizo Celestial</h3>
                             <p class="text-gray-600">Un diseño puro y bendecido.</p>
                         </div>
                     </div>
-                    <!-- Birthday Invitations -->
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-100" data-category="bautizos">
+                        <img src="https://placehold.co/600x400/D3D3D3/DD8EA6?text=Bautizo+Cruz" alt="Invitación Bautizo Cruz" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Bautizo Clásico</h3>
+                            <p class="text-gray-600">Diseño tradicional y elegante.</p>
+                        </div>
+                    </div>
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-200" data-category="bautizos">
+                        <img src="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Bautizo+Flores" alt="Invitación Bautizo Flores" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Bautizo Floral</h3>
+                            <p class="text-gray-600">Delicados detalles florales para la ocasión.</p>
+                        </div>
+                    </div>
+                    <!-- Add more Bautizos examples here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Cumpleaños Gallery -->
+        <section id="cumpleanos-gallery" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="large-title-quicksand text-main-pink animate-on-scroll">Invitaciones para Cumpleaños</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Cumpleaños Invitations Examples (more examples) -->
                     <div class="card invitation-item animate-on-scroll" data-category="cumpleanos">
                         <img src="https://placehold.co/600x400/FF69B4/FFFFFF?text=Cumpleaños+Fiesta" alt="Invitación Cumpleaños Fiesta" class="w-full h-48 object-cover">
                         <div class="p-6">
@@ -214,23 +401,95 @@
                             <p class="text-gray-600">Celebra con alegría y color.</p>
                         </div>
                     </div>
-                    <!-- Farewell Invitations -->
-                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-100" data-category="despedidas">
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-100" data-category="cumpleanos">
+                        <img src="https://placehold.co/600x400/ADD8E6/DD8EA6?text=Cumpleaños+Niños" alt="Invitación Cumpleaños Niños" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Cumpleaños Infantil</h3>
+                            <p class="text-gray-600">Diseños mágicos para los más pequeños.</p>
+                        </div>
+                    </div>
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-200" data-category="cumpleanos">
+                        <img src="https://placehold.co/600x400/FFD700/DD8EA6?text=Cumpleaños+Adultos" alt="Invitación Cumpleaños Adultos" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Cumpleaños Adultos</h3>
+                            <p class="text-gray-600">Estilo y elegancia para cualquier edad.</p>
+                        </div>
+                    </div>
+                    <!-- Add more Cumpleaños examples here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Despedidas Gallery -->
+        <section id="despedidas-gallery" class="py-20 bg-light-pink-bg">
+            <div class="container mx-auto px-6">
+                <h2 class="large-title-quicksand text-main-pink animate-on-scroll">Invitaciones para Despedidas</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Despedidas Invitations Examples (more examples) -->
+                    <div class="card invitation-item animate-on-scroll" data-category="despedidas">
                         <img src="https://placehold.co/600x400/C7A2E0/FFFFFF?text=Despedida+Soltero" alt="Invitación Despedida de Soltero/a" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-semibold mb-2 text-main-pink">Despedida de Soltero/a</h3>
                             <p class="text-gray-600">Para una última gran aventura.</p>
                         </div>
                     </div>
-                    <!-- Graduation Invitations -->
-                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-200" data-category="graduaciones">
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-100" data-category="despedidas">
+                        <img src="https://placehold.co/600x400/FFB3C6/DD8EA6?text=Despedida+Amigos" alt="Invitación Despedida Amigos" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Despedida de Amigos</h3>
+                            <p class="text-gray-600">Celebra la amistad con un diseño único.</p>
+                        </div>
+                    </div>
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-200" data-category="despedidas">
+                        <img src="https://placehold.co/600x400/DD8EA6/FFFFFF?text=Despedida+Viaje" alt="Invitación Despedida Viaje" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Despedida de Viaje</h3>
+                            <p class="text-gray-600">Para quienes emprenden nuevas aventuras.</p>
+                        </div>
+                    </div>
+                    <!-- Add more Despedidas examples here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Graduaciones Gallery -->
+        <section id="graduaciones-gallery" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="large-title-quicksand text-main-pink animate-on-scroll">Invitaciones para Graduaciones</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Graduaciones Invitations Examples (more examples) -->
+                    <div class="card invitation-item animate-on-scroll" data-category="graduaciones">
                         <img src="https://placehold.co/600x400/A7D9D9/DD8EA6?text=Graduación+Éxito" alt="Invitación Graduación Éxito" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-semibold mb-2 text-main-pink">Graduación Éxito</h3>
                             <p class="text-gray-600">Celebra tus logros con estilo.</p>
                         </div>
                     </div>
-                    <!-- Corporate Events Invitations -->
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-100" data-category="graduaciones">
+                        <img src="https://placehold.co/600x400/C27A92/FFFFFF?text=Graduación+Elegante" alt="Invitación Graduación Elegante" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Graduación Elegante</h3>
+                            <p class="text-gray-600">Diseño sofisticado para un gran momento.</p>
+                        </div>
+                    </div>
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-200" data-category="graduaciones">
+                        <img src="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Graduación+Moderna" alt="Invitación Graduación Moderna" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Graduación Moderna</h3>
+                            <p class="text-gray-600">Diseños contemporáneos y vibrantes.</p>
+                        </div>
+                    </div>
+                    <!-- Add more Graduaciones examples here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Empresariales Gallery -->
+        <section id="empresariales-gallery" class="py-20 bg-light-pink-bg">
+            <div class="container mx-auto px-6">
+                <h2 class="large-title-quicksand text-main-pink animate-on-scroll">Invitaciones para Eventos Empresariales</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Empresariales Invitations Examples (more examples) -->
                     <div class="card invitation-item animate-on-scroll" data-category="empresariales">
                         <img src="https://placehold.co/600x400/948C9C/FFFFFF?text=Evento+Empresarial" alt="Invitación Evento Empresarial" class="w-full h-48 object-cover">
                         <div class="p-6">
@@ -238,9 +497,25 @@
                             <p class="text-gray-600">Profesionalismo y elegancia para tu empresa.</p>
                         </div>
                     </div>
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-100" data-category="empresariales">
+                        <img src="https://placehold.co/600x400/C27A92/FFFFFF?text=Conferencia" alt="Invitación Conferencia" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Conferencia</h3>
+                            <p class="text-gray-600">Diseños formales para eventos profesionales.</p>
+                        </div>
+                    </div>
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-200" data-category="empresariales">
+                        <img src="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Lanzamiento" alt="Invitación Lanzamiento Producto" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Lanzamiento de Producto</h3>
+                            <p class="text-gray-600">Impacta con una invitación moderna.</p>
+                        </div>
+                    </div>
+                    <!-- Add more Empresariales examples here -->
                 </div>
             </div>
         </section>
+
 
         <!-- Services Section -->
         <section id="servicios" class="py-20 bg-white">
@@ -248,42 +523,42 @@
                 <h2 class="section-title text-main-pink animate-on-scroll">Nuestros Servicios Adicionales</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                     <div class="flex items-start p-6 bg-light-pink-bg rounded-xl shadow-md animate-on-scroll">
-                        <i class="fas fa-music text-4xl text-accent-yellow mr-6"></i>
+                        <i class="fas fa-music text-4xl text-white-accent mr-6"></i>
                         <div>
                             <h3 class="text-2xl font-semibold mb-2 text-main-pink">Música Ambiental</h3>
                             <p class="text-gray-700">Añade la banda sonora perfecta a tu invitación con música de fondo.</p>
                         </div>
                     </div>
                     <div class="flex items-start p-6 bg-light-pink-bg rounded-xl shadow-md animate-on-scroll animate-on-scroll-delay-100">
-                        <i class="fas fa-clipboard-check text-4xl text-accent-yellow mr-6"></i>
+                        <i class="fas fa-clipboard-check text-4xl text-white-accent mr-6"></i>
                         <div>
                             <h3 class="text-2xl font-semibold mb-2 text-main-pink">Formulario de Confirmación (RSVP)</h3>
                             <p class="text-gray-700">Gestiona fácilmente las confirmaciones de asistencia de tus invitados.</p>
                         </div>
                     </div>
                     <div class="flex items-start p-6 bg-light-pink-bg rounded-xl shadow-md animate-on-scroll animate-on-scroll-delay-200">
-                        <i class="fas fa-map-marked-alt text-4xl text-accent-yellow mr-6"></i>
+                        <i class="fas fa-map-marked-alt text-4xl text-white-accent mr-6"></i>
                         <div>
                             <h3 class="text-2xl font-semibold mb-2 text-main-pink">Ubicación con Mapa</h3>
                             <p class="text-gray-700">Integra un mapa interactivo para que tus invitados lleguen sin problemas.</p>
                         </div>
                     </div>
                     <div class="flex items-start p-6 bg-light-pink-bg rounded-xl shadow-md animate-on-scroll">
-                        <i class="fas fa-hourglass-half text-4xl text-accent-yellow mr-6"></i>
+                        <i class="fas fa-hourglass-half text-4xl text-main-pink mr-6"></i> <!-- Changed to text-main-pink -->
                         <div>
                             <h3 class="text-2xl font-semibold mb-2 text-main-pink">Cuenta Regresiva</h3>
                             <p class="text-gray-700">Genera emoción con un contador de tiempo hasta el evento.</p>
                         </div>
                     </div>
                     <div class="flex items-start p-6 bg-light-pink-bg rounded-xl shadow-md animate-on-scroll animate-on-scroll-delay-100">
-                        <i class="fas fa-gift text-4xl text-accent-yellow mr-6"></i>
+                        <i class="fas fa-gift text-4xl text-main-pink mr-6"></i> <!-- Changed to text-main-pink -->
                         <div>
                             <h3 class="text-2xl font-semibold mb-2 text-main-pink">Lista de Regalos</h3>
                             <p class="text-gray-700">Facilita a tus invitados la elección de regalos con una lista integrada.</p>
                         </div>
                     </div>
                     <div class="flex items-start p-6 bg-light-pink-bg rounded-xl shadow-md animate-on-scroll animate-on-scroll-delay-200">
-                        <i class="fas fa-image text-4xl text-accent-yellow mr-6"></i>
+                        <i class="fas fa-image text-4xl text-white-accent mr-6"></i>
                         <div>
                             <h3 class="text-2xl font-semibold mb-2 text-main-pink">Galería de Fotos</h3>
                             <p class="text-gray-700">Comparte tus momentos especiales con una galería de imágenes.</p>
@@ -296,31 +571,31 @@
         <!-- Testimonials Section -->
         <section id="testimonios" class="py-20 bg-main-pink text-white">
             <div class="container mx-auto px-6">
-                <h2 class="section-title text-accent-yellow animate-on-scroll">Lo que Dicen Nuestros Clientes</h2>
+                <h2 class="section-title text-white-accent animate-on-scroll">Lo que Dicen Nuestros Clientes</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="bg-darker-pink p-8 rounded-xl shadow-lg animate-on-scroll">
                         <p class="italic mb-4">"Las invitaciones de Momentos Encantados fueron simplemente perfectas para nuestra boda. Elegantes, fáciles de usar y a nuestros invitados les encantaron. ¡Totalmente recomendados!"</p>
-                        <p class="font-semibold text-accent-yellow">- Ana & Luis G.</p>
+                        <p class="font-semibold text-white-accent">- Ana & Luis G.</p>
                     </div>
                     <div class="bg-darker-pink p-8 rounded-xl shadow-lg animate-on-scroll animate-on-scroll-delay-100">
                         <p class="italic mb-4">"Crearon la invitación de XV años de mi hija tal como la soñamos. El servicio al cliente fue excelente y el resultado superó nuestras expectativas. ¡Gracias!"</p>
-                        <p class="font-semibold text-accent-yellow">- María S.</p>
+                        <p class="font-semibold text-white-accent">- María S.</p>
                     </div>
                     <div class="bg-darker-pink p-8 rounded-xl shadow-lg animate-on-scroll animate-on-scroll-delay-200">
                         <p class="italic mb-4">"Necesitábamos invitaciones rápidas y profesionales para nuestro evento corporativo y Momentos Encantados entregó un diseño impecable en tiempo récord. Muy eficientes."</p>
-                        <p class="font-semibold text-accent-yellow">- Carlos R. (CEO Tech Solutions)</p>
+                        <p class="font-semibold text-white-accent">- Carlos R. (CEO Tech Solutions)</p>
                     </div>
                     <div class="bg-darker-pink p-8 rounded-xl shadow-lg animate-on-scroll">
                         <p class="italic mb-4">"Desde el baby shower hasta el primer cumpleaños, siempre confío en Momentos Encantados. Sus diseños son siempre adorables y la personalización es fantástica."</p>
-                        <p class="font-semibold text-accent-yellow">- Sofía P.</p>
+                        <p class="font-semibold text-white-accent">- Sofía P.</p>
                     </div>
                     <div class="bg-darker-pink p-8 rounded-xl shadow-lg animate-on-scroll animate-on-scroll-delay-100">
                         <p class="italic mb-4">"La cuenta regresiva y el mapa integrado en nuestra invitación de graduación fueron un éxito. ¡Todos supieron exactamente dónde y cuándo celebrar!"</p>
-                        <p class="font-semibold text-accent-yellow">- Equipo de Graduación 2025</p>
+                        <p class="font-semibold text-white-accent">- Equipo de Graduación 2025</p>
                     </div>
                     <div class="bg-darker-pink p-8 rounded-xl shadow-lg animate-on-scroll animate-on-scroll-delay-200">
                         <p class="italic mb-4">"La atención al detalle y la creatividad en cada diseño son inigualables. Mi despedida de soltera tuvo la invitación más divertida gracias a ellos."</p>
-                        <p class="font-semibold text-accent-yellow">- Valeria M.</p>
+                        <p class="font-semibold text-white-accent">- Valeria M.</p>
                     </div>
                 </div>
             </div>
@@ -329,7 +604,7 @@
         <!-- Contact Section -->
         <section id="contacto" class="py-20 bg-light-pink-bg">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="contact-title text-main-pink animate-on-scroll">Contáctanos</h2>
+                <h2 class="large-title-quicksand text-main-pink animate-on-scroll">Contáctanos</h2>
                 <p class="text-xl mb-8 max-w-2xl mx-auto text-gray-700 animate-on-scroll animate-on-scroll-delay-200">
                     ¿Listo para crear la invitación perfecta? Contáctanos directamente por WhatsApp.
                 </p>
@@ -350,9 +625,9 @@
         <div class="container mx-auto px-6 text-center">
             <p class="mb-4">&copy; 2025 Momentos Encantados. Todos los derechos reservados.</p>
             <div class="flex justify-center space-x-6">
-                <a href="#" class="text-gray-400 hover:text-accent-yellow transition duration-300"><i class="fab fa-facebook-f text-xl"></i></a>
-                <a href="#" class="text-gray-400 hover:text-accent-yellow transition duration-300"><i class="fab fa-instagram text-xl"></i></a>
-                <a href="#" class="text-gray-400 hover:text-accent-yellow transition duration-300"><i class="fab fa-pinterest-p text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white-accent transition duration-300"><i class="fab fa-facebook-f text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white-accent transition duration-300"><i class="fab fa-instagram text-xl"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white-accent transition duration-300"><i class="fab fa-pinterest-p text-xl"></i></a>
             </div>
         </div>
     </footer>
@@ -378,52 +653,8 @@
             document.getElementById('mobile-menu').classList.toggle('hidden');
         });
 
-        // Gallery filter logic
+        // Intersection Observer for scroll animations
         document.addEventListener('DOMContentLoaded', () => {
-            const tabButtons = document.querySelectorAll('.tab-button');
-            const invitationGrid = document.getElementById('invitation-grid');
-
-            // Store initial invitation items (cloned to avoid re-fetching from DOM on each filter)
-            const allInvitationItems = Array.from(document.querySelectorAll('.invitation-item'));
-
-            function filterInvitations(category) {
-                // Clear the current grid
-                invitationGrid.innerHTML = '';
-
-                // Append only the items that match the selected category
-                let delay = 0; // Reset delay for each filter operation
-                allInvitationItems.forEach(item => {
-                    if (category === 'all' || item.dataset.category === category) {
-                        const clonedItem = item.cloneNode(true);
-                        // Remove animation classes if already present, then re-add for re-triggering
-                        clonedItem.classList.remove('fade-in-visible');
-                        clonedItem.style.transitionDelay = `${delay}s`; // Apply staggered delay
-                        invitationGrid.appendChild(clonedItem);
-                        // Use a timeout to re-add the visible class after the element is in the DOM
-                        setTimeout(() => {
-                            clonedItem.classList.add('fade-in-visible');
-                        }, 50); // Small delay to allow browser to render before animating
-                        delay += 0.1; // Increment delay for next item
-                    }
-                });
-            }
-
-            tabButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    // Remove active class from all buttons
-                    tabButtons.forEach(btn => btn.classList.remove('active-tab', 'bg-button-pink', 'hover:bg-button-hover-pink', 'text-white'));
-                    tabButtons.forEach(btn => btn.classList.add('bg-main-pink', 'hover:bg-darker-pink', 'text-white'));
-
-                    // Add active class to clicked button
-                    button.classList.add('active-tab', 'bg-button-pink', 'hover:bg-button-hover-pink', 'text-white');
-                    button.classList.remove('bg-main-pink', 'hover:bg-darker-pink');
-
-                    const category = button.dataset.category;
-                    filterInvitations(category);
-                });
-            });
-
-            // Intersection Observer for scroll animations
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -443,9 +674,6 @@
             document.querySelectorAll('.animate-on-scroll').forEach(element => {
                 observer.observe(element);
             });
-
-            // Initial filter to apply animations to visible items on load
-            document.querySelector('.tab-button[data-category="all"]').click();
         });
     </script>
 </body>
