@@ -165,6 +165,28 @@
                 width: calc(33.3333% - 0.6666rem); /* 3 cards per row with gap */
             }
         }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366; /* WhatsApp green */
+            color: white;
+            border-radius: 50%;
+            padding: 15px;
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            background-color: #1DA851; /* Darker green on hover */
+            transform: scale(1.1);
+        }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
@@ -312,9 +334,9 @@
                     <!-- Existing video for Bodas -->
                     <div class="card invitation-item animate-on-scroll" data-category="bodas">
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/b1%20verde.mp4"
-                                   poster="https://placehold.co/600x400/DD8EA6/FFFFFF?text=Boda+Verde+Video"
-                                   controls autoplay="false" loop="false" muted="true"
-                                   class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                poster="https://placehold.co/600x400/DD8EA6/FFFFFF?text=Boda+Verde+Video"
+                                controls autoplay="false" loop="false" muted="true"
+                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -325,9 +347,9 @@
                     <!-- Existing video for Bodas -->
                     <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-100" data-category="bodas">
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/boda%20mex.mp4"
-                                   poster="https://placehold.co/600x400/DD8EA6/FFFFFF?text=Boda+Mexicana+Video"
-                                   controls autoplay="false" loop="false" muted="true"
-                                   class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                poster="https://placehold.co/600x400/DD8EA6/FFFFFF?text=Boda+Mexicana+Video"
+                                controls autoplay="false" loop="false" muted="true"
+                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -338,9 +360,9 @@
                     <!-- Existing video for Bodas: boda 2 -->
                     <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-200" data-category="bodas">
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/boda%202.mp4"
-                                   poster="https://placehold.co/600x400/DD8EA6/FFFFFF?text=Boda+Video+2"
-                                   controls autoplay="false" loop="false" muted="true"
-                                   class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                poster="https://placehold.co/600x400/DD8EA6/FFFFFF?text=Boda+Video+2"
+                                controls autoplay="false" loop="false" muted="true"
+                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -351,9 +373,9 @@
                     <!-- Existing video for Bodas: Video de WhatsApp 2025-03-09 a las 20.46.18_064bdf27.mp4 -->
                     <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-100" data-category="bodas">
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Video%20de%20WhatsApp%202025-03-09%20a%20las%2020.46.18_064bdf27.mp4"
-                                   poster="https://placehold.co/600x400/DD8EA6/FFFFFF?text=Boda+Video+4"
-                                   controls autoplay="false" loop="false" muted="true"
-                                   class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                poster="https://placehold.co/600x400/DD8EA6/FFFFFF?text=Boda+Video+4"
+                                controls autoplay="false" loop="false" muted="true"
+                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -364,9 +386,9 @@
                     <!-- New video for Bodas: BODA AZUL.mp4 -->
                     <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-200" data-category="bodas">
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/BODA%20AZUL.mp4"
-                                   poster="https://placehold.co/600x400/ADD8E6/DD8EA6?text=Boda+Azul+Video"
-                                   controls autoplay="false" loop="false" muted="true"
-                                   class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                poster="https://placehold.co/600x400/ADD8E6/DD8EA6?text=Boda+Azul+Video"
+                                controls autoplay="false" loop="false" muted="true"
+                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -386,9 +408,9 @@
                     <!-- Existing video for XV Años: Rapunzel -->
                     <div class="card invitation-item animate-on-scroll" data-category="xvanos">
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/RAPUNZEL.mp4"
-                                   poster="https://placehold.co/600x400/DD8EA6/FFFFFF?text=XV+Anos+Rapunzel+Video"
-                                   controls autoplay="false" loop="false" muted="true"
-                                   class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                poster="https://placehold.co/600x400/DD8EA6/FFFFFF?text=XV+Anos+Rapunzel+Video"
+                                controls autoplay="false" loop="false" muted="true"
+                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -399,9 +421,9 @@
                     <!-- Existing video for XV Años: Video de WhatsApp 2025-03-10 a las 11.48.54_f800d301.mp4 -->
                     <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-100" data-category="xvanos">
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Video%20de%20WhatsApp%202025-03-10%20a%20las%2011.48.54_f800d301.mp4"
-                                   poster="https://placehold.co/600x400/DD8EA6/FFFFFF?text=XV+Anos+Video+2"
-                                   controls autoplay="false" loop="false" muted="true"
-                                   class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                poster="https://placehold.co/600x400/DD8EA6/FFFFFF?text=XV+Anos+Video+2"
+                                controls autoplay="false" loop="false" muted="true"
+                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -412,9 +434,9 @@
                     <!-- Existing video for XV Años: Video de WhatsApp 2025-03-10 a las 11.49.02_c4e56893.mp4 -->
                     <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-200" data-category="xvanos">
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Video%20de%20WhatsApp%202025-03-10%20a%20las%2011.49.02_c4e56893.mp4"
-                                   poster="https://placehold.co/600x400/DD8EA6/FFFFFF?text=XV+Anos+Video+3"
-                                   controls autoplay="false" loop="false" muted="true"
-                                   class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                poster="https://placehold.co/600x400/DD8EA6/FFFFFF?text=XV+Anos+Video+3"
+                                controls autoplay="false" loop="false" muted="true"
+                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -425,9 +447,9 @@
                     <!-- Existing video for XV Años: Video de WhatsApp 2025-03-10 a las 11.49.17_009d7ea6.mp4 -->
                     <div class="card invitation-item animate-on-scroll" data-category="xvanos">
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Video%20de%20WhatsApp%202025-03-10%20a%20las%2011.49.17_009d7ea6.mp4"
-                                   poster="https://placehold.co/600x400/DD8EA6/FFFFFF?text=XV+Anos+Video+4"
-                                   controls autoplay="false" loop="false" muted="true"
-                                   class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                poster="https://placehold.co/600x400/DD8EA6/FFFFFF?text=XV+Anos+Video+4"
+                                controls autoplay="false" loop="false" muted="true"
+                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -438,9 +460,9 @@
                     <!-- Existing video for XV Años: Video de WhatsApp 2025-03-10 a las 11.49.20_6dce3976.mp4 -->
                     <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-100" data-category="xvanos">
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Video%20de%20WhatsApp%202025-03-10%20a%20las%2011.49.20_6dce3976.mp4"
-                                   poster="https://placehold.co/600x400/DD8EA6/FFFFFF?text=XV+Anos+Video+5"
-                                   controls autoplay="false" loop="false" muted="true"
-                                   class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                poster="https://placehold.co/600x400/DD8EA6/FFFFFF?text=XV+Anos+Video+5"
+                                controls autoplay="false" loop="false" muted="true"
+                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -451,9 +473,9 @@
                     <!-- New video for XV Años: 426198013_7605644982788436_5733299954171461144_n.mp4 -->
                     <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-200" data-category="xvanos">
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/426198013_7605644982788436_5733299954171461144_n.mp4"
-                                   poster="https://placehold.co/600x400/DD8EA6/FFFFFF?text=XV+Anos+Video+6"
-                                   controls autoplay="false" loop="false" muted="true"
-                                   class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                poster="https://placehold.co/600x400/DD8EA6/FFFFFF?text=XV+Anos+Video+6"
+                                controls autoplay="false" loop="false" muted="true"
+                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -464,9 +486,9 @@
                     <!-- New video for XV Años: 10000000_7140466309404764_5652029856896274267_n.mp4 -->
                     <div class="card invitation-item animate-on-scroll" data-category="xvanos">
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/10000000_7140466309404764_5652029856896274267_n.mp4"
-                                   poster="https://placehold.co/600x400/DD8EA6/FFFFFF?text=XV+Anos+Video+7"
-                                   controls autoplay="false" loop="false" muted="true"
-                                   class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                poster="https://placehold.co/600x400/DD8EA6/FFFFFF?text=XV+Anos+Video+7"
+                                controls autoplay="false" loop="false" muted="true"
+                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -477,14 +499,14 @@
                     <!-- New video for XV Años: cenicienta (4).mp4 -->
                     <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-100" data-category="xvanos">
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/cenicienta%20(4).mp4"
-                                   poster="https://placehold.co/600x400/ADD8E6/DD8EA6?text=XV+Anos+Cenicienta+Video"
-                                   controls autoplay="false" loop="false" muted="true"
-                                   class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                poster="https://placehold.co/600x400/DD8EA6/FFFFFF?text=XV+Anos+Cenicienta+Video"
+                                controls autoplay="false" loop="false" muted="true"
+                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
                             <h3 class="text-xl font-semibold mb-2 text-main-pink">XV Años Cenicienta (Video)</h3>
-                            <p class="text-gray-600">Video invitación temática de Cenicienta para XV años.</p>
+                            <p class="text-gray-600">Invitación de XV años con temática de Cenicienta.</p>
                         </div>
                     </div>
                 </div>
@@ -493,20 +515,60 @@
 
         <!-- Baby Shower Gallery -->
         <section id="babyshower-gallery" class="py-20 bg-white">
-            <div class="container mx-auto px-2 sm:px-6"> <!-- Adjusted padding for small screens -->
+            <div class="container mx-auto px-2 sm:px-6">
                 <h2 class="category-heading text-main-pink animate-on-scroll">Invitaciones para Baby Shower</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- No content with actual video/image provided for Baby Shower, so this section will be empty if no videos are added later -->
+                    <div class="card invitation-item animate-on-scroll" data-category="babyshower">
+                        <img src="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Baby+Shower+1" alt="Invitación Baby Shower 1" class="w-full object-cover rounded-t-xl">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Baby Shower Clásico</h3>
+                            <p class="text-gray-600">Diseño tierno para la llegada del bebé.</p>
+                        </div>
+                    </div>
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-100" data-category="babyshower">
+                        <img src="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Baby+Shower+2" alt="Invitación Baby Shower 2" class="w-full object-cover rounded-t-xl">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Baby Shower Moderno</h3>
+                            <p class="text-gray-600">Estilo contemporáneo para tu celebración.</p>
+                        </div>
+                    </div>
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-200" data-category="babyshower">
+                        <img src="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Baby+Shower+3" alt="Invitación Baby Shower 3" class="w-full object-cover rounded-t-xl">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Baby Shower Temático</h3>
+                            <p class="text-gray-600">Personaliza con tu tema favorito.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Bautizos Gallery -->
         <section id="bautizos-gallery" class="py-20 bg-light-pink-bg">
-            <div class="container mx-auto px-2 sm:px-6"> <!-- Adjusted padding for small screens -->
+            <div class="container mx-auto px-2 sm:px-6">
                 <h2 class="category-heading text-main-pink animate-on-scroll">Invitaciones para Bautizos</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- No content with actual video/image provided for Bautizos, so this section will be empty if no videos are added later -->
+                    <div class="card invitation-item animate-on-scroll" data-category="bautizos">
+                        <img src="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Bautizo+1" alt="Invitación Bautizo 1" class="w-full object-cover rounded-t-xl">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Bautizo Tradicional</h3>
+                            <p class="text-gray-600">Diseño clásico para un día especial.</p>
+                        </div>
+                    </div>
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-100" data-category="bautizos">
+                        <img src="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Bautizo+2" alt="Invitación Bautizo 2" class="w-full object-cover rounded-t-xl">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Bautizo Moderno</h3>
+                            <p class="text-gray-600">Invitación con un toque contemporáneo.</p>
+                        </div>
+                    </div>
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-200" data-category="bautizos">
+                        <img src="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Bautizo+3" alt="Invitación Bautizo 3" class="w-full object-cover rounded-t-xl">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Bautizo Floral</h3>
+                            <p class="text-gray-600">Diseño con delicados motivos florales.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -514,19 +576,27 @@
         <!-- Comunión/Confirmación Gallery -->
         <section id="comunion-confirmacion-gallery" class="py-20 bg-white">
             <div class="container mx-auto px-2 sm:px-6">
-                <h2 class="category-heading text-main-pink animate-on-scroll">Invitaciones para Comunión/Confirmación</h2>
+                <h2 class="category-heading text-main-pink animate-on-scroll">Invitaciones para Comunión y Confirmación</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- New video for Comunión/Confirmación: AMELIA.mp4 -->
-                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-100" data-category="comunion-confirmacion">
-                        <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/AMELIA.mp4"
-                                   poster="https://placehold.co/600x400/ADD8E6/DD8EA6?text=Amelia+Confirmacion+Video"
-                                   controls autoplay="false" loop="false" muted="true"
-                                   class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
-                            Tu navegador no soporta la etiqueta de video.
-                        </video>
+                    <div class="card invitation-item animate-on-scroll" data-category="comunion-confirmacion">
+                        <img src="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Comunion+1" alt="Invitación Comunión 1" class="w-full object-cover rounded-t-xl">
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Confirmación Amelia (Video)</h3>
-                            <p class="text-gray-600">Video invitación para la Confirmación de Amelia.</p>
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Primera Comunión</h3>
+                            <p class="text-gray-600">Invitación para este sacramento especial.</p>
+                        </div>
+                    </div>
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-100" data-category="comunion-confirmacion">
+                        <img src="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Confirmacion+1" alt="Invitación Confirmación 1" class="w-full object-cover rounded-t-xl">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Confirmación Elegante</h3>
+                            <p class="text-gray-600">Diseño sobrio para la confirmación.</p>
+                        </div>
+                    </div>
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-200" data-category="comunion-confirmacion">
+                        <img src="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Comunion+Confirmacion+2" alt="Invitación Comunión/Confirmación 2" class="w-full object-cover rounded-t-xl">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Comunión y Confirmación</h3>
+                            <p class="text-gray-600">Diseño versátil para ambos eventos.</p>
                         </div>
                     </div>
                 </div>
@@ -534,190 +604,29 @@
         </section>
 
         <!-- Cumpleaños Gallery -->
-        <section id="cumpleanos-gallery" class="py-20 bg-white">
-            <div class="container mx-auto px-2 sm:px-6"> <!-- Adjusted padding for small screens -->
+        <section id="cumpleanos-gallery" class="py-20 bg-light-pink-bg">
+            <div class="container mx-auto px-2 sm:px-6">
                 <h2 class="category-heading text-main-pink animate-on-scroll">Invitaciones para Cumpleaños</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Existing video with poster and adjusted size -->
-                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-100" data-category="cumpleanos">
-                        <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/GALY%20(1).mp4"
-                                   poster="https://raw.githubusercontent.com/regina1503/invitaciones/main/GALY.jpg"
-                                   controls autoplay="false" loop="false" muted="true"
-                                   class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
-                            Tu navegador no soporta la etiqueta de video.
-                        </video>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Cumpleaños GALY (Video)</h3>
-                            <p class="text-gray-600">Video de invitación animada para tu fiesta.</p>
-                        </div>
-                    </div>
-                    <!-- Existing video for Cumpleaños: Confirmación y Ubicación -->
-                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-200" data-category="cumpleanos">
-                        <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Confirmaci%C3%B3n%20y%20ubicaci%C3%B3n%F0%9F%AA%82.mp4"
-                                   poster="https://placehold.co/600x400/FFD700/DD8EA6?text=Confirmacion+Ubicacion+Video"
-                                   controls autoplay="false" loop="false" muted="true"
-                                   class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
-                            Tu navegador no soporta la etiqueta de video.
-                        </video>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Confirmación y Ubicación (Video)</h3>
-                            <p class="text-gray-600">Invitación con funciones de RSVP y mapa.</p>
-                        </div>
-                    </div>
-                    <!-- Existing video for Cumpleaños: José Mateo -->
-                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-100" data-category="cumpleanos">
-                        <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Jos%C3%A9%20Mateo.mp4"
-                                   poster="https://placehold.co/600x400/FFD700/DD8EA6?text=Jose+Mateo+Video"
-                                   controls autoplay="false" loop="false" muted="true"
-                                   class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
-                            Tu navegador no soporta la etiqueta de video.
-                        </video>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Cumpleaños José Mateo (Video)</h3>
-                            <p class="text-gray-600">Video invitación para el cumpleaños de José Mateo.</p>
-                        </div>
-                    </div>
-                    <!-- Existing video for Cumpleaños: The King -->
-                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-200" data-category="cumpleanos">
-                        <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/The%20king%20(4).mp4"
-                                   poster="https://placehold.co/600x400/FFD700/DD8EA6?text=The+King+Video"
-                                   controls autoplay="false" loop="false" muted="true"
-                                   class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
-                            Tu navegador no soporta la etiqueta de video.
-                        </video>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Cumpleaños The King (Video)</h3>
-                            <p class="text-gray-600">Invitación animada con temática de rey.</p>
-                        </div>
-                    </div>
-                    <!-- Moved video from Bodas to Cumpleaños -->
                     <div class="card invitation-item animate-on-scroll" data-category="cumpleanos">
-                        <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Video%20de%20WhatsApp%202025-03-09%20a%20las%2020.45.25_41ac51e4.mp4"
-                                   poster="https://placehold.co/600x400/DD8EA6/FFFFFF?text=Cumpleanos+Moderno+Video"
-                                   controls autoplay="false" loop="false" muted="true"
-                                   class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
-                            Tu navegador no soporta la etiqueta de video.
-                        </video>
+                        <img src="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Cumpleanos+1" alt="Invitación Cumpleaños 1" class="w-full object-cover rounded-t-xl">
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Cumpleaños Moderno (Video)</h3>
-                            <p class="text-gray-600">Video invitación de cumpleaños con estilo moderno.</p>
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Cumpleaños Infantil</h3>
+                            <p class="text-gray-600">Diseños divertidos para los más pequeños.</p>
                         </div>
                     </div>
-                    <!-- New video for Cumpleaños: Blue and Purple Mermaid Birthday Party Invitation Mobile Video (1).mp4 -->
                     <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-100" data-category="cumpleanos">
-                        <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Blue%20and%20Purple%20Mermaid%20Birthday%20Party%20Invitation%20Mobile%20Video%20(1).mp4"
-                                   poster="https://placehold.co/600x400/8A2BE2/FFFFFF?text=Sirena+Cumpleanos+Video"
-                                   controls autoplay="false" loop="false" muted="true"
-                                   class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
-                            Tu navegador no soporta la etiqueta de video.
-                        </video>
+                        <img src="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Cumpleanos+2" alt="Invitación Cumpleaños 2" class="w-full object-cover rounded-t-xl">
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Cumpleaños Sirena (Video)</h3>
-                            <p class="text-gray-600">Video invitación de cumpleaños con temática de sirena.</p>
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Cumpleaños Adultos</h3>
+                            <p class="text-gray-600">Elegancia para celebraciones de adultos.</p>
                         </div>
                     </div>
-                    <!-- New video for Cumpleaños: Camila (1).mp4 -->
                     <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-200" data-category="cumpleanos">
-                        <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Camila%20(1).mp4"
-                                   poster="https://placehold.co/600x400/FFD1DC/DD8EA6?text=Cumpleanos+Camila+Video"
-                                   controls autoplay="false" loop="false" muted="true"
-                                   class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
-                            Tu navegador no soporta la etiqueta de video.
-                        </video>
+                        <img src="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Cumpleanos+3" alt="Invitación Cumpleaños 3" class="w-full object-cover rounded-t-xl">
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Cumpleaños Camila (Video)</h3>
-                            <p class="text-gray-600">Invitación de cumpleaños para Camila.</p>
-                        </div>
-                    </div>
-                    <!-- New video for Cumpleaños: CHIP AND DALE muestra.mp4 -->
-                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-300" data-category="cumpleanos">
-                        <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/CHIP%20AND%20DALE%20muestra.mp4"
-                                   poster="https://placehold.co/600x400/FFD700/DD8EA6?text=Cumpleanos+Chip+Dale+Video"
-                                   controls autoplay="false" loop="false" muted="true"
-                                   class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
-                            Tu navegador no soporta la etiqueta de video.
-                        </video>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Cumpleaños Chip y Dale (Video)</h3>
-                            <p class="text-gray-600">Video invitación con temática de Chip y Dale.</p>
-                        </div>
-                    </div>
-                    <!-- New video for Cumpleaños: Copia de El texto del párrafo.mp4 -->
-                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-400" data-category="cumpleanos">
-                        <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Copia%20de%20El%20texto%20del%20p%C3%A1rrafo.mp4"
-                                   poster="https://placehold.co/600x400/FFD700/DD8EA6?text=Cumpleanos+Texto+Video"
-                                   controls autoplay="false" loop="false" muted="true"
-                                   class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
-                            Tu navegador no soporta la etiqueta de video.
-                        </video>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Cumpleaños con Texto Personalizado (Video)</h3>
-                            <p class="text-gray-600">Video invitación personalizable con texto.</p>
-                        </div>
-                    </div>
-                    <!-- New video for Cumpleaños: CUMPLE (3).mp4 -->
-                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-500" data-category="cumpleanos">
-                        <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/CUMPLE%20(3).mp4"
-                                   poster="https://placehold.co/600x400/FFD700/DD8EA6?text=Cumple+Video+3"
-                                   controls autoplay="false" loop="false" muted="true"
-                                   class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
-                            Tu navegador no soporta la etiqueta de video.
-                        </video>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Cumpleaños Animado (Video)</h3>
-                            <p class="text-gray-600">Una invitación animada para celebrar el cumpleaños.</p>
-                        </div>
-                    </div>
-                    <!-- New video for Cumpleaños: Copia de Nuestro cumpleaños Lolys.mp4 -->
-                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-600" data-category="cumpleanos">
-                        <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Copia%20de%20Nuestro%20cumplea%C3%B1os%20Lolys%F0%9F%92%96.mp4"
-                                   poster="https://placehold.co/600x400/FFD700/DD8EA6?text=Cumpleanos+Lolys+Video"
-                                   controls autoplay="false" loop="false" muted="true"
-                                   class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
-                            Tu navegador no soporta la etiqueta de video.
-                        </video>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Cumpleaños Lolys (Video)</h3>
-                            <p class="text-gray-600">Video invitación para el cumpleaños de Lolys.</p>
-                        </div>
-                    </div>
-                    <!-- New video for Cumpleaños: Diseño sin título (1).mp4 -->
-                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-700" data-category="cumpleanos">
-                        <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Dise%C3%B1o%20sin%20t%C3%ADtulo%20(1).mp4"
-                                   poster="https://placehold.co/600x400/FFD700/DD8EA6?text=Cumpleanos+Diseno+Video"
-                                   controls autoplay="false" loop="false" muted="true"
-                                   class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
-                            Tu navegador no soporta la etiqueta de video.
-                        </video>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Cumpleaños Diseño Personalizado (Video)</h3>
-                            <p class="text-gray-600">Video invitación con un diseño único.</p>
-                        </div>
-                    </div>
-                    <!-- New video for Cumpleaños: El texto del párrafo (1).mp4 -->
-                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-800" data-category="cumpleanos">
-                        <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/El%20texto%20del%20p%C3%A1rrafo%20(1).mp4"
-                                   poster="https://placehold.co/600x400/FFD700/DD8EA6?text=Cumpleanos+Texto+2+Video"
-                                   controls autoplay="false" loop="false" muted="true"
-                                   class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
-                            Tu navegador no soporta la etiqueta de video.
-                        </video>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Cumpleaños con Texto Adicional (Video)</h3>
-                            <p class="text-gray-600">Video invitación con espacio para más texto.</p>
-                        </div>
-                    </div>
-                    <!-- New video for Cumpleaños: El texto del párrafo (3).mp4 -->
-                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-900" data-category="cumpleanos">
-                        <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/El%20texto%20del%20p%C3%A1rrafo%20(3).mp4"
-                                   poster="https://placehold.co/600x400/FFD700/DD8EA6?text=Cumpleanos+Texto+3+Video"
-                                   controls autoplay="false" loop="false" muted="true"
-                                   class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
-                            Tu navegador no soporta la etiqueta de video.
-                        </video>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Cumpleaños con Texto Extra (Video)</h3>
-                            <p class="text-gray-600">Otra opción de video para cumpleaños con más texto.</p>
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Cumpleaños Temático</h3>
+                            <p class="text-gray-600">Crea la fiesta perfecta con un tema.</p>
                         </div>
                     </div>
                 </div>
@@ -725,31 +634,59 @@
         </section>
 
         <!-- Despedidas Gallery -->
-        <section id="despedidas-gallery" class="py-20 bg-light-pink-bg">
-            <div class="container mx-auto px-2 sm:px-6"> <!-- Adjusted padding for small screens -->
+        <section id="despedidas-gallery" class="py-20 bg-white">
+            <div class="container mx-auto px-2 sm:px-6">
                 <h2 class="category-heading text-main-pink animate-on-scroll">Invitaciones para Despedidas</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- No content with actual video/image provided for Despedidas, so this section will be empty if no videos are added later -->
+                    <div class="card invitation-item animate-on-scroll" data-category="despedidas">
+                        <img src="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Despedida+Soltera+1" alt="Invitación Despedida Soltera 1" class="w-full object-cover rounded-t-xl">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Despedida de Soltera</h3>
+                            <p class="text-gray-600">Diseños divertidos para la última noche de soltera.</p>
+                        </div>
+                    </div>
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-100" data-category="despedidas">
+                        <img src="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Despedida+Mixta+1" alt="Invitación Despedida Mixta 1" class="w-full object-cover rounded-t-xl">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Despedida Mixta</h3>
+                            <p class="text-gray-600">Invitaciones para celebraciones conjuntas.</p>
+                        </div>
+                    </div>
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-200" data-category="despedidas">
+                        <img src="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Despedida+Bebe+1" alt="Invitación Despedida Bebé 1" class="w-full object-cover rounded-t-xl">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Despedida de Bebé</h3>
+                            <p class="text-gray-600">Para la bienvenida de tu pequeño.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Graduaciones Gallery -->
-        <section id="graduaciones-gallery" class="py-20 bg-white">
-            <div class="container mx-auto px-2 sm:px-6"> <!-- Adjusted padding for small screens -->
+        <section id="graduaciones-gallery" class="py-20 bg-light-pink-bg">
+            <div class="container mx-auto px-2 sm:px-6">
                 <h2 class="category-heading text-main-pink animate-on-scroll">Invitaciones para Graduaciones</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Existing video for Graduaciones -->
                     <div class="card invitation-item animate-on-scroll" data-category="graduaciones">
-                        <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Te%20invito%20a%20festejar%20mi%20graduaci%C3%B3n%20%C3%8Dker%20Gael%20(3).mp4"
-                                   poster="https://placehold.co/600x400/A7D9D9/DD8EA6?text=Graduacion+Iker+Video"
-                                   controls autoplay="false" loop="false" muted="true"
-                                   class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
-                            Tu navegador no soporta la etiqueta de video.
-                        </video>
+                        <img src="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Graduacion+1" alt="Invitación Graduación 1" class="w-full object-cover rounded-t-xl">
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Graduación Íker Gael (Video)</h3>
-                            <p class="text-gray-600">Celebra tu graduación con este video animado.</p>
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Graduación Clásica</h3>
+                            <p class="text-gray-600">Diseño atemporal para tu logro.</p>
+                        </div>
+                    </div>
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-100" data-category="graduaciones">
+                        <img src="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Graduacion+2" alt="Invitación Graduación 2" class="w-full object-cover rounded-t-xl">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Graduación Moderna</h3>
+                            <p class="text-gray-600">Estilo contemporáneo para celebrar.</p>
+                        </div>
+                    </div>
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-200" data-category="graduaciones">
+                        <img src="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Graduacion+3" alt="Invitación Graduación 3" class="w-full object-cover rounded-t-xl">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Graduación Temática</h3>
+                            <p class="text-gray-600">Personaliza con los colores de tu escuela.</p>
                         </div>
                     </div>
                 </div>
@@ -757,173 +694,302 @@
         </section>
 
         <!-- Empresariales Gallery -->
-        <section id="empresariales-gallery" class="py-20 bg-light-pink-bg">
-            <div class="container mx-auto px-2 sm:px-6"> <!-- Adjusted padding for small screens -->
-                <h2 class="category-heading text-main-pink animate-on-scroll">Invitaciones para Eventos Empresariales</h2>
+        <section id="empresariales-gallery" class="py-20 bg-white">
+            <div class="container mx-auto px-2 sm:px-6">
+                <h2 class="category-heading text-main-pink animate-on-scroll">Invitaciones Empresariales</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- No content with actual video/image provided for Empresariales, so this section will be empty if no videos are added later -->
+                    <div class="card invitation-item animate-on-scroll" data-category="empresariales">
+                        <img src="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Empresarial+1" alt="Invitación Empresarial 1" class="w-full object-cover rounded-t-xl">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Evento Corporativo</h3>
+                            <p class="text-gray-600">Invitaciones profesionales para tu empresa.</p>
+                        </div>
+                    </div>
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-100" data-category="empresariales">
+                        <img src="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Empresarial+2" alt="Invitación Empresarial 2" class="w-full object-cover rounded-t-xl">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Lanzamiento de Producto</h3>
+                            <p class="text-gray-600">Diseños impactantes para tus lanzamientos.</p>
+                        </div>
+                    </div>
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-200" data-category="empresariales">
+                        <img src="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Empresarial+3" alt="Invitación Empresarial 3" class="w-full object-cover rounded-t-xl">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Cena de Gala</h3>
+                            <p class="text-gray-600">Invitaciones elegantes para eventos formales.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Revelación de Género Gallery -->
-        <section id="revelacion-genero-gallery" class="py-20 bg-white">
+        <section id="revelacion-genero-gallery" class="py-20 bg-light-pink-bg">
             <div class="container mx-auto px-2 sm:px-6">
                 <h2 class="category-heading text-main-pink animate-on-scroll">Invitaciones para Revelación de Género</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- New video for Revelación de Género -->
                     <div class="card invitation-item animate-on-scroll" data-category="revelacion-genero">
-                        <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/%C2%BFNi%C3%B1o%20o%20ni%C3%B1a%20(3).mp4"
-                                   poster="https://placehold.co/600x400/FFD1DC/DD8EA6?text=Revelacion+Genero+Video"
-                                   controls autoplay="false" loop="false" muted="true"
-                                   class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
-                            Tu navegador no soporta la etiqueta de video.
-                        </video>
+                        <img src="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Revelacion+1" alt="Invitación Revelación de Género 1" class="w-full object-cover rounded-t-xl">
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2 text-main-pink">¿Niño o Niña? (Video)</h3>
-                            <p class="text-gray-600">Video invitación para la emocionante revelación de género.</p>
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Es Niño o Niña?</h3>
+                            <p class="text-gray-600">Diseños creativos para el gran anuncio.</p>
+                        </div>
+                    </div>
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-100" data-category="revelacion-genero">
+                        <img src="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Revelacion+2" alt="Invitación Revelación de Género 2" class="w-full object-cover rounded-t-xl">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Dulce Espera</h3>
+                            <p class="text-gray-600">Invitaciones con un toque de ternura.</p>
+                        </div>
+                    </div>
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-200" data-category="revelacion-genero">
+                        <img src="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Revelacion+3" alt="Invitación Revelación de Género 3" class="w-full object-cover rounded-t-xl">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Sorpresa de Género</h3>
+                            <p class="text-gray-600">Para una revelación inolvidable.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Paquetes Section (New) -->
-        <section id="paquetes" class="py-20 bg-light-pink-bg">
-            <div class="container mx-auto px-2 sm:px-6">
-                <h2 class="main-section-title-quicksand text-main-pink animate-on-scroll">Nuestros Paquetes</h2>
+        <!-- Paquetes Section -->
+        <section id="paquetes" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-main-pink animate-on-scroll">Nuestros Paquetes</h2>
                 <p class="text-xl text-center mb-12 animate-on-scroll animate-on-scroll-delay-100">
-                    Descubre el paquete perfecto para tu evento, adaptado a tus necesidades.
+                    Ofrecemos diferentes paquetes para ajustarnos a tus necesidades.
                 </p>
-
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Paquete Básico -->
+                    <!-- Paquete WEB BÁSICA -->
                     <div class="card p-8 text-center animate-on-scroll animate-on-scroll-delay-200">
-                        <h3 class="text-3xl font-bold text-main-pink mb-4">Paquete Básico</h3>
-                        <p class="text-gray-700 mb-6">Ideal para eventos sencillos y elegantes.</p>
-                        <div class="text-5xl font-bold text-darker-pink mb-6">$XX.XX</div>
-                        <ul class="list-none text-gray-800 space-y-3 mb-8">
-                            <li class="flex items-center justify-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Invitación Digital Personalizada</li>
-                            <li class="flex items-center justify-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Diseño Estático (Imagen)</li>
-                            <li class="flex items-center justify-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> 1 Revisión de Diseño</li>
+                        <div class="bg-light-pink-bg p-4 rounded-full inline-block mb-6">
+                            <i class="fas fa-mobile-alt text-5xl text-main-pink"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold mb-4 text-main-pink">WEB BÁSICA</h3>
+                        <p class="text-gray-700 mb-6">Ideal para invitaciones sencillas y elegantes.</p>
+                        <p class="text-5xl font-bold text-darker-pink mb-6">$179</p>
+                        <ul class="list-disc list-inside text-left mx-auto max-w-xs mb-8 text-gray-700">
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>Música</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>1 Botón de ubicación</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>1 Botón de confirmación</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>Cuenta Regresiva</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>Datos básicos del evento</li>
                         </ul>
-                        <a href="#contacto" class="btn-primary">¡Lo Quiero!</a>
+                        <button class="btn-primary">Más Información</button>
                     </div>
 
-                    <!-- Paquete Estándar -->
-                    <div class="card p-8 text-center border-4 border-main-pink animate-on-scroll animate-on-scroll-delay-300">
-                        <h3 class="text-3xl font-bold text-main-pink mb-4">Paquete Estándar</h3>
-                        <p class="text-gray-700 mb-6">La opción más popular con funciones interactivas.</p>
-                        <div class="text-5xl font-bold text-darker-pink mb-6">$YY.YY</div>
-                        <ul class="list-none text-gray-800 space-y-3 mb-8">
-                            <li class="flex items-center justify-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Invitación Digital Animada (Video)</li>
-                            <li class="flex items-center justify-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Música Ambiental</li>
-                            <li class="flex items-center justify-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Formulario de Confirmación (RSVP)</li>
-                            <li class="flex items-center justify-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> 3 Revisiones de Diseño</li>
+                    <!-- Paquete WEB BRONCE -->
+                    <div class="card p-8 text-center animate-on-scroll animate-on-scroll-delay-300">
+                        <div class="bg-light-pink-bg p-4 rounded-full inline-block mb-6">
+                            <i class="fas fa-star text-5xl text-main-pink"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold mb-4 text-main-pink">WEB BRONCE</h3>
+                        <p class="text-gray-700 mb-6">Un paso más allá con funciones adicionales.</p>
+                        <p class="text-5xl font-bold text-darker-pink mb-6">$329</p>
+                        <ul class="list-disc list-inside text-left mx-auto max-w-xs mb-8 text-gray-700">
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>Frase de su elección</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>Música</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>2 Botones de ubicación</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>1 Botón de confirmación</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>Cuenta Regresiva</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>Nombre de papás</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>Lluvia de sobres</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>Galería de fotos</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>Código de vestimenta</li>
                         </ul>
-                        <a href="#contacto" class="btn-primary">¡Lo Quiero!</a>
+                        <button class="btn-primary">Más Información</button>
                     </div>
 
-                    <!-- Paquete Premium -->
+                    <!-- Paquete WEB PLATA -->
                     <div class="card p-8 text-center animate-on-scroll animate-on-scroll-delay-400">
-                        <h3 class="text-3xl font-bold text-main-pink mb-4">Paquete Premium</h3>
-                        <p class="text-gray-700 mb-6">La experiencia completa para un evento inolvidable.</p>
-                        <div class="text-5xl font-bold text-darker-pink mb-6">$ZZ.ZZ</div>
-                        <ul class="list-none text-gray-800 space-y-3 mb-8">
-                            <li class="flex items-center justify-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Invitación Digital Animada Premium</li>
-                            <li class="flex items-center justify-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Música Ambiental Personalizada</li>
-                            <li class="flex items-center justify-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Formulario de Confirmación (RSVP) Avanzado</li>
-                            <li class="flex items-center justify-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Ubicación con Mapa Interactivo</li>
-                            <li class="flex items-center justify-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Cuenta Regresiva</li>
-                            <li class="flex items-center justify-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Galería de Fotos del Evento</li>
-                            <li class="flex items-center justify-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Revisiones Ilimitadas</li>
+                        <div class="bg-light-pink-bg p-4 rounded-full inline-block mb-6">
+                            <i class="fas fa-gem text-5xl text-main-pink"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold mb-4 text-main-pink">WEB PLATA</h3>
+                        <p class="text-gray-700 mb-6">Funcionalidades avanzadas para tu evento.</p>
+                        <p class="text-5xl font-bold text-darker-pink mb-6">$499</p>
+                        <ul class="list-disc list-inside text-left mx-auto max-w-xs mb-8 text-gray-700">
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>Frases de su elección</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>Música</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>2 Botones de ubicación</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>1 Botón de confirmación</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>Cuenta Regresiva</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>Pases digitales para 150 personas</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>Lluvia de sobres</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>Galería de fotos</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>Código de vestimenta</li>
                         </ul>
-                        <a href="#contacto" class="btn-primary">¡Lo Quiero!</a>
+                        <button class="btn-primary">Más Información</button>
+                    </div>
+
+                    <!-- Paquete WEB ORO (Highlighted) -->
+                    <div class="card p-8 text-center border-4 border-main-pink animate-on-scroll animate-on-scroll-delay-500">
+                        <div class="bg-main-pink p-4 rounded-full inline-block mb-6">
+                            <i class="fas fa-crown text-5xl text-white-accent"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold mb-4 text-main-pink">WEB ORO</h3>
+                        <p class="text-gray-700 mb-6">La opción más completa para tu evento especial.</p>
+                        <p class="text-5xl font-bold text-darker-pink mb-6">$659</p>
+                        <ul class="list-disc list-inside text-left mx-auto max-w-xs mb-8 text-gray-700">
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>Frases de su elección</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>Música</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>2 Botones de ubicación</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>1 Botón de confirmación</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>Pases digitales ilimitados</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>Cuenta regresiva</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>Lluvia de sobres/mesa de regalos</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>Galería de fotos dinámica</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>Opciones de hospedaje</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>Código de vestimenta</li>
+                        </ul>
+                        <button class="btn-primary">¡Contratar Ahora!</button>
+                    </div>
+
+                    <!-- Paquete WEB ORO PLUS -->
+                    <div class="card p-8 text-center animate-on-scroll animate-on-scroll-delay-600">
+                        <div class="bg-light-pink-bg p-4 rounded-full inline-block mb-6">
+                            <i class="fas fa-medal text-5xl text-main-pink"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold mb-4 text-main-pink">WEB ORO PLUS</h3>
+                        <p class="text-gray-700 mb-6">Experiencia exclusiva con atención personalizada.</p>
+                        <p class="text-5xl font-bold text-darker-pink mb-6">$799</p>
+                        <ul class="list-disc list-inside text-left mx-auto max-w-xs mb-8 text-gray-700">
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>Frases de su elección</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>Música</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>2 Botones de ubicación</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>1 Botón de confirmación</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>Pases digitales ilimitados</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>Cuenta regresiva</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>Lluvia de sobres/mesa de regalos</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>Galería de fotos dinámica</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>Opciones de hospedaje</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>Código de vestimenta</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>QR de acceso al evento</li>
+                            <li class="mb-2"><i class="fas fa-check-circle text-main-pink mr-2"></i>QR de fotos para subir fotos el día del evento</li>
+                        </ul>
+                        <button class="btn-primary">Solicitar Presupuesto</button>
                     </div>
                 </div>
             </div>
         </section>
 
-
-        <!-- Services Section -->
-        <section id="servicios" class="py-20 bg-white">
-            <div class="container mx-auto px-2 sm:px-6"> <!-- Adjusted padding for small screens -->
-                <h2 class="section-title text-main-pink animate-on-scroll">Nuestros Servicios Adicionales</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    <div class="flex items-start p-6 bg-light-pink-bg rounded-xl shadow-md animate-on-scroll">
-                        <i class="fas fa-music text-4xl text-white-accent mr-6"></i>
-                        <div>
-                            <h3 class="text-2xl font-semibold mb-2 text-main-pink">Música Ambiental</h3>
-                            <p class="text-gray-700">Añade la banda sonora perfecta a tu invitación con música de fondo.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start p-6 bg-light-pink-bg rounded-xl shadow-md animate-on-scroll animate-on-scroll-delay-100">
-                        <i class="fas fa-clipboard-check text-4xl text-white-accent mr-6"></i>
-                        <div>
-                            <h3 class="text-2xl font-semibold mb-2 text-main-pink">Formulario de Confirmación (RSVP)</h3>
-                            <p class="text-gray-700">Gestiona fácilmente las confirmaciones de asistencia de tus invitados.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start p-6 bg-light-pink-bg rounded-xl shadow-md animate-on-scroll animate-on-scroll-delay-200">
-                        <i class="fas fa-map-marked-alt text-4xl text-white-accent mr-6"></i>
-                        <div>
-                            <h3 class="text-2xl font-semibold mb-2 text-main-pink">Ubicación con Mapa</h3>
-                            <p class="text-gray-700">Integra un mapa interactivo para que tus invitados lleguen sin problemas.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start p-6 bg-light-pink-bg rounded-xl shadow-md animate-on-scroll">
-                        <i class="fas fa-hourglass-half text-4xl text-main-pink mr-6"></i>
-                        <div>
-                            <h3 class="text-2xl font-semibold mb-2 text-main-pink">Cuenta Regresiva</h3>
-                            <p class="text-gray-700">Genera emoción con un contador de tiempo hasta el evento.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start p-6 bg-light-pink-bg rounded-xl shadow-md animate-on-scroll animate-on-scroll-delay-100">
-                        <i class="fas fa-gift text-4xl text-main-pink mr-6"></i>
-                        <div>
-                            <h3 class="text-2xl font-semibold mb-2 text-main-pink">Lista de Regalos</h3>
-                            <p class="text-gray-700">Facilita a tus invitados la elección de regalos con una lista integrada.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start p-6 bg-light-pink-bg rounded-xl shadow-md animate-on-scroll animate-on-scroll-delay-200">
-                        <i class="fas fa-image text-4xl text-white-accent mr-6"></i>
-                        <div>
-                            <h3 class="text-2xl font-semibold mb-2 text-main-pink">Galería de Fotos</h3>
-                            <p class="text-gray-700">Comparte tus momentos especiales con una galería de imágenes.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonials Section -->
-        <section id="testimonios" class="py-20 bg-main-pink text-white">
-            <div class="container mx-auto px-2 sm:px-6"> <!-- Adjusted padding for small screens -->
-                <h2 class="section-title text-white-accent animate-on-scroll">Lo que Dicen Nuestros Clientes</h2>
+        <!-- Servicios Section -->
+        <section id="servicios" class="py-20 bg-light-pink-bg">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-main-pink animate-on-scroll">Nuestros Servicios</h2>
+                <p class="text-xl text-center mb-12 animate-on-scroll animate-on-scroll-delay-100">
+                    Ofrecemos una variedad de servicios para hacer tu evento aún más especial.
+                </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-darker-pink p-8 rounded-xl shadow-lg animate-on-scroll">
-                        <p class="italic mb-4">"Las invitaciones de Momentos Encantados fueron simplemente perfectas para nuestra boda. Elegantes, fáciles de usar y a nuestros invitados les encantaron. ¡Totalmente recomendados!"</p>
-                        <p class="font-semibold text-white-accent">- Ana & Luis G.</p>
+                    <!-- Servicio 1 -->
+                    <div class="card p-6 text-center animate-on-scroll animate-on-scroll-delay-200">
+                        <div class="bg-light-pink-bg p-4 rounded-full inline-block mb-4">
+                            <i class="fas fa-envelope-open-text text-4xl text-main-pink"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-2 text-main-pink">Invitaciones Digitales Personalizadas</h3>
+                        <p class="text-gray-600">Diseños únicos adaptados a tu estilo y temática del evento.</p>
                     </div>
-                    <div class="bg-darker-pink p-8 rounded-xl shadow-lg animate-on-scroll animate-on-scroll-delay-100">
-                        <p class="italic mb-4">"Crearon la invitación de XV años de mi hija tal como la soñamos. El servicio al cliente fue excelente y el resultado superó nuestras expectativas. ¡Gracias!"</p>
-                        <p class="font-semibold text-white-accent">- María S.</p>
+                    <!-- Servicio 2 -->
+                    <div class="card p-6 text-center animate-on-scroll animate-on-scroll-delay-300">
+                        <div class="bg-light-pink-bg p-4 rounded-full inline-block mb-4">
+                            <i class="fas fa-video text-4xl text-main-pink"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-2 text-main-pink">Invitaciones Animadas y en Video</h3>
+                        <p class="text-gray-600">Impacta a tus invitados con invitaciones dinámicas y memorables.</p>
                     </div>
-                    <div class="bg-darker-pink p-8 rounded-xl shadow-lg animate-on-scroll animate-on-scroll-delay-200">
-                        <p class="italic mb-4">"Necesitábamos invitaciones rápidas y profesionales para nuestro evento corporativo y Momentos Encantados entregó un diseño impecable en tiempo récord. Muy eficientes."</p>
-                        <p class="font-semibold text-white-accent">- Carlos R. (CEO Tech Solutions)</p>
+                    <!-- Servicio 3 -->
+                    <div class="card p-6 text-center animate-on-scroll animate-on-scroll-delay-400">
+                        <div class="bg-light-pink-bg p-4 rounded-full inline-block mb-4">
+                            <i class="fas fa-map-marked-alt text-4xl text-main-pink"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-2 text-main-pink">Mapas de Ubicación Interactivos</h3>
+                        <p class="text-gray-600">Facilita la llegada de tus invitados con enlaces directos a Google Maps.</p>
                     </div>
-                    <div class="bg-darker-pink p-8 rounded-xl shadow-lg animate-on-scroll">
-                        <p class="italic mb-4">"Desde el baby shower hasta el primer cumpleaños, siempre confío en Momentos Encantados. Sus diseños son siempre adorables y la personalización es fantástica."</p>
-                        <p class="font-semibold text-white-accent">- Sofía P.</p>
+                    <!-- Servicio 4 -->
+                    <div class="card p-6 text-center animate-on-scroll animate-on-scroll-delay-200">
+                        <div class="bg-light-pink-bg p-4 rounded-full inline-block mb-4">
+                            <i class="fas fa-calendar-check text-4xl text-main-pink"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-2 text-main-pink">Gestión de RSVP</h3>
+                        <p class="text-gray-600">Confirma la asistencia de tus invitados de manera sencilla y eficiente.</p>
+                        </div>
+                    <!-- Servicio 5 -->
+                    <div class="card p-6 text-center animate-on-scroll animate-on-scroll-delay-300">
+                        <div class="bg-light-pink-bg p-4 rounded-full inline-block mb-4">
+                            <i class="fas fa-music text-4xl text-main-pink"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-2 text-main-pink">Música de Fondo Personalizada</h3>
+                        <p class="text-gray-600">Añade la banda sonora perfecta a tu invitación.</p>
                     </div>
-                    <div class="bg-darker-pink p-8 rounded-xl shadow-lg animate-on-scroll animate-on-scroll-delay-100">
-                        <p class="italic mb-4">"La cuenta regresiva y el mapa integrado en nuestra invitación de graduación fueron un éxito. ¡Todos supieron exactamente dónde y cuándo celebrar!"</p>
-                        <p class="font-semibold text-white-accent">- Equipo de Graduación 2025</p>
+                    <!-- Servicio 6 -->
+                    <div class="card p-6 text-center animate-on-scroll animate-on-scroll-delay-400">
+                        <div class="bg-light-pink-bg p-4 rounded-full inline-block mb-4">
+                            <i class="fas fa-gifts text-4xl text-main-pink"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-2 text-main-pink">Mesa de Regalos</h3>
+                        <p class="text-gray-600">Facilita a tus invitados la opción de regalos.</p>
                     </div>
-                    <div class="bg-darker-pink p-8 rounded-xl shadow-lg animate-on-scroll animate-on-scroll-delay-200">
-                        <p class="italic mb-4">"La atención al detalle y la creatividad en cada diseño son inigualables. Mi despedida de soltera tuvo la invitación más divertida gracias a ellos."</p>
-                        <p class="font-semibold text-white-accent">- Valeria M.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonios Section -->
+        <section id="testimonios" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title text-main-pink animate-on-scroll">Lo que Dicen Nuestros Clientes</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Testimonio 1 -->
+                    <div class="card p-8 animate-on-scroll animate-on-scroll-delay-100">
+                        <div class="flex items-center mb-6">
+                            <img src="https://placehold.co/80x80/DD8EA6/FFFFFF?text=Cliente1" alt="Cliente 1" class="w-20 h-20 rounded-full mr-4 object-cover">
+                            <div>
+                                <p class="font-semibold text-xl text-main-pink">Ana G.</p>
+                                <p class="text-gray-600">Novia Satisfecha</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed">
+                            "¡Absolutamente encantada con nuestras invitaciones de boda! El diseño superó nuestras expectativas y la atención al detalle fue impecable. Nuestros invitados quedaron fascinados."
+                        </p>
+                    </div>
+                    <!-- Testimonio 2 -->
+                    <div class="card p-8 animate-on-scroll animate-on-scroll-delay-200">
+                        <div class="flex items-center mb-6">
+                            <img src="https://placehold.co/80x80/DD8EA6/FFFFFF?text=Cliente2" alt="Cliente 2" class="w-20 h-20 rounded-full mr-4 object-cover">
+                            <div>
+                                <p class="font-semibold text-xl text-main-pink">Carlos R.</p>
+                                <p class="text-gray-600">Padre de Quinceañera</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed">
+                            "La invitación de XV años para mi hija fue un sueño hecho realidad. La opción de video es increíble y la música personalizada le dio un toque mágico. ¡Gracias por un trabajo tan profesional!"
+                        </p>
+                    </div>
+                    <!-- Testimonio 3 -->
+                    <div class="card p-8 animate-on-scroll animate-on-scroll-delay-300">
+                        <div class="flex items-center mb-6">
+                            <img src="https://placehold.co/80x80/DD8EA6/FFFFFF?text=Cliente3" alt="Cliente 3" class="w-20 h-20 rounded-full mr-4 object-cover">
+                            <div>
+                                <p class="font-semibold text-xl text-main-pink">Sofía M.</p>
+                                <p class="text-gray-600">Organizadora de Eventos</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed">
+                            "Siempre confío en Momentos Encantados para las invitaciones de mis clientes. Su creatividad y eficiencia son insuperables. ¡Recomendados al 100%!"
+                        </p>
+                    </div>
+                    <!-- Testimonio 4 -->
+                    <div class="card p-8 animate-on-scroll animate-on-scroll-delay-400">
+                        <div class="flex items-center mb-6">
+                            <img src="https://placehold.co/80x80/DD8EA6/FFFFFF?text=Cliente4" alt="Cliente 4" class="w-20 h-20 rounded-full mr-4 object-cover">
+                            <div>
+                                <p class="font-semibold text-xl text-main-pink">Juan P.</p>
+                                <p class="text-gray-600">Cumpleañero</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed">
+                            "Pedí una invitación para mi fiesta de cumpleaños y el resultado fue espectacular. El proceso fue muy fácil y el equipo muy amable. ¡Mis amigos quedaron impresionados!"
+                        </p>
                     </div>
                 </div>
             </div>
@@ -931,29 +997,49 @@
 
         <!-- Contact Section -->
         <section id="contacto" class="py-20 bg-light-pink-bg">
-            <div class="container mx-auto px-2 sm:px-6 text-center"> <!-- Adjusted padding for small screens -->
+            <div class="container mx-auto px-6">
                 <h2 class="main-section-title-quicksand text-main-pink animate-on-scroll">Contáctanos</h2>
-                <p class="text-xl mb-8 max-w-2xl mx-auto text-gray-700 animate-on-scroll animate-on-scroll-delay-200">
-                    ¿Listo para crear la invitación perfecta? Envíanos un mensaje.
+                <p class="text-xl text-center mb-12 animate-on-scroll animate-on-scroll-delay-100">
+                    ¿Listo para crear tu invitación perfecta? ¡Envíanos un mensaje!
                 </p>
-
-                <div class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-lg animate-on-scroll animate-on-scroll-delay-400">
-                    <form id="whatsapp-form" class="space-y-6 text-left">
+                <div class="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-lg animate-on-scroll animate-on-scroll-delay-200">
+                    <form action="#" method="POST" class="space-y-6">
                         <div>
-                            <label for="nombre" class="block text-lg font-medium text-gray-700 mb-2">Tu Nombre:</label>
-                            <input type="text" id="nombre" name="nombre" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 ring-button-pink focus:outline-none" placeholder="Ej: Juan Pérez" required>
+                            <label for="name" class="block text-gray-700 text-lg font-semibold mb-2">Nombre Completo</label>
+                            <input type="text" id="name" name="name" required
+                                   class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 ring-button-pink transition duration-200 text-lg">
                         </div>
                         <div>
-                            <label for="tipoInvitacion" class="block text-lg font-medium text-gray-700 mb-2">Tipo de Invitación/Evento:</label>
-                            <input type="text" id="tipoInvitacion" name="tipoInvitacion" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 ring-button-pink focus:outline-none" placeholder="Ej: Boda, XV Años, Cumpleaños" required>
+                            <label for="email" class="block text-gray-700 text-lg font-semibold mb-2">Correo Electrónico</label>
+                            <input type="email" id="email" name="email" required
+                                   class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 ring-button-pink transition duration-200 text-lg">
                         </div>
                         <div>
-                            <label for="mensaje" class="block text-lg font-medium text-gray-700 mb-2">Tu Mensaje:</label>
-                            <textarea id="mensaje" name="mensaje" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 ring-button-pink focus:outline-none" placeholder="Ej: Me gustaría una invitación con temática floral..." required></textarea>
+                            <label for="event" class="block text-gray-700 text-lg font-semibold mb-2">Tipo de Evento</label>
+                            <select id="event" name="event" required
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 ring-button-pink transition duration-200 text-lg">
+                                <option value="">Selecciona un tipo de evento</option>
+                                <option value="boda">Boda</option>
+                                <option value="xv_anos">XV Años</option>
+                                <option value="baby_shower">Baby Shower</option>
+                                <option value="bautizo">Bautizo</option>
+                                <option value="comunion_confirmacion">Comunión/Confirmación</option>
+                                <option value="cumpleanos">Cumpleaños</option>
+                                <option value="despedida">Despedida</option>
+                                <option value="graduacion">Graduación</option>
+                                <option value="empresarial">Empresarial</option>
+                                <option value="revelacion_genero">Revelación de Género</option>
+                                <option value="otro">Otro</option>
+                            </select>
                         </div>
-                        <button type="submit" class="btn-primary w-full flex items-center justify-center">
-                            <i class="fab fa-whatsapp text-2xl mr-3"></i> Enviar Mensaje por WhatsApp
-                        </button>
+                        <div>
+                            <label for="message" class="block text-gray-700 text-lg font-semibold mb-2">Tu Mensaje</label>
+                            <textarea id="message" name="message" rows="5" required
+                                      class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 ring-button-pink transition duration-200 text-lg"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn-primary">Enviar Mensaje</button>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -961,121 +1047,127 @@
 
     </main>
 
+    <!-- Floating WhatsApp Button -->
+    <a href="#contacto" id="whatsapp-float-btn" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <!-- Footer -->
-    <footer class="bg-black text-white py-10">
-        <div class="container mx-auto px-2 sm:px-6 text-center"> <!-- Adjusted padding for small screens -->
-            <p class="mb-4">&copy; 2025 Momentos Encantados. Todos los derechos reservados.</p>
-            <div class="flex justify-center space-x-6">
-                <a href="#" class="text-gray-400 hover:text-white-accent transition duration-300"><i class="fab fa-facebook-f text-xl"></i></a>
-                <a href="#" class="text-gray-400 hover:text-white-accent transition duration-300"><i class="fab fa-instagram text-xl"></i></a>
-                <a href="#" class="text-gray-400 hover:text-white-accent transition duration-300"><i class="fab fa-pinterest-p text-xl"></i></a>
+    <footer class="bg-darker-pink text-white py-10">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mb-6">
+                <a href="#" class="text-3xl font-bold text-white-accent" style="font-family: 'Quicksand', sans-serif;">Momentos Encantados</a>
             </div>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#inicio" class="hover:text-white-accent transition duration-300">Inicio</a>
+                <a href="#plantillas" class="hover:text-white-accent transition duration-300">Plantillas</a>
+                <a href="#paquetes" class="hover:text-white-accent transition duration-300">Paquetes</a>
+                <a href="#servicios" class="hover:text-white-accent transition duration-300">Servicios</a>
+                <a href="#testimonios" class="hover:text-white-accent transition duration-300">Testimonios</a>
+                <a href="#contacto" class="hover:text-white-accent transition duration-300">Contacto</a>
+            </div>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="text-2xl hover:text-white-accent transition duration-300"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-2xl hover:text-white-accent transition duration-300"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-2xl hover:text-white-accent transition duration-300"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <p class="text-sm">&copy; 2025 Momentos Encantados. Todos los derechos reservados.</p>
         </div>
     </footer>
 
     <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-                // Close mobile menu if open
-                const mobileMenu = document.getElementById('mobile-menu');
-                if (!mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
-                }
-            });
-        });
-
-        // Mobile menu toggle
+        // Mobile Menu Toggle
         document.getElementById('mobile-menu-button').addEventListener('click', function() {
             document.getElementById('mobile-menu').classList.toggle('hidden');
         });
 
-        // Intersection Observer for scroll animations
-        document.addEventListener('DOMContentLoaded', () => {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('fade-in-visible');
-                        // Optional: Stop observing once animated if you only want it to animate once
-                        // observer.unobserve(entry.target);
-                    } else {
-                        // Optional: Remove class if element scrolls out of view to re-animate on scroll back
-                        // entry.target.classList.remove('fade-in-visible');
-                    }
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(item => {
+            item.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Scroll Animation
+        const animateOnScrollElements = document.querySelectorAll('.animate-on-scroll');
+
+        const observerOptions = {
+            root: null, // viewport
+            rootMargin: '0px',
+            threshold: 0.1 // 10% of the element must be visible
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-visible');
+                    observer.unobserve(entry.target); // Stop observing once visible
+                }
+            });
+        }, observerOptions);
+
+        animateOnScrollElements.forEach(element => {
+            observer.observe(element);
+        });
+
+        // Carousel Functionality
+        const carouselTrack = document.getElementById('carousel-track');
+        const carouselPrevBtn = document.getElementById('carousel-prev');
+        const carouselNextBtn = document.getElementById('carousel-next');
+
+        carouselNextBtn.addEventListener('click', () => {
+            const scrollAmount = carouselTrack.clientWidth * 0.75; // Scroll by 75% of container width
+            carouselTrack.scrollBy({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        });
+
+        carouselPrevBtn.addEventListener('click', () => {
+            const scrollAmount = carouselTrack.clientWidth * 0.75; // Scroll by 75% of container width
+            carouselTrack.scrollBy({
+                left: -scrollAmount,
+                behavior: 'smooth'
+            });
+        });
+
+        // Optional: Hide/show carousel buttons based on scroll position (more advanced)
+        carouselTrack.addEventListener('scroll', () => {
+            // Logic to hide/show buttons if needed, for now they are always visible
+            // You could check carouselTrack.scrollLeft and carouselTrack.scrollWidth - carouselTrack.clientWidth
+            // to determine if at start or end.
+        });
+
+        // Smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
                 });
-            }, {
-                threshold: 0.1 // Trigger when 10% of the element is visible
-            });
-
-            // Observe all elements with the 'animate-on-scroll' class
-            document.querySelectorAll('.animate-on-scroll').forEach(element => {
-                observer.observe(element);
             });
         });
 
-        // WhatsApp Form Submission
-        document.getElementById('whatsapp-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent default form submission
-
-            const nombre = document.getElementById('nombre').value;
-            const tipoInvitacion = document.getElementById('tipoInvitacion').value;
-            const mensaje = document.getElementById('mensaje').value;
-
-            const phoneNumber = '5214426084804'; // Your WhatsApp number
-
-            const whatsappMessage = `Hola Momentos Encantados,\n\nMi nombre es: ${nombre}\nTipo de Invitación/Evento: ${tipoInvitacion}\nMensaje: ${mensaje}\n\n¡Espero su pronta respuesta!`;
-
-            // Encode the message for URL
-            const encodedMessage = encodeURIComponent(whatsappMessage);
-
-            // Construct the WhatsApp URL
-            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-
-            // Open WhatsApp in a new tab
-            window.open(whatsappUrl, '_blank');
-        });
-
-        // Carousel Logic
-        document.addEventListener('DOMContentLoaded', () => {
-            const carouselTrack = document.getElementById('carousel-track');
-            const prevButton = document.getElementById('carousel-prev');
-            const nextButton = document.getElementById('carousel-next');
-
-            // Function to calculate how much to scroll based on the width of a single card + its gap
-            const getScrollStep = () => {
-                const firstCard = carouselTrack.querySelector('.card');
-                if (firstCard) {
-                    const computedStyle = window.getComputedStyle(carouselTrack);
-                    const gap = parseFloat(computedStyle.getPropertyValue('gap'));
-                    return firstCard.offsetWidth + gap;
-                }
-                return carouselTrack.offsetWidth;
-            };
-
-            nextButton.addEventListener('click', () => {
-                const step = getScrollStep();
-                // Check if at the end to loop
-                if (carouselTrack.scrollLeft + carouselTrack.offsetWidth >= carouselTrack.scrollWidth - 1) { // -1 for tolerance
-                    carouselTrack.scrollTo({ left: 0, behavior: 'smooth' });
-                } else {
-                    carouselTrack.scrollBy({ left: step, behavior: 'smooth' });
-                }
+        // Video Play/Pause on Hover (for category sections)
+        document.querySelectorAll('.invitation-item video').forEach(video => {
+            video.addEventListener('mouseenter', () => {
+                video.play();
             });
-
-            prevButton.addEventListener('click', () => {
-                const step = getScrollStep();
-                // Check if at the beginning to loop
-                if (carouselTrack.scrollLeft <= 1) { // +1 for tolerance
-                    carouselTrack.scrollTo({ left: carouselTrack.scrollWidth, behavior: 'smooth' });
-                } else {
-                    carouselTrack.scrollBy({ left: -step, behavior: 'smooth' });
-                }
+            video.addEventListener('mouseleave', () => {
+                video.pause();
+                video.currentTime = 0; // Reset video to start
             });
         });
+
+        // Smooth scroll for the WhatsApp floating button
+        document.getElementById('whatsapp-float-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+
     </script>
 </body>
 </html>
