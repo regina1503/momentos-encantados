@@ -121,7 +121,10 @@
             scroll-snap-type: x mandatory;
             -webkit-overflow-scrolling: touch; /* For smoother scrolling on iOS */
             gap: 1rem; /* Space between cards */
-            padding-bottom: 1rem; /* To prevent scrollbar from overlapping content */
+            padding-bottom: 1rem;
+            /* Added horizontal padding to the track itself for consistent spacing */
+            padding-left: 1rem;
+            padding-right: 1rem;
         }
         /* Hide scrollbar for a cleaner look */
         .carousel-track::-webkit-scrollbar {
@@ -133,47 +136,20 @@
         }
 
         .carousel-track > .card {
-            flex: none; /* Disable flex-grow/shrink */
-            width: 75%; /* Default for mobile */
-            scroll-snap-align: start; /* Snap to the start of each card */
-            height: 24rem; /* Fixed height for carousel cards (384px) */
+            flex: 0 0 calc(100% - 2rem); /* Mobile: 1 card visible, 100% of track width minus its own padding */
+            scroll-snap-align: start;
+            height: 24rem;
         }
-        .carousel-track > .card img {
-            height: 100%; /* Image fills the card height */
-            object-fit: cover; /* Ensure image covers the area, cropping if necessary */
-        }
-
-        .carousel-button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(221, 142, 166, 0.8); /* bg-main-pink with opacity */
-            color: white;
-            padding: 1rem;
-            border-radius: 9999px; /* Full rounded */
-            cursor: pointer;
-            z-index: 10;
-            transition: background-color 0.3s ease;
-        }
-        .carousel-button:hover {
-            background-color: rgba(194, 122, 146, 0.9); /* bg-darker-pink with opacity */
-        }
-        .carousel-button-left {
-            left: 1rem;
-        }
-        .carousel-button-right {
-            right: 1rem;
-        }
-
-        /* Adjust carousel card width for different screen sizes */
         @media (min-width: 640px) { /* sm */
             .carousel-track > .card {
-                width: calc(50% - 0.5rem); /* 2 cards per row with gap */
+                /* 2 cards, 1 gap. (100% of track width - 1rem gap - 2rem total track padding) / 2 */
+                flex: 0 0 calc(50% - 1.5rem);
             }
         }
         @media (min-width: 1024px) { /* lg */
             .carousel-track > .card {
-                width: calc(33.3333% - 0.6666rem); /* 3 cards per row with gap */
+                /* 3 cards, 2 gaps. (100% of track width - 2rem gaps - 2rem total track padding) / 3 */
+                flex: 0 0 calc(33.3333% - 1.3333rem);
             }
         }
 
@@ -256,14 +232,14 @@
 
         <!-- Main Gallery Overview Section (Carousel) -->
         <section id="plantillas" class="py-20 bg-light-pink-bg">
-            <div class="container mx-auto px-2 sm:px-6">
-                <h2 class="main-section-title-quicksand text-main-pink animate-on-scroll">Nuestras Plantillas</h2>
-                <p class="text-xl text-center mb-12 animate-on-scroll animate-on-scroll-delay-100">
+            <div class="container mx-auto"> <!-- Removed px-2 sm:px-6 here, padding moved to inner elements -->
+                <h2 class="main-section-title-quicksand text-main-pink animate-on-scroll px-6">Nuestras Plantillas</h2>
+                <p class="text-xl text-center mb-12 animate-on-scroll animate-on-scroll-delay-100 px-6">
                     Explora nuestra amplia colección de invitaciones digitales por categoría.
                 </p>
 
                 <!-- Category Navigation Buttons -->
-                <div class="grid grid-cols-2 md:flex md:flex-nowrap justify-center gap-4 mb-12 animate-on-scroll animate-on-scroll-delay-200">
+                <div class="grid grid-cols-2 md:flex md:flex-nowrap justify-center gap-4 mb-12 animate-on-scroll animate-on-scroll-delay-200 px-6">
                     <button class="tab-button bg-main-pink text-white rounded-full font-semibold hover:bg-darker-pink transition duration-300" data-target="#bodas-gallery">Bodas</button>
                     <button class="tab-button bg-main-pink text-white rounded-full font-semibold hover:bg-darker-pink transition duration-300" data-target="#xvanos-gallery">XV Años</button>
                     <button class="tab-button bg-main-pink text-white rounded-full font-semibold hover:bg-darker-pink transition duration-300" data-target="#baby-revelacion-gallery">Baby Shower / Revelación de Género</button>
@@ -342,7 +318,7 @@
 
         <!-- Bodas Gallery -->
         <section id="bodas-gallery" class="py-20 bg-white category-gallery-section">
-            <div class="container mx-auto px-2 sm:px-6"> <!-- Adjusted padding for small screens -->
+            <div class="container mx-auto px-6">
                 <h2 class="category-heading text-main-pink animate-on-scroll">Invitaciones para Bodas</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- New video for Bodas: ruby boda.mp4 -->
@@ -442,7 +418,7 @@
 
         <!-- XV Años Gallery -->
         <section id="xvanos-gallery" class="py-20 bg-light-pink-bg category-gallery-section">
-            <div class="container mx-auto px-2 sm:px-6"> <!-- Adjusted padding for small screens -->
+            <div class="container mx-auto px-6">
                 <h2 class="category-heading text-main-pink animate-on-scroll">Invitaciones para XV Años</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- New video for XV Años: xv luna.mp4 -->
@@ -568,7 +544,7 @@
 
         <!-- Baby Shower & Revelación de Género Gallery -->
         <section id="baby-revelacion-gallery" class="py-20 bg-white category-gallery-section">
-            <div class="container mx-auto px-2 sm:px-6">
+            <div class="container mx-auto px-6">
                 <h2 class="category-heading text-main-pink animate-on-scroll">Invitaciones para Baby Shower y Revelación de Género</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Content from Baby Shower -->
@@ -610,7 +586,7 @@
 
         <!-- Comunión/Confirmación Gallery -->
         <section id="comunion-confirmacion-gallery" class="py-20 bg-light-pink-bg category-gallery-section">
-            <div class="container mx-auto px-2 sm:px-6">
+            <div class="container mx-auto px-6">
                 <h2 class="category-heading text-main-pink animate-on-scroll">Invitaciones para Comunión y Confirmación</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- New video for Comunión/Confirmación: mathias confirmacion.mp4 -->
@@ -645,7 +621,7 @@
 
         <!-- Cumpleaños Gallery -->
         <section id="cumpleanos-gallery" class="py-20 bg-white category-gallery-section">
-            <div class="container mx-auto px-2 sm:px-6">
+            <div class="container mx-auto px-6">
                 <h2 class="category-heading text-main-pink animate-on-scroll">Invitaciones para Cumpleaños</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- New video for Cumpleaños: princesa .mp4 -->
@@ -979,7 +955,7 @@
 
         <!-- Graduaciones Gallery -->
         <section id="graduaciones-gallery" class="py-20 bg-light-pink-bg category-gallery-section">
-            <div class="container mx-auto px-2 sm:px-6">
+            <div class="container mx-auto px-6">
                 <h2 class="category-heading text-main-pink animate-on-scroll">Invitaciones para Graduaciones</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- New video for Graduaciones: graduacion.mp4 -->
@@ -1416,7 +1392,10 @@
         const carouselNextBtn = document.getElementById('carousel-next');
 
         carouselNextBtn.addEventListener('click', () => {
-            const scrollAmount = carouselTrack.clientWidth * 0.75; // Scroll by 75% of container width
+            // Scroll by the width of one card plus its gap
+            const cardWidth = carouselTrack.querySelector('.card').offsetWidth;
+            const gapWidth = parseFloat(getComputedStyle(carouselTrack).gap);
+            const scrollAmount = cardWidth + gapWidth;
             carouselTrack.scrollBy({
                 left: scrollAmount,
                 behavior: 'smooth'
@@ -1424,7 +1403,10 @@
         });
 
         carouselPrevBtn.addEventListener('click', () => {
-            const scrollAmount = carouselTrack.clientWidth * 0.75; // Scroll by 75% of container width
+            // Scroll back by the width of one card plus its gap
+            const cardWidth = carouselTrack.querySelector('.card').offsetWidth;
+            const gapWidth = parseFloat(getComputedStyle(carouselTrack).gap);
+            const scrollAmount = cardWidth + gapWidth;
             carouselTrack.scrollBy({
                 left: -scrollAmount,
                 behavior: 'smooth'
