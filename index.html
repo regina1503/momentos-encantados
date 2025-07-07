@@ -102,13 +102,18 @@
             @apply px-8 py-4 text-lg w-full; /* Ensure full width within grid column */
         }
 
-        /* Adjusted font size for specific buttons on small screens */
+        /* Adjusted font size and padding for specific buttons on small screens */
         @media (max-width: 767px) { /* For mobile devices */
-            .tab-button[data-target="#baby-revelacion-gallery"],
+            .tab-button[data-target="#baby-revelacion-gallery"] {
+                font-size: 0.875rem; /* text-sm */
+                padding-left: 0.5rem; /* px-2 */
+                padding-right: 0.5rem; /* px-2 */
+            }
             .tab-button[data-target="#comunion-confirmacion-gallery"] {
                 font-size: 0.875rem; /* text-sm */
                 padding-left: 0.5rem; /* px-2 */
                 padding-right: 0.5rem; /* px-2 */
+                line-height: 1.2; /* Adjust line height for two lines */
             }
         }
 
@@ -255,8 +260,8 @@
                     <button class="tab-button bg-main-pink text-white rounded-full font-semibold hover:bg-darker-pink transition duration-300" data-target="#bodas-gallery">Bodas</button>
                     <button class="tab-button bg-main-pink text-white rounded-full font-semibold hover:bg-darker-pink transition duration-300" data-target="#xvanos-gallery">XV Años</button>
                     <!-- Adjusted text size for mobile for these two buttons -->
-                    <button class="tab-button bg-main-pink text-white rounded-full font-semibold hover:bg-darker-pink transition duration-300 text-sm md:text-lg" data-target="#baby-revelacion-gallery">Baby Shower / Revelación de Género</button>
-                    <button class="tab-button bg-main-pink text-white rounded-full font-semibold hover:bg-darker-pink transition duration-300 text-sm md:text-lg" data-target="#comunion-confirmacion-gallery">Comunión/Confirmación</button>
+                    <button class="tab-button bg-main-pink text-white rounded-full font-semibold hover:bg-darker-pink transition duration-300 text-sm md:text-lg" data-target="#baby-revelacion-gallery">Baby Shower / <br class="md:hidden">Revelación de Género</button>
+                    <button class="tab-button bg-main-pink text-white rounded-full font-semibold hover:bg-darker-pink transition duration-300 text-sm md:text-lg" data-target="#comunion-confirmacion-gallery">Comunión/<br class="md:hidden">Confirmación</button>
                     <button class="tab-button bg-main-pink text-white rounded-full font-semibold hover:bg-darker-pink transition duration-300" data-target="#cumpleanos-gallery">Cumpleaños</button>
                     <button class="tab-button bg-main-pink text-white rounded-full font-semibold hover:bg-darker-pink transition duration-300" data-target="#graduaciones-gallery">Graduaciones</button>
                 </div>
