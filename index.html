@@ -172,8 +172,8 @@
         /* Floating WhatsApp Button */
         .whatsapp-float {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 20px; /* Default for larger screens */
+            right: 20px; /* Default for larger screens */
             background-color: #25D366; /* WhatsApp green */
             color: white;
             border-radius: 50%;
@@ -186,6 +186,15 @@
             z-index: 1000;
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
+
+        /* Adjust WhatsApp button position for smaller screens */
+        @media (max-width: 767px) {
+            .whatsapp-float {
+                bottom: 10px; /* Adjusted for mobile */
+                right: 10px; /* Adjusted for mobile */
+            }
+        }
+
         .whatsapp-float:hover {
             background-color: #1DA851; /* Darker green on hover */
             transform: scale(1.1);
