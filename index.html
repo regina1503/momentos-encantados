@@ -6,8 +6,8 @@
     <title>Momentos Encantados - Invitaciones Digitales Personalizadas</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Playfair Display for elegance, Inter for general text, Quicksand for specific elements -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts: Playfair Display for elegance, Inter for general text, Quicksand for specific elements, Montserrat for hero -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Quicksand:wght@400;500;600;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <!-- Font Awesome CDN for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -60,8 +60,9 @@
             @apply text-7xl md:text-8xl font-bold text-center mb-12; /* Even larger and more prominent */
             font-family: 'Quicksand', sans-serif; /* Specific font for these titles */
         }
-        .category-heading { /* New class for category titles like "Invitaciones para Bodas" */
-            @apply text-5xl md:text-6xl font-bold text-center mb-12; /* Larger than section-title, smaller than main-section-title */
+        /* Updated category heading for larger size and Quicksand font */
+        .category-heading {
+            @apply text-7xl md:text-8xl font-bold text-center mb-12; /* Made even larger as requested */
             font-family: 'Quicksand', sans-serif; /* Specific font for these titles */
         }
         /* Custom styles for smooth scrolling */
@@ -175,6 +176,7 @@
             <div class="hidden md:flex space-x-8">
                 <a href="#inicio" class="hover:text-white-accent transition duration-300">Inicio</a>
                 <a href="#plantillas" class="hover:text-white-accent transition duration-300">Plantillas</a>
+                <a href="#paquetes" class="hover:text-white-accent transition duration-300">Paquetes</a> <!-- New Nav Link -->
                 <a href="#servicios" class="hover:text-white-accent transition duration-300">Servicios</a>
                 <a href="#testimonios" class="hover:text-white-accent transition duration-300">Testimonios</a>
                 <a href="#contacto" class="hover:text-white-accent transition duration-300">Contacto</a>
@@ -188,6 +190,7 @@
         <div id="mobile-menu" class="hidden md:hidden bg-main-pink py-4">
             <a href="#inicio" class="block px-6 py-2 hover:bg-darker-pink transition duration-300">Inicio</a>
             <a href="#plantillas" class="block px-6 py-2 hover:bg-darker-pink transition duration-300">Plantillas</a>
+            <a href="#paquetes" class="block px-6 py-2 hover:bg-darker-pink transition duration-300">Paquetes</a> <!-- New Mobile Nav Link -->
             <a href="#servicios" class="block px-6 py-2 hover:bg-darker-pink transition duration-300">Servicios</a>
             <a href="#testimonios" class="block px-6 py-2 hover:bg-darker-pink transition duration-300">Testimonios</a>
             <a href="#contacto" class="block px-6 py-2 hover:bg-darker-pink transition duration-300">Contacto</a>
@@ -197,10 +200,10 @@
     <main class="pt-20"> <!-- Padding top to account for fixed header -->
 
         <!-- Hero Section -->
-        <section id="inicio" class="relative h-screen flex items-center justify-center bg-cover bg-center" style="background-color: #DD8EA6;">
-            <div class="absolute inset-0 bg-black opacity-60"></div>
+        <section id="inicio" class="relative h-[50vh] flex items-center justify-center bg-cover bg-center" style="background-color: #DD8EA6;">
+            <div class="absolute inset-0 bg-black opacity-30"></div>
             <div class="relative z-10 text-center text-white px-6">
-                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight drop-shadow-lg animate-on-scroll">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight drop-shadow-lg animate-on-scroll" style="font-family: 'Montserrat', sans-serif;">
                     Crea Recuerdos Inolvidables, Una Invitación a la Vez.
                 </h1>
                 <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto drop-shadow-md animate-on-scroll animate-on-scroll-delay-200">
@@ -236,55 +239,6 @@
                 <!-- Carousel for All Invitations Overview -->
                 <div class="carousel-container animate-on-scroll animate-on-scroll-delay-300">
                     <div id="carousel-track" class="carousel-track">
-                        <!-- Carousel Images - Replace with your actual invitation images -->
-                        <div class="card">
-                            <img src="https://placehold.co/400x600/FFD1DC/DD8EA6?text=Invitacion+Boda+1" alt="Invitación de Boda" class="w-full object-cover rounded-xl">
-                            <div class="p-4 text-center">
-                                <h3 class="text-xl font-semibold text-main-pink">Boda Clásica</h3>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img src="https://placehold.co/400x600/DD8EA6/FFFFFF?text=Invitacion+XV+Anos+1" alt="Invitación de XV Años" class="w-full object-cover rounded-xl">
-                            <div class="p-4 text-center">
-                                <h3 class="text-xl font-semibold text-main-pink">XV Años Soñados</h3>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img src="https://placehold.co/400x600/FDF2F5/DD8EA6?text=Invitacion+Baby+Shower+1" alt="Invitación de Baby Shower" class="w-full object-cover rounded-xl">
-                            <div class="p-4 text-center">
-                                <h3 class="text-xl font-semibold text-main-pink">Baby Shower Alegre</h3>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img src="https://placehold.co/400x600/C27A92/FFFFFF?text=Invitacion+Cumpleanos+1" alt="Invitación de Cumpleaños" class="w-full object-cover rounded-xl">
-                            <div class="p-4 text-center">
-                                <h3 class="text-xl font-semibold text-main-pink">Cumpleaños Divertido</h3>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img src="https://placehold.co/400x600/FFB3C6/DD8EA6?text=Invitacion+Bautizo+1" alt="Invitación de Bautizo" class="w-full object-cover rounded-xl">
-                            <div class="p-4 text-center">
-                                <h3 class="text-xl font-semibold text-main-pink">Bautizo Celestial</h3>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img src="https://placehold.co/400x600/DD8EA6/FFFFFF?text=Invitacion+Graduacion+1" alt="Invitación de Graduación" class="w-full object-cover rounded-xl">
-                            <div class="p-4 text-center">
-                                <h3 class="text-xl font-semibold text-main-pink">Graduación Exitosa</h3>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img src="https://placehold.co/400x600/FDF2F5/DD8EA6?text=Invitacion+Empresarial+1" alt="Invitación Empresarial" class="w-full object-cover rounded-xl">
-                            <div class="p-4 text-center">
-                                <h3 class="text-xl font-semibold text-main-pink">Evento Corporativo</h3>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img src="https://placehold.co/400x600/C27A92/FFFFFF?text=Invitacion+Revelacion+1" alt="Invitación de Revelación de Género" class="w-full object-cover rounded-xl">
-                            <div class="p-4 text-center">
-                                <h3 class="text-xl font-semibold text-main-pink">Revelación Mágica</h3>
-                            </div>
-                        </div>
                         <!-- New image for Main Gallery Overview: Danna Jasley -->
                         <div class="card">
                             <img src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Danna%20jasley.jpg" alt="Invitación Danna Jasley" class="w-full object-cover rounded-xl">
@@ -297,6 +251,48 @@
                             <img src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Nuestra%20(5).jpg" alt="Invitación Nuestra" class="w-full object-cover rounded-xl">
                             <div class="p-4 text-center">
                                 <h3 class="text-xl font-semibold text-main-pink">Diseño Exclusivo</h3>
+                            </div>
+                        </div>
+                        <!-- New image for Main Gallery Overview: Mi bautizo y primer año -->
+                        <div class="card">
+                            <img src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Mi%20bautizo%20y%20primer%20a%C3%B1o.jpg" alt="Invitación Mi Bautizo y Primer Año" class="w-full object-cover rounded-xl">
+                            <div class="p-4 text-center">
+                                <h3 class="text-xl font-semibold text-main-pink">Bautizo y Primer Año</h3>
+                            </div>
+                        </div>
+                        <!-- New image for Main Gallery Overview: Mi primer añito -->
+                        <div class="card">
+                            <img src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Mi%20primer%20a%C3%B1ito.jpg" alt="Invitación Mi Primer Añito" class="w-full object-cover rounded-xl">
+                            <div class="p-4 text-center">
+                                <h3 class="text-xl font-semibold text-main-pink">Mi Primer Añito</h3>
+                            </div>
+                        </div>
+                        <!-- New image for Main Gallery Overview: Nuestra Boda (2) -->
+                        <div class="card">
+                            <img src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Nuestra%20Boda%20(2).jpg" alt="Invitación Nuestra Boda 2" class="w-full object-cover rounded-xl">
+                            <div class="p-4 text-center">
+                                <h3 class="text-xl font-semibold text-main-pink">Nuestra Boda (2)</h3>
+                            </div>
+                        </div>
+                        <!-- New image for Main Gallery Overview: Nuestra Boda (22) -->
+                        <div class="card">
+                            <img src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Nuestra%20Boda%20(22).jpg" alt="Invitación Nuestra Boda 22" class="w-full object-cover rounded-xl">
+                            <div class="p-4 text-center">
+                                <h3 class="text-xl font-semibold text-main-pink">Nuestra Boda (22)</h3>
+                            </div>
+                        </div>
+                        <!-- New image for Main Gallery Overview: Añadir un poco de texto -->
+                        <div class="card">
+                            <img src="https://raw.githubusercontent.com/regina1503/invitaciones/main/A%C3%B1adir%20un%20poco%20de%20texto.jpg" alt="Invitación Añadir Texto" class="w-full object-cover rounded-xl">
+                            <div class="p-4 text-center">
+                                <h3 class="text-xl font-semibold text-main-pink">Añadir Texto</h3>
+                            </div>
+                        </div>
+                        <!-- New image for Main Gallery Overview: Karen Valeria & Omar -->
+                        <div class="card">
+                            <img src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Karen%20Valeria%20%26%20Omar.png" alt="Invitación Karen Valeria & Omar" class="w-full object-cover rounded-xl">
+                            <div class="p-4 text-center">
+                                <h3 class="text-xl font-semibold text-main-pink">Karen & Omar</h3>
                             </div>
                         </div>
                     </div>
@@ -520,19 +516,6 @@
             <div class="container mx-auto px-2 sm:px-6">
                 <h2 class="category-heading text-main-pink animate-on-scroll">Invitaciones para Comunión/Confirmación</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Existing video for Comunión/Confirmación -->
-                    <div class="card invitation-item animate-on-scroll" data-category="comunion-confirmacion">
-                        <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Copia%20de%20Matias%20(1).mp4"
-                                   poster="https://placehold.co/600x400/ADD8E6/DD8EA6?text=Comunion+Matias+Video"
-                                   controls autoplay="false" loop="false" muted="true"
-                                   class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
-                            Tu navegador no soporta la etiqueta de video.
-                        </video>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Comunión Matías (Video)</h3>
-                            <p class="text-gray-600">Video invitación para la Primera Comunión de Matías.</p>
-                        </div>
-                    </div>
                     <!-- New video for Comunión/Confirmación: AMELIA.mp4 -->
                     <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-100" data-category="comunion-confirmacion">
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/AMELIA.mp4"
@@ -555,14 +538,6 @@
             <div class="container mx-auto px-2 sm:px-6"> <!-- Adjusted padding for small screens -->
                 <h2 class="category-heading text-main-pink animate-on-scroll">Invitaciones para Cumpleaños</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Existing image -->
-                    <div class="card invitation-item animate-on-scroll" data-category="cumpleanos">
-                        <img src="https://raw.githubusercontent.com/regina1503/invitaciones/main/GALY.jpg" alt="Invitación Cumpleaños GALY" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Cumpleaños GALY (Imagen)</h3>
-                            <p class="text-gray-600">Un diseño vibrante y único para celebrar.</p>
-                        </div>
-                    </div>
                     <!-- Existing video with poster and adjusted size -->
                     <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-100" data-category="cumpleanos">
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/GALY%20(1).mp4"
@@ -587,19 +562,6 @@
                         <div class="p-6">
                             <h3 class="text-xl font-semibold mb-2 text-main-pink">Confirmación y Ubicación (Video)</h3>
                             <p class="text-gray-600">Invitación con funciones de RSVP y mapa.</p>
-                        </div>
-                    </div>
-                    <!-- Existing video for Cumpleaños: Matías -->
-                    <div class="card invitation-item animate-on-scroll" data-category="cumpleanos">
-                        <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Copia%20de%20Matias%20(1).mp4"
-                                   poster="https://placehold.co/600x400/FFD700/DD8EA6?text=Matias+Cumpleanos+Video"
-                                   controls autoplay="false" loop="false" muted="true"
-                                   class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
-                            Tu navegador no soporta la etiqueta de video.
-                        </video>
-                        <div class="p-6">
-                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Cumpleaños Matías (Video)</h3>
-                            <p class="text-gray-600">Invitación animada para el cumpleaños de Matías.</p>
                         </div>
                     </div>
                     <!-- Existing video for Cumpleaños: José Mateo -->
@@ -821,6 +783,62 @@
                             <h3 class="text-xl font-semibold mb-2 text-main-pink">¿Niño o Niña? (Video)</h3>
                             <p class="text-gray-600">Video invitación para la emocionante revelación de género.</p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Paquetes Section (New) -->
+        <section id="paquetes" class="py-20 bg-light-pink-bg">
+            <div class="container mx-auto px-2 sm:px-6">
+                <h2 class="main-section-title-quicksand text-main-pink animate-on-scroll">Nuestros Paquetes</h2>
+                <p class="text-xl text-center mb-12 animate-on-scroll animate-on-scroll-delay-100">
+                    Descubre el paquete perfecto para tu evento, adaptado a tus necesidades.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Paquete Básico -->
+                    <div class="card p-8 text-center animate-on-scroll animate-on-scroll-delay-200">
+                        <h3 class="text-3xl font-bold text-main-pink mb-4">Paquete Básico</h3>
+                        <p class="text-gray-700 mb-6">Ideal para eventos sencillos y elegantes.</p>
+                        <div class="text-5xl font-bold text-darker-pink mb-6">$XX.XX</div>
+                        <ul class="list-none text-gray-800 space-y-3 mb-8">
+                            <li class="flex items-center justify-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Invitación Digital Personalizada</li>
+                            <li class="flex items-center justify-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Diseño Estático (Imagen)</li>
+                            <li class="flex items-center justify-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> 1 Revisión de Diseño</li>
+                        </ul>
+                        <a href="#contacto" class="btn-primary">¡Lo Quiero!</a>
+                    </div>
+
+                    <!-- Paquete Estándar -->
+                    <div class="card p-8 text-center border-4 border-main-pink animate-on-scroll animate-on-scroll-delay-300">
+                        <h3 class="text-3xl font-bold text-main-pink mb-4">Paquete Estándar</h3>
+                        <p class="text-gray-700 mb-6">La opción más popular con funciones interactivas.</p>
+                        <div class="text-5xl font-bold text-darker-pink mb-6">$YY.YY</div>
+                        <ul class="list-none text-gray-800 space-y-3 mb-8">
+                            <li class="flex items-center justify-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Invitación Digital Animada (Video)</li>
+                            <li class="flex items-center justify-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Música Ambiental</li>
+                            <li class="flex items-center justify-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Formulario de Confirmación (RSVP)</li>
+                            <li class="flex items-center justify-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> 3 Revisiones de Diseño</li>
+                        </ul>
+                        <a href="#contacto" class="btn-primary">¡Lo Quiero!</a>
+                    </div>
+
+                    <!-- Paquete Premium -->
+                    <div class="card p-8 text-center animate-on-scroll animate-on-scroll-delay-400">
+                        <h3 class="text-3xl font-bold text-main-pink mb-4">Paquete Premium</h3>
+                        <p class="text-gray-700 mb-6">La experiencia completa para un evento inolvidable.</p>
+                        <div class="text-5xl font-bold text-darker-pink mb-6">$ZZ.ZZ</div>
+                        <ul class="list-none text-gray-800 space-y-3 mb-8">
+                            <li class="flex items-center justify-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Invitación Digital Animada Premium</li>
+                            <li class="flex items-center justify-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Música Ambiental Personalizada</li>
+                            <li class="flex items-center justify-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Formulario de Confirmación (RSVP) Avanzado</li>
+                            <li class="flex items-center justify-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Ubicación con Mapa Interactivo</li>
+                            <li class="flex items-center justify-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Cuenta Regresiva</li>
+                            <li class="flex items-center justify-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Galería de Fotos del Evento</li>
+                            <li class="flex items-center justify-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Revisiones Ilimitadas</li>
+                        </ul>
+                        <a href="#contacto" class="btn-primary">¡Lo Quiero!</a>
                     </div>
                 </div>
             </div>
