@@ -101,6 +101,17 @@
         .tab-button {
             @apply px-8 py-4 text-lg w-full; /* Ensure full width within grid column */
         }
+
+        /* Adjusted font size for specific buttons on small screens */
+        @media (max-width: 767px) { /* For mobile devices */
+            .tab-button[data-target="#baby-revelacion-gallery"],
+            .tab-button[data-target="#comunion-confirmacion-gallery"] {
+                font-size: 0.875rem; /* text-sm */
+                padding-left: 0.5rem; /* px-2 */
+                padding-right: 0.5rem; /* px-2 */
+            }
+        }
+
         /* Adjusted paragraph text size */
         p {
             @apply text-lg; /* Ensure general paragraphs are larger */
@@ -187,19 +198,15 @@
 <body class="bg-gray-100 text-gray-800">
 
     <!-- Header / Navbar -->
-    <header class="bg-main-pink text-white shadow-lg fixed w-full z-50">
-        <nav class="container mx-auto px-6 py-4 flex items-center">
-            <!-- Flex container for logo and mobile menu button on small screens -->
-            <!-- Changed justify-between to space-x-4 for closer alignment on mobile -->
-            <div class="flex items-center space-x-4 w-full md:w-auto">
-                <a href="#" class="text-2xl font-bold text-white-accent" style="font-family: 'Quicksand', sans-serif;">Momentos Encantados</a>
-                <!-- Mobile menu button - now inside the flex container with the logo -->
-                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none ml-auto"> <!-- Added ml-auto to push it to the right within its flex container on mobile -->
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
-            </div>
+    <header class="bg-main-pink text-white shadow-lg fixed w-full z-50 px-6"> <!-- px-6 moved here -->
+        <nav class="container mx-auto py-4 flex items-center justify-between"> <!-- Added justify-between -->
+            <a href="#" class="text-2xl font-bold text-white-accent" style="font-family: 'Quicksand', sans-serif;">Momentos Encantados</a>
+            <!-- Mobile menu button - no ml-auto needed if justify-between is on parent -->
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
             <!-- Desktop menu - pushed to the right on medium and larger screens -->
-            <div class="hidden md:flex space-x-8 ml-auto">
+            <div class="hidden md:flex space-x-8"> <!-- ml-auto no longer needed here either, justify-between handles it -->
                 <a href="#inicio" class="hover:text-white-accent transition duration-300">Inicio</a>
                 <a href="#plantillas" class="hover:text-white-accent transition duration-300">Plantillas</a>
                 <a href="#paquetes" class="hover:text-white-accent transition duration-300">Paquetes</a>
@@ -247,8 +254,9 @@
                 <div class="grid grid-cols-2 md:flex md:flex-nowrap justify-center gap-4 mb-12 animate-on-scroll animate-on-scroll-delay-200">
                     <button class="tab-button bg-main-pink text-white rounded-full font-semibold hover:bg-darker-pink transition duration-300" data-target="#bodas-gallery">Bodas</button>
                     <button class="tab-button bg-main-pink text-white rounded-full font-semibold hover:bg-darker-pink transition duration-300" data-target="#xvanos-gallery">XV Años</button>
-                    <button class="tab-button bg-main-pink text-white rounded-full font-semibold hover:bg-darker-pink transition duration-300" data-target="#baby-revelacion-gallery">Baby Shower / Revelación de Género</button>
-                    <button class="tab-button bg-main-pink text-white rounded-full font-semibold hover:bg-darker-pink transition duration-300" data-target="#comunion-confirmacion-gallery">Comunión/Confirmación</button>
+                    <!-- Adjusted text size for mobile for these two buttons -->
+                    <button class="tab-button bg-main-pink text-white rounded-full font-semibold hover:bg-darker-pink transition duration-300 text-sm md:text-lg" data-target="#baby-revelacion-gallery">Baby Shower / Revelación de Género</button>
+                    <button class="tab-button bg-main-pink text-white rounded-full font-semibold hover:bg-darker-pink transition duration-300 text-sm md:text-lg" data-target="#comunion-confirmacion-gallery">Comunión/Confirmación</button>
                     <button class="tab-button bg-main-pink text-white rounded-full font-semibold hover:bg-darker-pink transition duration-300" data-target="#cumpleanos-gallery">Cumpleaños</button>
                     <button class="tab-button bg-main-pink text-white rounded-full font-semibold hover:bg-darker-pink transition duration-300" data-target="#graduaciones-gallery">Graduaciones</button>
                 </div>
@@ -418,6 +426,10 @@
                         </div>
                     </div>
                 </div>
+                <!-- Back to Categories Button -->
+                <div class="text-center mt-12">
+                    <button class="btn-primary back-to-categories-btn">Volver a Categorías</button>
+                </div>
             </div>
         </section>
 
@@ -544,6 +556,10 @@
                         </div>
                     </div>
                 </div>
+                <!-- Back to Categories Button -->
+                <div class="text-center mt-12">
+                    <button class="btn-primary back-to-categories-btn">Volver a Categorías</button>
+                </div>
             </div>
         </section>
 
@@ -586,6 +602,10 @@
                         </div>
                     </div>
                 </div>
+                <!-- Back to Categories Button -->
+                <div class="text-center mt-12">
+                    <button class="btn-primary back-to-categories-btn">Volver a Categorías</button>
+                </div>
             </div>
         </section>
 
@@ -620,6 +640,10 @@
                             <p class="text-gray-600">Video invitación para la Primera Comunión de Amelia.</p>
                         </div>
                     </div>
+                </div>
+                <!-- Back to Categories Button -->
+                <div class="text-center mt-12">
+                    <button class="btn-primary back-to-categories-btn">Volver a Categorías</button>
                 </div>
             </div>
         </section>
@@ -955,6 +979,10 @@
                         </div>
                     </div>
                 </div>
+                <!-- Back to Categories Button -->
+                <div class="text-center mt-12">
+                    <button class="btn-primary back-to-categories-btn">Volver a Categorías</button>
+                </div>
             </div>
         </section>
 
@@ -989,6 +1017,10 @@
                             <p class="text-gray-600">Video invitación para la graduación de Íker Gael.</p>
                         </div>
                     </div>
+                </div>
+                <!-- Back to Categories Button -->
+                <div class="text-center mt-12">
+                    <button class="btn-primary back-to-categories-btn">Volver a Categorías</button>
                 </div>
             </div>
         </section>
@@ -1481,6 +1513,28 @@
                 const initialCategoryId = firstCategoryButton.dataset.target;
                 showCategory(initialCategoryId);
             }
+        });
+
+        // Back to Categories Button functionality
+        document.querySelectorAll('.back-to-categories-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // Hide all category sections
+                document.querySelectorAll('.category-gallery-section').forEach(section => {
+                    section.classList.remove('active');
+                });
+                // Scroll back to the main plantillas section
+                const plantillasSection = document.getElementById('plantillas');
+                if (plantillasSection) {
+                    const headerOffset = document.querySelector('header').offsetHeight;
+                    const elementPosition = plantillasSection.getBoundingClientRect().top + window.pageYOffset;
+                    const offsetPosition = elementPosition - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                }
+            });
         });
 
     </script>
