@@ -68,6 +68,7 @@
         /* Custom styles for smooth scrolling */
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 5rem; /* Adjust for fixed header height */
         }
 
         /* Animation specific styles */
@@ -198,7 +199,7 @@
             <div class="hidden md:flex space-x-8">
                 <a href="#inicio" class="hover:text-white-accent transition duration-300">Inicio</a>
                 <a href="#plantillas" class="hover:text-white-accent transition duration-300">Plantillas</a>
-                <a href="#paquetes" class="hover:text-white-accent transition duration-300">Paquetes</a> <!-- New Nav Link -->
+                <a href="#paquetes" class="hover:text-white-accent transition duration-300">Paquetes</a>
                 <a href="#servicios" class="hover:text-white-accent transition duration-300">Servicios</a>
                 <a href="#testimonios" class="hover:text-white-accent transition duration-300">Testimonios</a>
                 <a href="#contacto" class="hover:text-white-accent transition duration-300">Contacto</a>
@@ -212,7 +213,7 @@
         <div id="mobile-menu" class="hidden md:hidden bg-main-pink py-4">
             <a href="#inicio" class="block px-6 py-2 hover:bg-darker-pink transition duration-300">Inicio</a>
             <a href="#plantillas" class="block px-6 py-2 hover:bg-darker-pink transition duration-300">Plantillas</a>
-            <a href="#paquetes" class="block px-6 py-2 hover:bg-darker-pink transition duration-300">Paquetes</a> <!-- New Mobile Nav Link -->
+            <a href="#paquetes" class="block px-6 py-2 hover:bg-darker-pink transition duration-300">Paquetes</a>
             <a href="#servicios" class="block px-6 py-2 hover:bg-darker-pink transition duration-300">Servicios</a>
             <a href="#testimonios" class="block px-6 py-2 hover:bg-darker-pink transition duration-300">Testimonios</a>
             <a href="#contacto" class="block px-6 py-2 hover:bg-darker-pink transition duration-300">Contacto</a>
@@ -249,12 +250,10 @@
                     <a href="#bodas-gallery" class="tab-button bg-main-pink text-white px-8 py-4 rounded-full font-semibold hover:bg-darker-pink transition duration-300">Bodas</a>
                     <a href="#xvanos-gallery" class="tab-button bg-main-pink text-white px-8 py-4 rounded-full font-semibold hover:bg-darker-pink transition duration-300">XV Años</a>
                     <a href="#babyshower-gallery" class="tab-button bg-main-pink text-white px-8 py-4 rounded-full font-semibold hover:bg-darker-pink transition duration-300">Baby Shower</a>
-                    <a href="#bautizos-gallery" class="tab-button bg-main-pink text-white px-8 py-4 rounded-full font-semibold hover:bg-darker-pink transition duration-300">Bautizos</a>
+                    <!-- Removed Bautizos button -->
                     <a href="#comunion-confirmacion-gallery" class="tab-button bg-main-pink text-white px-8 py-4 rounded-full font-semibold hover:bg-darker-pink transition duration-300">Comunión/Confirmación</a>
                     <a href="#cumpleanos-gallery" class="tab-button bg-main-pink text-white px-8 py-4 rounded-full font-semibold hover:bg-darker-pink transition duration-300">Cumpleaños</a>
-                    <a href="#despedidas-gallery" class="tab-button bg-main-pink text-white px-8 py-4 rounded-full font-semibold hover:bg-darker-pink transition duration-300">Despedidas</a>
                     <a href="#graduaciones-gallery" class="tab-button bg-main-pink text-white px-8 py-4 rounded-full font-semibold hover:bg-darker-pink transition duration-300">Graduaciones</a>
-                    <a href="#empresariales-gallery" class="tab-button bg-main-pink text-white px-8 py-4 rounded-full font-semibold hover:bg-darker-pink transition duration-300">Empresariales</a>
                     <a href="#revelacion-genero-gallery" class="tab-button bg-main-pink text-white px-8 py-4 rounded-full font-semibold hover:bg-darker-pink transition duration-300">Revelación de Género</a>
                 </div>
 
@@ -331,6 +330,32 @@
             <div class="container mx-auto px-2 sm:px-6"> <!-- Adjusted padding for small screens -->
                 <h2 class="category-heading text-main-pink animate-on-scroll">Invitaciones para Bodas</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- New video for Bodas: ruby boda.mp4 -->
+                    <div class="card invitation-item animate-on-scroll" data-category="bodas">
+                        <video src="https://raw.githubusercontent.com/regina1503/paquetes-invi/main/ruby%20boda.mp4"
+                                poster="https://placehold.co/600x400/DD8EA6/FFFFFF?text=Boda+Ruby+Video"
+                                controls autoplay="false" loop="false" muted="true"
+                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Boda Ruby (Video)</h3>
+                            <p class="text-gray-600">Invitación de boda con temática de rubí.</p>
+                        </div>
+                    </div>
+                    <!-- New video for Bodas: boda y 3 años.mp4 -->
+                    <div class="card invitation-item animate-on-scroll" data-category="bodas">
+                        <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/boda%20y%203%20a%C3%B1os.mp4"
+                                poster="https://placehold.co/600x400/DD8EA6/FFFFFF?text=Boda+y+3+Anos+Video"
+                                controls autoplay="false" loop="false" muted="true"
+                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Boda y 3 Años (Video)</h3>
+                            <p class="text-gray-600">Invitación para boda y celebración de 3 años.</p>
+                        </div>
+                    </div>
                     <!-- Existing video for Bodas -->
                     <div class="card invitation-item animate-on-scroll" data-category="bodas">
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/b1%20verde.mp4"
@@ -405,6 +430,19 @@
             <div class="container mx-auto px-2 sm:px-6"> <!-- Adjusted padding for small screens -->
                 <h2 class="category-heading text-main-pink animate-on-scroll">Invitaciones para XV Años</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- New video for XV Años: xv luna.mp4 -->
+                    <div class="card invitation-item animate-on-scroll" data-category="xvanos">
+                        <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/xv%20luna.mp4"
+                                poster="https://placehold.co/600x400/DD8EA6/FFFFFF?text=XV+Luna+Video"
+                                controls autoplay="false" loop="false" muted="true"
+                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">XV Años Luna (Video)</h3>
+                            <p class="text-gray-600">Invitación de XV años con temática de luna.</p>
+                        </div>
+                    </div>
                     <!-- Existing video for XV Años: Rapunzel -->
                     <div class="card invitation-item animate-on-scroll" data-category="xvanos">
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/RAPUNZEL.mp4"
@@ -543,22 +581,37 @@
             </div>
         </section>
 
-        <!-- Bautizos Gallery -->
-        <section id="bautizos-gallery" class="py-20 bg-light-pink-bg">
-            <div class="container mx-auto px-2 sm:px-6">
-                <h2 class="category-heading text-main-pink animate-on-scroll">Invitaciones para Bautizos</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- No specific images/videos for Bautizos were provided, so this section will be empty if no placeholders are allowed. -->
-                </div>
-            </div>
-        </section>
-
         <!-- Comunión/Confirmación Gallery -->
         <section id="comunion-confirmacion-gallery" class="py-20 bg-white">
             <div class="container mx-auto px-2 sm:px-6">
                 <h2 class="category-heading text-main-pink animate-on-scroll">Invitaciones para Comunión y Confirmación</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- No specific images/videos for Comunión/Confirmación were provided, so this section will be empty if no placeholders are allowed. -->
+                    <!-- New video for Comunión/Confirmación: mathias confirmacion.mp4 -->
+                    <div class="card invitation-item animate-on-scroll" data-category="comunion-confirmacion">
+                        <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/mathias%20confirmacion.mp4"
+                                poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Confirmacion+Mathias+Video"
+                                controls autoplay="false" loop="false" muted="true"
+                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Confirmación Mathias (Video)</h3>
+                            <p class="text-gray-600">Video invitación para la Confirmación de Mathias.</p>
+                        </div>
+                    </div>
+                    <!-- Existing video for Comunión: AMELIA.mp4 -->
+                    <div class="card invitation-item animate-on-scroll" data-category="comunion-confirmacion">
+                        <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/AMELIA.mp4"
+                                poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Comunion+Amelia+Video"
+                                controls autoplay="false" loop="false" muted="true"
+                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Comunión Amelia (Video)</h3>
+                            <p class="text-gray-600">Video invitación para la Primera Comunión de Amelia.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -568,7 +621,189 @@
             <div class="container mx-auto px-2 sm:px-6">
                 <h2 class="category-heading text-main-pink animate-on-scroll">Invitaciones para Cumpleaños</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- New video for Cumpleaños: Kaleb (1).mp4 -->
+                    <!-- New video for Cumpleaños: princesa .mp4 -->
+                    <div class="card invitation-item animate-on-scroll" data-category="cumpleanos">
+                        <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/princesa%20.mp4"
+                                poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Cumpleanos+Princesa+Video"
+                                controls autoplay="false" loop="false" muted="true"
+                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Cumpleaños Princesa</h3>
+                            <p class="text-gray-600">Video invitación con temática de princesa.</p>
+                        </div>
+                    </div>
+                    <!-- New video for Cumpleaños: spider man.mp4 -->
+                    <div class="card invitation-item animate-on-scroll" data-category="cumpleanos">
+                        <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/spider%20man.mp4"
+                                poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Cumpleanos+SpiderMan+Video"
+                                controls autoplay="false" loop="false" muted="true"
+                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Cumpleaños Spider-Man</h3>
+                            <p class="text-gray-600">Video invitación temática de Spider-Man.</p>
+                        </div>
+                    </div>
+                    <!-- New video for Cumpleaños: mis 3 años joss.mp4 -->
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-100" data-category="cumpleanos">
+                        <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/mis%203%20a%C3%B1os%20joss.mp4"
+                                poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Cumpleanos+Joss+Video"
+                                controls autoplay="false" loop="false" muted="true"
+                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Cumpleaños Mis 3 Años Joss</h3>
+                            <p class="text-gray-600">Video invitación para el tercer cumpleaños de Joss.</p>
+                        </div>
+                    </div>
+                    <!-- New video for Cumpleaños: frozen.mp4 -->
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-200" data-category="cumpleanos">
+                        <video src="https://raw.githubusercontent.com/regina1503/paquetes-invi/main/frozen.mp4"
+                                poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Cumpleanos+Frozen+Video"
+                                controls autoplay="false" loop="false" muted="true"
+                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Cumpleaños Frozen</h3>
+                            <p class="text-gray-600">Video invitación temática de Frozen.</p>
+                        </div>
+                    </div>
+                    <!-- New video for Cumpleaños: minie mouse.mp4 -->
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-300" data-category="cumpleanos">
+                        <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/minie%20mouse.mp4"
+                                poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Cumpleanos+Minnie+Video"
+                                controls autoplay="false" loop="false" muted="true"
+                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Cumpleaños Minnie Mouse</h3>
+                            <p class="text-gray-600">Video invitación temática de Minnie Mouse.</p>
+                        </div>
+                    </div>
+                    <!-- New video for Cumpleaños: plim plim 23.mp4 -->
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-400" data-category="cumpleanos">
+                        <video src="https://raw.githubusercontent.com/regina1503/paquetes-invi/main/plim%20plim%2023.mp4"
+                                poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Cumpleanos+PlimPlim+Video"
+                                controls autoplay="false" loop="false" muted="true"
+                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Cumpleaños Plim Plim</h3>
+                            <p class="text-gray-600">Video invitación temática de Plim Plim.</p>
+                        </div>
+                    </div>
+                    <!-- Existing video for Cumpleaños: Ven a celebrar mi.mp4 -->
+                    <div class="card invitation-item animate-on-scroll" data-category="cumpleanos">
+                        <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Ven%20a%20celebrar%20mi.mp4"
+                                poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Cumpleanos+Celebracion+Video"
+                                controls autoplay="false" loop="false" muted="true"
+                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Ven a Celebrar mi Cumpleaños</h3>
+                            <p class="text-gray-600">Video invitación para una celebración de cumpleaños.</p>
+                        </div>
+                    </div>
+                    <!-- Existing video for Cumpleaños: The king (4).mp4 -->
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-100" data-category="cumpleanos">
+                        <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/The%20king%20(4).mp4"
+                                poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Cumpleanos+Rey+Video"
+                                controls autoplay="false" loop="false" muted="true"
+                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Cumpleaños El Rey</h3>
+                            <p class="text-gray-600">Video invitación con temática de rey.</p>
+                        </div>
+                    </div>
+                    <!-- Existing video for Cumpleaños: Moises.mp4 -->
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-200" data-category="cumpleanos">
+                        <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Moises.mp4"
+                                poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Cumpleanos+Moises+Video"
+                                controls autoplay="false" loop="false" muted="true"
+                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Cumpleaños Moisés</h3>
+                            <p class="text-gray-600">Video invitación para el cumpleaños de Moisés.</p>
+                        </div>
+                    </div>
+                    <!-- Existing video for Cumpleaños: Copia de Mis tres años (1).mp4 -->
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-300" data-category="cumpleanos">
+                        <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Copia%20de%20Mis%20tres%20a%C3%B1os%20(1).mp4"
+                                poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Cumpleanos+Mis+3+Anos+Copia+Video"
+                                controls autoplay="false" loop="false" muted="true"
+                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Cumpleaños Mis 3 Años (Copia)</h3>
+                            <p class="text-gray-600">Video invitación para el tercer cumpleaños (copia).</p>
+                        </div>
+                    </div>
+                    <!-- Existing video for Cumpleaños: Camila (1).mp4 -->
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-400" data-category="cumpleanos">
+                        <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Camila%20(1).mp4"
+                                poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Cumpleanos+Camila+Video"
+                                controls autoplay="false" loop="false" muted="true"
+                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Cumpleaños Camila</h3>
+                            <p class="text-gray-600">Video invitación para el cumpleaños de Camila.</p>
+                        </div>
+                    </div>
+                    <!-- Existing video for Cumpleaños: Blue and Purple Mermaid Birthday Party Invitation Mobile Video (1).mp4 -->
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-500" data-category="cumpleanos">
+                        <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Blue%20and%20Purple%20Mermaid%20Birthday%20Party%20Invitation%20Mobile%20Video%20(1).mp4"
+                                poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Cumpleanos+Sirena+Video"
+                                controls autoplay="false" loop="false" muted="true"
+                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Cumpleaños Sirena Azul y Púrpura</h3>
+                            <p class="text-gray-600">Video invitación de cumpleaños con temática de sirena.</p>
+                        </div>
+                    </div>
+                    <!-- Existing video for Cumpleaños: GALY (1).mp4 -->
+                    <div class="card invitation-item animate-on-scroll" data-category="cumpleanos">
+                        <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/GALY%20(1).mp4"
+                                poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Cumpleanos+Galy+Video"
+                                controls autoplay="false" loop="false" muted="true"
+                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Cumpleaños Galy</h3>
+                            <p class="text-gray-600">Video invitación para el cumpleaños de Galy.</p>
+                        </div>
+                    </div>
+                    <!-- Existing video for Cumpleaños: CHIP AND DALE muestra.mp4 -->
+                    <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-100" data-category="cumpleanos">
+                        <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/CHIP%20AND%20DALE%20muestra.mp4"
+                                poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Cumpleanos+Chip+Dale+Video"
+                                controls autoplay="false" loop="false" muted="true"
+                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Cumpleaños Chip y Dale</h3>
+                            <p class="text-gray-600">Video invitación temática de Chip y Dale.</p>
+                        </div>
+                    </div>
+                    <!-- Existing video for Cumpleaños: Kaleb (1).mp4 -->
                     <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-300" data-category="cumpleanos">
                         <video src="https://raw.githubusercontent.com/regina1503/paquetes-invi/main/Kaleb%20(1).mp4"
                                 poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Cumpleanos+Kaleb+Video"
@@ -581,7 +816,7 @@
                             <p class="text-gray-600">Video invitación para el cumpleaños de Kaleb.</p>
                         </div>
                     </div>
-                    <!-- New video for Cumpleaños: Ivanna (8).mp4 -->
+                    <!-- Existing video for Cumpleaños: Ivanna (8).mp4 -->
                     <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-400" data-category="cumpleanos">
                         <video src="https://raw.githubusercontent.com/regina1503/paquetes-invi/main/Ivanna%20(8).mp4"
                                 poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Cumpleanos+Ivanna+Video"
@@ -594,7 +829,7 @@
                             <p class="text-gray-600">Video invitación para el cumpleaños de Ivanna.</p>
                         </div>
                     </div>
-                    <!-- New video for Cumpleaños: León (1).mp4 -->
+                    <!-- Existing video for Cumpleaños: León (1).mp4 -->
                     <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-500" data-category="cumpleanos">
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Le%C3%B3n%20(1).mp4"
                                 poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Cumpleanos+Leon+Video"
@@ -607,7 +842,7 @@
                             <p class="text-gray-600">Video invitación para el cumpleaños de León.</p>
                         </div>
                     </div>
-                    <!-- New video for Cumpleaños: Lia y Evan (1).mp4 -->
+                    <!-- Existing video for Cumpleaños: Lia y Evan (1).mp4 -->
                     <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-600" data-category="cumpleanos">
                         <video src="https://raw.githubusercontent.com/regina1503/paquetes-invi/main/Lia%20y%20Evan%20(1).mp4"
                                 poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Cumpleanos+Lia+Evan+Video"
@@ -620,7 +855,7 @@
                             <p class="text-gray-600">Video invitación para el cumpleaños de Lia y Evan.</p>
                         </div>
                     </div>
-                     <!-- New video for Cumpleaños: MATEO (1).mp4 -->
+                     <!-- Existing video for Cumpleaños: MATEO (1).mp4 -->
                     <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-700" data-category="cumpleanos">
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/MATEO%20(1).mp4"
                                 poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Cumpleanos+Mateo+Video"
@@ -633,7 +868,7 @@
                             <p class="text-gray-600">Video invitación para el cumpleaños de Mateo.</p>
                         </div>
                     </div>
-                    <!-- New video for Cumpleaños: MI BAUTIZO Y PRIMER AÑO BELLA (1).mp4 -->
+                    <!-- Existing video for Cumpleaños: MI BAUTIZO Y PRIMER AÑO BELLA (1).mp4 -->
                     <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-800" data-category="cumpleanos">
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/MI%20BAUTIZO%20Y%20PRIMER%20A%C3%91O%20BELLA%20(1).mp4"
                                 poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Bautizo+Primer+Ano+Bella+Video"
@@ -646,7 +881,7 @@
                             <p class="text-gray-600">Video invitación para el bautizo y primer año de Bella.</p>
                         </div>
                     </div>
-                    <!-- New video for Cumpleaños: MI PRIMER AÑO (2).mp4 -->
+                    <!-- Existing video for Cumpleaños: MI PRIMER AÑO (2).mp4 -->
                     <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-900" data-category="cumpleanos">
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/MI%20PRIMER%20A%C3%91O%20(2).mp4"
                                 poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Mi+Primer+Ano+Video"
@@ -659,7 +894,7 @@
                             <p class="text-gray-600">Video invitación para celebrar el primer año.</p>
                         </div>
                     </div>
-                    <!-- New video for Cumpleaños: Mis 2 años (2).mp4 -->
+                    <!-- Existing video for Cumpleaños: Mis 2 años (2).mp4 -->
                     <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-1000" data-category="cumpleanos">
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Mis%202%20a%C3%B1os%20(2).mp4"
                                 poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Mis+2+Anos+Video"
@@ -672,7 +907,7 @@
                             <p class="text-gray-600">Video invitación para el segundo cumpleaños.</p>
                         </div>
                     </div>
-                    <!-- New video for Cumpleaños: Mis 3 años (2).mp4 -->
+                    <!-- Existing video for Cumpleaños: Mis 3 años (2).mp4 -->
                     <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-1100" data-category="cumpleanos">
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Mis%203%20a%C3%B1os%20(2).mp4"
                                 poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Mis+3+Anos+Video"
@@ -685,7 +920,7 @@
                             <p class="text-gray-600">Video invitación para el tercer cumpleaños.</p>
                         </div>
                     </div>
-                    <!-- New video for Cumpleaños: Mis 3 años (5).mp4 -->
+                    <!-- Existing video for Cumpleaños: Mis 3 años (5).mp4 -->
                     <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-1200" data-category="cumpleanos">
                         <video src="https://raw.githubusercontent.com/regina1503/paquetes-invi/main/Mis%203%20a%C3%B1os%20(5).mp4"
                                 poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Mis+3+Anos+Video+2"
@@ -698,7 +933,7 @@
                             <p class="text-gray-600">Otro video invitación para el tercer cumpleaños.</p>
                         </div>
                     </div>
-                    <!-- New video for Cumpleaños: Mis 9 años (1).mp4 -->
+                    <!-- Existing video for Cumpleaños: Mis 9 años (1).mp4 -->
                     <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-1300" data-category="cumpleanos">
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Mis%209%20a%C3%B1os%20(1).mp4"
                                 poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Mis+9+Anos+Video"
@@ -715,22 +950,25 @@
             </div>
         </section>
 
-        <!-- Despedidas Gallery -->
-        <section id="despedidas-gallery" class="py-20 bg-white">
-            <div class="container mx-auto px-2 sm:px-6">
-                <h2 class="category-heading text-main-pink animate-on-scroll">Invitaciones para Despedidas</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- No specific images/videos for Despedidas were provided, so this section will be empty if no placeholders are allowed. -->
-                </div>
-            </div>
-        </section>
-
         <!-- Graduaciones Gallery -->
         <section id="graduaciones-gallery" class="py-20 bg-light-pink-bg">
             <div class="container mx-auto px-2 sm:px-6">
                 <h2 class="category-heading text-main-pink animate-on-scroll">Invitaciones para Graduaciones</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- New video for Graduaciones: Te invito a festejar mi graduación Íker Gael (3).mp4 -->
+                    <!-- New video for Graduaciones: graduacion.mp4 -->
+                    <div class="card invitation-item animate-on-scroll" data-category="graduaciones">
+                        <video src="https://raw.githubusercontent.com/regina1503/paquetes-invi/main/graduacion.mp4"
+                                poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Graduacion+Video"
+                                controls autoplay="false" loop="false" muted="true"
+                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Graduación (Video)</h3>
+                            <p class="text-gray-600">Video invitación para una graduación.</p>
+                        </div>
+                    </div>
+                    <!-- Existing video for Graduaciones: Te invito a festejar mi graduación Íker Gael (3).mp4 -->
                     <div class="card invitation-item animate-on-scroll animate-on-scroll-delay-300" data-category="graduaciones">
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Te%20invito%20a%20festejar%20mi%20graduaci%C3%B3n%20%C3%8Dker%20Gael%20(3).mp4"
                                 poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Graduacion+Iker+Video"
@@ -747,22 +985,24 @@
             </div>
         </section>
 
-        <!-- Empresariales Gallery -->
-        <section id="empresariales-gallery" class="py-20 bg-white">
-            <div class="container mx-auto px-2 sm:px-6">
-                <h2 class="category-heading text-main-pink animate-on-scroll">Invitaciones Empresariales</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- No specific images/videos for Empresariales were provided, so this section will be empty if no placeholders are allowed. -->
-                </div>
-            </div>
-        </section>
-
         <!-- Revelación de Género Gallery -->
         <section id="revelacion-genero-gallery" class="py-20 bg-light-pink-bg">
             <div class="container mx-auto px-2 sm:px-6">
                 <h2 class="category-heading text-main-pink animate-on-scroll">Invitaciones para Revelación de Género</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- No specific images/videos for Revelación de Género were provided, so this section will be empty if no placeholders are allowed. -->
+                    <!-- New video for Revelación de Género: ¿Niño o niña (3).mp4 -->
+                    <div class="card invitation-item animate-on-scroll" data-category="revelacion-genero">
+                        <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/%C2%BFNi%C3%B1o%20o%20ni%C3%B1a%20(3).mp4"
+                                poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Revelacion+Genero+Video"
+                                controls autoplay="false" loop="false" muted="true"
+                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                            Tu navegador no soporta la etiqueta de video.
+                        </video>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2 text-main-pink">Revelación de Género (Video)</h3>
+                            <p class="text-gray-600">Video invitación para la revelación de género.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1036,12 +1276,10 @@
                                 <option value="boda">Boda</option>
                                 <option value="xv_anos">XV Años</option>
                                 <option value="baby_shower">Baby Shower</option>
-                                <option value="bautizo">Bautizo</option>
+                                <!-- Removed Bautizo option -->
                                 <option value="comunion_confirmacion">Comunión/Confirmación</option>
                                 <option value="cumpleanos">Cumpleaños</option>
-                                <option value="despedida">Despedida</option>
                                 <option value="graduacion">Graduación</option>
-                                <option value="empresarial">Empresarial</option>
                                 <option value="revelacion_genero">Revelación de Género</option>
                                 <option value="otro">Otro</option>
                             </select>
@@ -1157,16 +1395,37 @@
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
 
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                // Get the target element
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    // Scroll to the target element, considering the fixed header height
+                    const headerOffset = document.querySelector('header').offsetHeight;
+                    const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                    const offsetPosition = elementPosition - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                }
             });
         });
 
         // Video Play/Pause on Hover (for category sections)
         document.querySelectorAll('.invitation-item video').forEach(video => {
-            video.addEventListener('mouseenter', () => {
-                video.play();
+            video.addEventListener('mouseenter', async () => {
+                try {
+                    await video.play();
+                } catch (error) {
+                    if (error.name === "AbortError") {
+                        // This is often benign, ignore it
+                        console.log("Video play was aborted, likely due to quick mouse movement.");
+                    } else {
+                        console.error("Error playing video:", error);
+                    }
+                }
             });
             video.addEventListener('mouseleave', () => {
                 video.pause();
