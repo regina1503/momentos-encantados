@@ -89,7 +89,7 @@
 
         /* Category buttons styling */
         .tab-button {
-            @apply px-8 py-4 text-lg; /* Slightly larger buttons */
+            @apply px-8 py-4 text-lg w-full; /* Ensure full width within grid column */
         }
         /* Adjusted paragraph text size */
         p {
@@ -188,6 +188,14 @@
             background-color: #1DA851; /* Darker green on hover */
             transform: scale(1.1);
         }
+
+        /* Hide all category sections by default, show only the active one via JS */
+        .category-gallery-section {
+            display: none;
+        }
+        .category-gallery-section.active {
+            display: block;
+        }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
@@ -227,7 +235,7 @@
             <div class="absolute inset-0 bg-black opacity-30"></div>
             <div class="relative z-10 text-center text-white px-6">
                 <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight drop-shadow-lg animate-on-scroll" style="font-family: 'Montserrat', sans-serif;">
-                    Invitaciones que Enamoran desde el Primer Toque.
+                    Invitaciones que enamoran desde el primer toque.
                 </h1>
                 <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto drop-shadow-md animate-on-scroll animate-on-scroll-delay-200">
                     Diseños únicos y personalizados para cada celebración especial en tu vida.
@@ -242,17 +250,16 @@
                 <h2 class="main-section-title-quicksand text-main-pink animate-on-scroll">Nuestras Plantillas</h2>
                 <p class="text-xl text-center mb-12 animate-on-scroll animate-on-scroll-delay-100">
                     Explora nuestra amplia colección de invitaciones digitales por categoría.
-                    Usa las flechas para navegar por los ejemplos.
                 </p>
 
                 <!-- Category Navigation Buttons -->
-                <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-12 animate-on-scroll animate-on-scroll-delay-200">
-                    <a href="#bodas-gallery" class="tab-button bg-main-pink text-white px-8 py-4 rounded-full font-semibold hover:bg-darker-pink transition duration-300">Bodas</a>
-                    <a href="#xvanos-gallery" class="tab-button bg-main-pink text-white px-8 py-4 rounded-full font-semibold hover:bg-darker-pink transition duration-300">XV Años</a>
-                    <a href="#baby-revelacion-gallery" class="tab-button bg-main-pink text-white px-8 py-4 rounded-full font-semibold hover:bg-darker-pink transition duration-300">Baby Shower / Revelación de Género</a>
-                    <a href="#comunion-confirmacion-gallery" class="tab-button bg-main-pink text-white px-8 py-4 rounded-full font-semibold hover:bg-darker-pink transition duration-300">Comunión/Confirmación</a>
-                    <a href="#cumpleanos-gallery" class="tab-button bg-main-pink text-white px-8 py-4 rounded-full font-semibold hover:bg-darker-pink transition duration-300">Cumpleaños</a>
-                    <a href="#graduaciones-gallery" class="tab-button bg-main-pink text-white px-8 py-4 rounded-full font-semibold hover:bg-darker-pink transition duration-300">Graduaciones</a>
+                <div class="grid grid-cols-2 md:flex md:flex-nowrap justify-center gap-4 mb-12 animate-on-scroll animate-on-scroll-delay-200">
+                    <button class="tab-button bg-main-pink text-white rounded-full font-semibold hover:bg-darker-pink transition duration-300" data-target="#bodas-gallery">Bodas</button>
+                    <button class="tab-button bg-main-pink text-white rounded-full font-semibold hover:bg-darker-pink transition duration-300" data-target="#xvanos-gallery">XV Años</button>
+                    <button class="tab-button bg-main-pink text-white rounded-full font-semibold hover:bg-darker-pink transition duration-300" data-target="#baby-revelacion-gallery">Baby Shower / Revelación de Género</button>
+                    <button class="tab-button bg-main-pink text-white rounded-full font-semibold hover:bg-darker-pink transition duration-300" data-target="#comunion-confirmacion-gallery">Comunión/Confirmación</button>
+                    <button class="tab-button bg-main-pink text-white rounded-full font-semibold hover:bg-darker-pink transition duration-300" data-target="#cumpleanos-gallery">Cumpleaños</button>
+                    <button class="tab-button bg-main-pink text-white rounded-full font-semibold hover:bg-darker-pink transition duration-300" data-target="#graduaciones-gallery">Graduaciones</button>
                 </div>
 
                 <!-- Carousel for All Invitations Overview -->
@@ -324,7 +331,7 @@
         <!-- Dedicated Category Sections -->
 
         <!-- Bodas Gallery -->
-        <section id="bodas-gallery" class="py-20 bg-white">
+        <section id="bodas-gallery" class="py-20 bg-white category-gallery-section">
             <div class="container mx-auto px-2 sm:px-6"> <!-- Adjusted padding for small screens -->
                 <h2 class="category-heading text-main-pink animate-on-scroll">Invitaciones para Bodas</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -424,7 +431,7 @@
         </section>
 
         <!-- XV Años Gallery -->
-        <section id="xvanos-gallery" class="py-20 bg-light-pink-bg">
+        <section id="xvanos-gallery" class="py-20 bg-light-pink-bg category-gallery-section">
             <div class="container mx-auto px-2 sm:px-6"> <!-- Adjusted padding for small screens -->
                 <h2 class="category-heading text-main-pink animate-on-scroll">Invitaciones para XV Años</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -550,7 +557,7 @@
         </section>
 
         <!-- Baby Shower & Revelación de Género Gallery -->
-        <section id="baby-revelacion-gallery" class="py-20 bg-white">
+        <section id="baby-revelacion-gallery" class="py-20 bg-white category-gallery-section">
             <div class="container mx-auto px-2 sm:px-6">
                 <h2 class="category-heading text-main-pink animate-on-scroll">Invitaciones para Baby Shower y Revelación de Género</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -592,7 +599,7 @@
         </section>
 
         <!-- Comunión/Confirmación Gallery -->
-        <section id="comunion-confirmacion-gallery" class="py-20 bg-light-pink-bg">
+        <section id="comunion-confirmacion-gallery" class="py-20 bg-light-pink-bg category-gallery-section">
             <div class="container mx-auto px-2 sm:px-6">
                 <h2 class="category-heading text-main-pink animate-on-scroll">Invitaciones para Comunión y Confirmación</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -627,7 +634,7 @@
         </section>
 
         <!-- Cumpleaños Gallery -->
-        <section id="cumpleanos-gallery" class="py-20 bg-white">
+        <section id="cumpleanos-gallery" class="py-20 bg-white category-gallery-section">
             <div class="container mx-auto px-2 sm:px-6">
                 <h2 class="category-heading text-main-pink animate-on-scroll">Invitaciones para Cumpleaños</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -961,7 +968,7 @@
         </section>
 
         <!-- Graduaciones Gallery -->
-        <section id="graduaciones-gallery" class="py-20 bg-light-pink-bg">
+        <section id="graduaciones-gallery" class="py-20 bg-light-pink-bg category-gallery-section">
             <div class="container mx-auto px-2 sm:px-6">
                 <h2 class="category-heading text-main-pink animate-on-scroll">Invitaciones para Graduaciones</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -1124,39 +1131,39 @@
                     Ofrecemos una variedad de servicios para hacer tu evento aún más especial.
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Servicio 1 -->
+                    <!-- Servicio 1: Invitaciones Digitales Personalizadas (Estática) -->
                     <div class="card p-4 text-center animate-on-scroll animate-on-scroll-delay-200">
                         <div class="bg-light-pink-bg p-3 rounded-full inline-block mb-3">
-                            <i class="fas fa-envelope-open-text text-3xl text-main-pink"></i>
+                            <i class="fas fa-image text-3xl text-main-pink"></i>
                         </div>
-                        <h3 class="text-xl font-semibold mb-1 text-main-pink">Invitaciones Digitales Personalizadas</h3>
-                        <p class="text-gray-600 text-base">Diseños únicos adaptados a tu estilo y temática del evento.</p>
+                        <h3 class="text-xl font-semibold mb-1 text-main-pink">Invitación Estática (Imagen)</h3>
+                        <p class="text-gray-600 text-base">Diseño único de imagen para tu evento. ($69 pesos)</p>
                     </div>
-                    <!-- Servicio 2 -->
+                    <!-- Servicio 2: Invitaciones Animadas y en Video -->
                     <div class="card p-4 text-center animate-on-scroll animate-on-scroll-delay-300">
                         <div class="bg-light-pink-bg p-3 rounded-full inline-block mb-3">
                             <i class="fas fa-video text-3xl text-main-pink"></i>
                         </div>
-                        <h3 class="text-xl font-semibold mb-1 text-main-pink">Invitaciones Animadas y en Video</h3>
-                        <p class="text-gray-600 text-base">Impacta a tus invitados con invitaciones dinámicas y memorables.</p>
+                        <h3 class="text-xl font-semibold mb-1 text-main-pink">Video Invitación</h3>
+                        <p class="text-gray-600 text-base">Video dinámico (aprox. 30 seg. a 1 min.) con diseño personalizado. ($129 pesos)</p>
                     </div>
-                    <!-- Servicio 3 -->
+                    <!-- Servicio 3: Video Invitación con Botones -->
                     <div class="card p-4 text-center animate-on-scroll animate-on-scroll-delay-400">
                         <div class="bg-light-pink-bg p-3 rounded-full inline-block mb-3">
-                            <i class="fas fa-map-marked-alt text-3xl text-main-pink"></i>
+                            <i class="fas fa-film text-3xl text-main-pink"></i>
                         </div>
-                        <h3 class="text-xl font-semibold mb-1 text-main-pink">Mapas de Ubicación Interactivos</h3>
-                        <p class="text-gray-600 text-base">Facilita la llegada de tus invitados con enlaces directos a Google Maps.</p>
+                        <h3 class="text-xl font-semibold mb-1 text-main-pink">Video Invitación Interactiva</h3>
+                        <p class="text-gray-600 text-base">Video invitación con 1 botón de ubicación y 1 de confirmación de asistencia. ($159 pesos)</p>
                     </div>
-                    <!-- Servicio 4 -->
+                    <!-- Servicio 4: Invitación Interactiva (PDF) -->
                     <div class="card p-4 text-center animate-on-scroll animate-on-scroll-delay-200">
                         <div class="bg-light-pink-bg p-3 rounded-full inline-block mb-3">
-                            <i class="fas fa-calendar-check text-3xl text-main-pink"></i>
+                            <i class="fas fa-file-pdf text-3xl text-main-pink"></i>
                         </div>
-                        <h3 class="text-xl font-semibold mb-1 text-main-pink">Gestión de RSVP</h3>
-                        <p class="text-gray-600 text-base">Confirma la asistencia de tus invitados de manera sencilla y eficiente.</p>
-                        </div>
-                    <!-- Servicio 5 -->
+                        <h3 class="text-xl font-semibold mb-1 text-main-pink">Invitación Interactiva (PDF)</h3>
+                        <p class="text-gray-600 text-base">Invitación en formato PDF con 1 botón de ubicación y 1 de confirmación de asistencia. ($99 pesos)</p>
+                    </div>
+                    <!-- Servicio 5: Música de Fondo Personalizada -->
                     <div class="card p-4 text-center animate-on-scroll animate-on-scroll-delay-300">
                         <div class="bg-light-pink-bg p-3 rounded-full inline-block mb-3">
                             <i class="fas fa-music text-3xl text-main-pink"></i>
@@ -1164,13 +1171,21 @@
                         <h3 class="text-xl font-semibold mb-1 text-main-pink">Música de Fondo Personalizada</h3>
                         <p class="text-gray-600 text-base">Añade la banda sonora perfecta a tu invitación.</p>
                     </div>
-                    <!-- Servicio 6 -->
+                    <!-- Servicio 6: Mesa de Regalos -->
                     <div class="card p-4 text-center animate-on-scroll animate-on-scroll-delay-400">
                         <div class="bg-light-pink-bg p-3 rounded-full inline-block mb-3">
                             <i class="fas fa-gifts text-3xl text-main-pink"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-1 text-main-pink">Mesa de Regalos</h3>
                         <p class="text-gray-600 text-base">Facilita a tus invitados la opción de regalos.</p>
+                    </div>
+                    <!-- Nuevo Servicio: Proceso de Compra Simplificado -->
+                    <div class="card p-4 text-center animate-on-scroll animate-on-scroll-delay-500">
+                        <div class="bg-light-pink-bg p-3 rounded-full inline-block mb-3">
+                            <i class="fas fa-shopping-cart text-3xl text-main-pink"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-1 text-main-pink">Proceso de Compra Simplificado</h3>
+                        <p class="text-gray-600 text-base">Asesoría y facilidad en el proceso de adquisición de tu invitación.</p>
                     </div>
                 </div>
             </div>
@@ -1319,12 +1334,49 @@
             document.getElementById('mobile-menu').classList.toggle('hidden');
         });
 
-        // Close mobile menu when a link is clicked
+        // Function to show a specific category gallery and hide others
+        function showCategory(categoryId) {
+            const allCategorySections = document.querySelectorAll('.category-gallery-section');
+            allCategorySections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            const targetSection = document.querySelector(categoryId);
+            if (targetSection) {
+                targetSection.classList.add('active');
+                // Scroll to the category section after showing it, for better UX
+                const headerOffset = document.querySelector('header').offsetHeight;
+                const elementPosition = targetSection.getBoundingClientRect().top + window.pageYOffset;
+                const offsetPosition = elementPosition - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+            }
+        }
+
+        // Event listeners for category navigation buttons
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault(); // Prevent default anchor behavior (scrolling)
+                const targetId = this.dataset.target; // Get the target ID from data-target attribute
+                showCategory(targetId);
+            });
+        });
+
+        // Close mobile menu and show category when a link is clicked
         document.querySelectorAll('#mobile-menu a').forEach(item => {
             item.addEventListener('click', () => {
                 document.getElementById('mobile-menu').classList.add('hidden');
+                // If the link is a category link, also show that category
+                const targetId = item.getAttribute('href');
+                if (targetId.endsWith('-gallery')) { // Simple check if it's a category gallery link
+                    showCategory(targetId);
+                }
             });
         });
+
 
         // Scroll Animation
         const animateOnScrollElements = document.querySelectorAll('.animate-on-scroll');
@@ -1376,17 +1428,15 @@
             // to determine if at start or end.
         });
 
-        // Smooth scroll for internal links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        // Smooth scroll for internal links (for main navigation, not category tabs)
+        document.querySelectorAll('header nav a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
 
-                // Get the target element
                 const targetId = this.getAttribute('href');
                 const targetElement = document.querySelector(targetId);
 
                 if (targetElement) {
-                    // Scroll to the target element, considering the fixed header height
                     const headerOffset = document.querySelector('header').offsetHeight;
                     const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
                     const offsetPosition = elementPosition - headerOffset;
@@ -1425,6 +1475,15 @@
             document.querySelector(this.getAttribute('href')).scrollIntoView({
                 behavior: 'smooth'
             });
+        });
+
+        // Initialize: Show the first category gallery when the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            const firstCategoryButton = document.querySelector('.tab-button');
+            if (firstCategoryButton) {
+                const initialCategoryId = firstCategoryButton.dataset.target;
+                showCategory(initialCategoryId);
+            }
         });
 
     </script>
