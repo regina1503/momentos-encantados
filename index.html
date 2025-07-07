@@ -188,9 +188,17 @@
 
     <!-- Header / Navbar -->
     <header class="bg-main-pink text-white shadow-lg fixed w-full z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-white-accent" style="font-family: 'Quicksand', sans-serif;">Momentos Encantados</a>
-            <div class="hidden md:flex space-x-8">
+        <nav class="container mx-auto px-6 py-4 flex items-center"> <!-- Removed justify-between here -->
+            <!-- Flex container for logo and mobile menu button on small screens -->
+            <div class="flex items-center justify-between w-full md:w-auto">
+                <a href="#" class="text-2xl font-bold text-white-accent" style="font-family: 'Quicksand', sans-serif;">Momentos Encantados</a>
+                <!-- Mobile menu button - now inside the flex container with the logo -->
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <!-- Desktop menu - pushed to the right on medium and larger screens -->
+            <div class="hidden md:flex space-x-8 ml-auto">
                 <a href="#inicio" class="hover:text-white-accent transition duration-300">Inicio</a>
                 <a href="#plantillas" class="hover:text-white-accent transition duration-300">Plantillas</a>
                 <a href="#paquetes" class="hover:text-white-accent transition duration-300">Paquetes</a>
@@ -198,10 +206,6 @@
                 <a href="#testimonios" class="hover:text-white-accent transition duration-300">Testimonios</a>
                 <a href="#contacto" class="hover:text-white-accent transition duration-300">Contacto</a>
             </div>
-            <!-- Mobile menu button -->
-            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
         </nav>
         <!-- Mobile menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-main-pink py-4">
@@ -232,14 +236,14 @@
 
         <!-- Main Gallery Overview Section (Carousel) -->
         <section id="plantillas" class="py-20 bg-light-pink-bg">
-            <div class="container mx-auto"> <!-- Removed px-2 sm:px-6 here, padding moved to inner elements -->
-                <h2 class="main-section-title-quicksand text-main-pink animate-on-scroll px-6">Nuestras Plantillas</h2>
-                <p class="text-xl text-center mb-12 animate-on-scroll animate-on-scroll-delay-100 px-6">
+            <div class="container mx-auto px-6"> <!-- Added px-6 here for consistent padding -->
+                <h2 class="main-section-title-quicksand text-main-pink animate-on-scroll">Nuestras Plantillas</h2>
+                <p class="text-xl text-center mb-12 animate-on-scroll animate-on-scroll-delay-100">
                     Explora nuestra amplia colección de invitaciones digitales por categoría.
                 </p>
 
                 <!-- Category Navigation Buttons -->
-                <div class="grid grid-cols-2 md:flex md:flex-nowrap justify-center gap-4 mb-12 animate-on-scroll animate-on-scroll-delay-200 px-6">
+                <div class="grid grid-cols-2 md:flex md:flex-nowrap justify-center gap-4 mb-12 animate-on-scroll animate-on-scroll-delay-200">
                     <button class="tab-button bg-main-pink text-white rounded-full font-semibold hover:bg-darker-pink transition duration-300" data-target="#bodas-gallery">Bodas</button>
                     <button class="tab-button bg-main-pink text-white rounded-full font-semibold hover:bg-darker-pink transition duration-300" data-target="#xvanos-gallery">XV Años</button>
                     <button class="tab-button bg-main-pink text-white rounded-full font-semibold hover:bg-darker-pink transition duration-300" data-target="#baby-revelacion-gallery">Baby Shower / Revelación de Género</button>
@@ -326,7 +330,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/paquetes-invi/main/ruby%20boda.mp4"
                                 poster="https://placehold.co/600x400/DD8EA6/FFFFFF?text=Boda+Ruby+Video"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -339,7 +343,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/boda%20y%203%20a%C3%B1os.mp4"
                                 poster="https://placehold.co/600x400/DD8EA6/FFFFFF?text=Boda+y+3+Anos+Video"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -352,7 +356,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/b1%20verde.mp4"
                                 poster="https://placehold.co/600x400/DD8EA6/FFFFFF?text=Boda+Verde+Video"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -365,7 +369,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/boda%20mex.mp4"
                                 poster="https://placehold.co/600x400/DD8EA6/FFFFFF?text=Boda+Mexicana+Video"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -378,7 +382,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/boda%202.mp4"
                                 poster="https://placehold.co/600x400/DD8EA6/FFFFFF?text=Boda+Video+2"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -391,7 +395,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Video%20de%20WhatsApp%202025-03-09%20a%20las%2020.46.18_064bdf27.mp4"
                                 poster="https://placehold.co/600x400/DD8EA6/FFFFFF?text=Boda+Video+4"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -404,7 +408,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/BODA%20AZUL.mp4"
                                 poster="https://placehold.co/600x400/ADD8E6/DD8EA6?text=Boda+Azul+Video"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -426,7 +430,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/xv%20luna.mp4"
                                 poster="https://placehold.co/600x400/DD8EA6/FFFFFF?text=XV+Luna+Video"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -439,7 +443,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/RAPUNZEL.mp4"
                                 poster="https://placehold.co/600x400/DD8EA6/FFFFFF?text=XV+Anos+Rapunzel+Video"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -452,7 +456,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Video%20de%20WhatsApp%202025-03-10%20a%20las%2011.48.54_f800d301.mp4"
                                 poster="https://placehold.co/600x400/DD8EA6/FFFFFF?text=XV+Anos+Video+2"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -465,7 +469,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Video%20de%20WhatsApp%202025-03-10%20a%20las%2011.49.02_c4e56893.mp4"
                                 poster="https://placehold.co/600x400/DD8EA6/FFFFFF?text=XV+Anos+Video+3"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -478,7 +482,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Video%20de%20WhatsApp%202025-03-10%20a%20las%2011.49.17_009d7ea6.mp4"
                                 poster="https://placehold.co/600x400/DD8EA6/FFFFFF?text=XV+Anos+Video+4"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -491,7 +495,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Video%20de%20WhatsApp%202025-03-10%20a%20las%2011.49.20_6dce3976.mp4"
                                 poster="https://placehold.co/600x400/DD8EA6/FFFFFF?text=XV+Anos+Video+5"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -504,7 +508,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/426198013_7605644982788436_5733299954171461144_n.mp4"
                                 poster="https://placehold.co/600x400/DD8EA6/FFFFFF?text=XV+Anos+Video+6"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -517,7 +521,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/10000000_7140466309404764_5652029856896274267_n.mp4"
                                 poster="https://placehold.co/600x400/DD8EA6/FFFFFF?text=XV+Anos+Video+7"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -530,7 +534,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/cenicienta%20(4).mp4"
                                 poster="https://placehold.co/600x400/DD8EA6/FFFFFF?text=XV+Anos+Cenicienta+Video"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -559,7 +563,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/paquetes-invi/main/El%20texto%20del%20p%C3%A1rrafo%20(15).mp4"
                                 poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Baby+Shower+Video"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -572,7 +576,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/%C2%BFNi%C3%B1o%20o%20ni%C3%B1a%20(3).mp4"
                                 poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Revelacion+Genero+Video"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -594,7 +598,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/mathias%20confirmacion.mp4"
                                 poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Confirmacion+Mathias+Video"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -607,7 +611,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/AMELIA.mp4"
                                 poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Comunion+Amelia+Video"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -629,7 +633,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/princesa%20.mp4"
                                 poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Cumpleanos+Princesa+Video"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -642,7 +646,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/spider%20man.mp4"
                                 poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Cumpleanos+SpiderMan+Video"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -655,7 +659,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/mis%203%20a%C3%B1os%20joss.mp4"
                                 poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Cumpleanos+Joss+Video"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -668,7 +672,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/paquetes-invi/main/frozen.mp4"
                                 poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Cumpleanos+Frozen+Video"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -681,7 +685,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/minie%20mouse.mp4"
                                 poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Cumpleanos+Minnie+Video"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -694,7 +698,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/paquetes-invi/main/plim%20plim%2023.mp4"
                                 poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Cumpleanos+PlimPlim+Video"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -707,7 +711,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Ven%20a%20celebrar%20mi.mp4"
                                 poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Cumpleanos+Celebracion+Video"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -720,7 +724,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/The%20king%20(4).mp4"
                                 poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Cumpleanos+Rey+Video"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -733,7 +737,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Moises.mp4"
                                 poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Cumpleanos+Moises+Video"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -746,7 +750,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Copia%20de%20Mis%20tres%20a%C3%B1os%20(1).mp4"
                                 poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Cumpleanos+Mis+3+Anos+Copia+Video"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -759,7 +763,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Camila%20(1).mp4"
                                 poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Cumpleanos+Camila+Video"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -772,7 +776,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Blue%20and%20Purple%20Mermaid%20Birthday%20Party%20Invitation%20Mobile%20Video%20(1).mp4"
                                 poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Cumpleanos+Sirena+Video"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -785,7 +789,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/GALY%20(1).mp4"
                                 poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Cumpleanos+Galy+Video"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -798,7 +802,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/CHIP%20AND%20DALE%20muestra.mp4"
                                 poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Cumpleanos+Chip+Dale+Video"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -811,7 +815,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/paquetes-invi/main/Kaleb%20(1).mp4"
                                 poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Cumpleanos+Kaleb+Video"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -824,7 +828,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/paquetes-invi/main/Ivanna%20(8).mp4"
                                 poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Cumpleanos+Ivanna+Video"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -837,7 +841,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Le%C3%B3n%20(1).mp4"
                                 poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Cumpleanos+Leon+Video"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -850,7 +854,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/paquetes-invi/main/Lia%20y%20Evan%20(1).mp4"
                                 poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Cumpleanos+Lia+Evan+Video"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -863,7 +867,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/MATEO%20(1).mp4"
                                 poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Cumpleanos+Mateo+Video"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -876,7 +880,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/MI%20BAUTIZO%20Y%20PRIMER%20A%C3%91O%20BELLA%20(1).mp4"
                                 poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Bautizo+Primer+Ano+Bella+Video"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -889,7 +893,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/MI%20PRIMER%20A%C3%91O%20(2).mp4"
                                 poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Mi+Primer+Ano+Video"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -902,7 +906,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Mis%202%20a%C3%B1os%20(2).mp4"
                                 poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Mis+2+Anos+Video"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -915,7 +919,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Mis%203%20a%C3%B1os%20(2).mp4"
                                 poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Mis+3+Anos+Video"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -928,7 +932,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/paquetes-invi/main/Mis%203%20a%C3%B1os%20(5).mp4"
                                 poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Mis+3+Anos+Video+2"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -941,7 +945,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Mis%209%20a%C3%B1os%20(1).mp4"
                                 poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Mis+9+Anos+Video"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -963,7 +967,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/paquetes-invi/main/graduacion.mp4"
                                 poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Graduacion+Video"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
@@ -976,7 +980,7 @@
                         <video src="https://raw.githubusercontent.com/regina1503/invitaciones/main/Te%20invito%20a%20festejar%20mi%20graduaci%C3%B3n%20%C3%8Dker%20Gael%20(3).mp4"
                                 poster="https://placehold.co/600x400/FDF2F5/DD8EA6?text=Graduacion+Iker+Video"
                                 controls autoplay="false" loop="false" muted="true"
-                                class="w-3/4 md:w-7/12 h-auto rounded-t-xl mx-auto">
+                                class="w-full h-auto rounded-t-xl mx-auto"> <!-- Changed w-3/4 to w-full -->
                             Tu navegador no soporta la etiqueta de video.
                         </video>
                         <div class="p-6">
